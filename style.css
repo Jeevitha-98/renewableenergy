@@ -1,0 +1,344 @@
+/* Unique Typography Import for Stackly Brand Identity */
+@import url('https://googleapis.com');
+
+/* Base Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    overflow-x: hidden;
+}
+
+/* Preloader Base Architecture */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* Explicit White Background */
+    z-index: 99999; /* Higher priority execution layer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), 
+                visibility 0.5s ease;
+}
+
+/* Graceful Exit State managed via DOM API */
+#preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Centered View Content Block */
+.preloader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Vector Geometric Micro-Animation */
+.stackly-logo-vector {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1.5rem;
+}
+
+.stack-layer {
+    transform-origin: bottom center;
+    animation: stackBounce 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+/* Offset timeline keys to simulate organic mechanical stacking sequential patterns */
+.layer-1 { animation-delay: 0.1s; }
+.layer-2 { animation-delay: 0.25s; }
+.layer-3 { animation-delay: 0.4s; }
+
+@keyframes stackBounce {
+    0%, 100% {
+        transform: translateY(0) scaleX(1);
+    }
+    40% {
+        transform: translateY(-20px) scaleX(0.9);
+    }
+    50% {
+        transform: translateY(0) scaleX(1.05);
+    }
+    55% {
+        transform: translateY(0) scaleX(0.95);
+    }
+    60% {
+        transform: translateY(0) scaleX(1);
+    }
+}
+
+/* Typography Identity Constraints */
+.preloader-brand {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #000000; /* Absolute Minimalist Black Color */
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+    text-transform: lowercase; /* Trend-forward creative stylistic approach */
+}
+
+.preloader-brand::after {
+    content: '.';
+    color: #facc15; /* Accented Brand Identity Point in Core Yellow */
+}
+
+/* Vector Linear Timing Track Indicator */
+.loading-track {
+    width: 140px;
+    height: 3px;
+    background-color: #f1f5f9;
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.loading-bar {
+    width: 100%;
+    height: 100%;
+    background-color: #facc15; /* Target Yellow Accent Color */
+    transform: translateX(-100%);
+    animation: linearFill 2s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+@keyframes linearFill {
+    to {
+        transform: translateX(0%);
+    }
+}
+
+/* Main Content Styles */
+.main-wrapper {
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* Fluid Scalability across Responsive Viewports */
+@media (max-width: 480px) {
+    .stackly-logo-vector {
+        width: 90px;
+        height: 90px;
+    }
+    .preloader-brand {
+        font-size: 2rem;
+    }
+    .loading-track {
+        width: 110px;
+    }
+}
+
+/* Core Navigation Structural Rulesets */
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #e2e8f0;
+    z-index: 9999;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; /* Strict Layout Architecture Restraint */
+    max-width: 1440px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+/* Brand Area */
+.logo-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.brand-logo {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Centered Navigation Layout */
+.nav-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav-item {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.25s ease;
+}
+
+/* Strict Creative Yellow & Black Active Matrix Indicator */
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #facc15; /* Target Yellow Matrix Color */
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+}
+
+.nav-item.active {
+    font-weight: 700;
+}
+
+/* Auth Access Call To Action (Right Hand Side Placement) */
+.auth-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.btn-auth {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #000000; /* Minimalist Strict Black Profile */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.btn-auth:hover {
+    background-color: #facc15;
+    color: #000000;
+}
+
+/* Vector Mobile Hamburger Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10000;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    transition: all 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+    transform-origin: left center;
+}
+
+/* Prevent layout scrolling when viewport navigation overlay modal is deployed */
+body.scroll-lock {
+    overflow: hidden !important;
+}
+
+/* --- Mobile System Responsive Adaptations --- */
+@media (max-width: 992px) {
+    .header-content {
+        width: 90%; /* Scale up layout spacing organically in lower desktop viewports */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #ffffff;
+        flex-direction: column;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        z-index: 9998;
+    }
+
+    .nav-wrapper.active {
+        transform: translateX(0);
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .nav-item {
+        font-size: 1.5rem;
+    }
+
+    /* Transform vector items into close cross configurations gracefully on activation click states */
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(45deg) translateY(-2px);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translateY(2px);
+    }
+}

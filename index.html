@@ -1,0 +1,5033 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | Eco-Energy Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Creative Preloader Core Infrastructure -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <!-- SVG Vector Stackly Kinetic Icon -->
+            <svg class="stackly-logo-vector" viewBox="0 0 100 100" xmlns="http://w3.org">
+                <rect class="stack-layer layer-1" x="25" y="65" width="50" height="12" rx="4" fill="#eab308" />
+                <rect class="stack-layer layer-2" x="25" y="47" width="50" height="12" rx="4" fill="#facc15" />
+                <rect class="stack-layer layer-3" x="25" y="29" width="50" height="12" rx="4" fill="#fef08a" />
+            </svg>
+            <h1 class="preloader-brand">Stackly</h1>
+            <div class="loading-track">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Default Main Website Body Template -->
+ 
+
+ <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // Core Preloader Dismissal Protocol
+    const preloader = document.getElementById('preloader');
+    
+    // Explicit 2-second timeout window matching system constraints
+    setTimeout(() => {
+        if (preloader) {
+            preloader.classList.add('fade-out');
+        }
+    }, 2000); 
+});
+
+ </script>
+
+ <header class="header-container">
+    <div class="header-content">
+        
+        <a href="#" id="brandLogo" class="logo-link" aria-label="Stackly Home">
+            <img src="logo.svg" alt="Stackly Logo" class="brand-logo">
+        </a>
+
+        <!-- Main Navigation Links Container -->
+        <nav class="nav-wrapper" id="navWrapper">
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-item active">Home</a></li>
+                <li><a href="#infrastructure" class="nav-item">Infrastructure</a></li>
+                <li><a href="#analytics" class="nav-item">Analytics</a></li>
+                <li><a href="#pricing" class="nav-item">Pricing</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Access Controls (Right Aligned) -->
+        <div class="auth-wrapper">
+            <a href="#login" class="btn-auth">Launch App</a>
+            <!-- Accessible Kinetic Vector Hamburger Mechanism -->
+            <button class="hamburger" id="mobileMenuToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Core Brand Logo Page Refresh Event Mechanism
+    const brandLogo = document.getElementById('brandLogo');
+    if (brandLogo) {
+        brandLogo.addEventListener('click', (event) => {
+            event.preventDefault(); // Halt standard anchor routing paths execution trace
+            window.location.reload(); // Enforce strict clear programmatic cache refresh
+        });
+    }
+
+    // 2. Mobile Vector Hamburger Navigation Overlay & Scroll Lock Controller
+    const toggleButton = document.getElementById('mobileMenuToggle');
+    const navigationMenu = document.getElementById('navWrapper');
+    const applicationBody = document.body;
+
+    if (toggleButton && navigationMenu) {
+        toggleButton.addEventListener('click', () => {
+            const isMenuCurrentlyExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+            
+            // Toggle active interface matrix layers classes
+            toggleButton.classList.toggle('active');
+            navigationMenu.classList.toggle('active');
+            
+            // Lock background window page viewing metrics scroll traces dynamically
+            applicationBody.classList.toggle('scroll-lock');
+            
+            // Adjust system context access states
+            toggleButton.setAttribute('aria-expanded', !isMenuCurrentlyExpanded);
+        });
+    }
+
+    // 3. Dynamic Active Navigation Link State Controller
+    const navigationItems = document.querySelectorAll('.nav-item');
+    
+    navigationItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Strip out out-dated system target items indicators cleanly
+            document.querySelector('.nav-item.active')?.classList.remove('active');
+            
+            // Enforce focus state targets metrics updates
+            item.classList.add('active');
+
+            // Force close navigation views states arrays dynamically when browsing steps execute targets via viewport screen scales 
+            if (navigationMenu.classList.contains('active')) {
+                toggleButton.classList.remove('active');
+                navigationMenu.classList.remove('active');
+                applicationBody.classList.remove('scroll-lock');
+                toggleButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+});
+
+</script>
+
+<section id="home" class="hero-viewport">
+    <!-- Cinematic Canvas Backdrop Video Layer -->
+    <div class="video-container-layer">
+        <!-- Replace src with your environmental/clean energy video asset path -->
+        <video autoplay loop muted playsinline class="hero-video-asset">
+            <source src="hero-energy-matrix.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay-tint"></div>
+    </div>
+
+    <!-- Core Layout Matrix Container -->
+    <div class="hero-canvas-content">
+        <div class="hero-text-engine">
+            <!-- Title Structure: Split into clean tracking spans for sequential word-by-word reveal triggers -->
+            <h1 class="scroll-word-reveal" id="scrollTitle">
+                <span>Decentralizing</span> 
+                <span>Tomorrow's</span> 
+                <span>Grid</span> 
+                <span>Architecture.</span>
+            </h1>
+            
+            <p class="slide-up-paragraph">
+                Stackly engineered micro-grids process local atmospheric energy kinetic payloads, converting ambient variances into predictable, high-yield municipal resource reserves.
+            </p>
+
+            <div class="cta-flank-container">
+                <a href="#infrastructure" class="btn-hero-flank flank-left">Initialize Grid</a>
+                <a href="#analytics" class="btn-hero-flank flank-right">Explore Node Metrics</a>
+            </div>
+        </div>
+
+        <!-- Floating Telemetry Feature Nodes Matrix Area -->
+        <div class="floating-features-ecosystem">
+            <div class="feature-telemetry-card card-variant-alpha">
+                <div class="card-icon">⚡</div>
+                <div class="card-info">
+                    <h4>Grid Efficiency</h4>
+                    <span class="card-metric">+94.6%</span>
+                </div>
+            </div>
+
+            <div class="feature-telemetry-card card-variant-beta">
+                <div class="card-icon">🍃</div>
+                <div class="card-info">
+                    <h4>Carbon Deficit</h4>
+                    <span class="card-metric">-12.4T</span>
+                </div>
+            </div>
+
+            <div class="feature-telemetry-card card-variant-gamma">
+                <div class="card-icon">🔋</div>
+                <div class="card-info">
+                    <h4>Cell Reserve</h4>
+                    <span class="card-metric">4.2 MWh</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Context Indicator -->
+    <div class="scroll-context-indicator">
+        <span class="mouse-wheel"></span>
+    </div>
+</section>
+
+<style>
+    /* Hero System Layout Infrastructure */
+.hero-viewport {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    overflow: hidden;
+    padding: 120px 0 80px 0;
+}
+
+/* Background Cinematic video layer */
+.video-container-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-video-asset {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay-tint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.95) 100%);
+    pointer-events: none;
+}
+
+/* Structural Interaction Canvas */
+.hero-canvas-content {
+    position: relative;
+    width: 80%; /* Aligned perfectly to your structural width ruleset */
+    max-width: 1440px;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Word-by-Word Animation Canvas Setup */
+.scroll-word-reveal {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+}
+
+/* Each discrete target text segment starts semi-transparent */
+.scroll-word-reveal span {
+    opacity: 0.15;
+    transition: opacity 0.35s cubic-bezier(0.25, 1, 0.5, 1), transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: translateZ(0);
+}
+
+/* Active trace matrix triggered incrementally via intersection algorithms */
+.scroll-word-reveal span.active-word {
+    opacity: 1;
+    color: #000000;
+}
+
+/* Highlight final target entity using signature yellow */
+.scroll-word-reveal span:last-child.active-word {
+    color: #eab308;
+}
+
+/* Entry Transitions: Paragraph from base track upward */
+.slide-up-paragraph {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #334155;
+    max-width: 540px;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.slide-up-paragraph.visible-element {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Entry Transitions: CTA elements moving symmetrically from flanks inward */
+.cta-flank-container {
+    display: flex;
+    gap: 1.5rem;
+    overflow: hidden;
+    padding: 0.5rem;
+}
+
+.btn-hero-flank {
+    font-family: 'Space Grotesk', sans-serif;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.375rem;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.flank-left {
+    background-color: #000000;
+    color: #ffffff;
+    transform: translateX(-150%);
+    opacity: 0;
+}
+
+.flank-right {
+    background-color: #f1f5f9;
+    color: #000000;
+    border: 1px solid #e2e8f0;
+    transform: translateX(150%);
+    opacity: 0;
+}
+
+.cta-flank-container.visible-element .btn-hero-flank {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Highly Stylized Micro-Hover Engineering profiles */
+.flank-left:hover {
+    background-color: #facc15;
+    color: #000000;
+    box-shadow: 0 12px 24px rgba(250, 204, 21, 0.25);
+    transform: translateY(-2px);
+}
+
+.flank-right:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000;
+    transform: translateY(-2px);
+}
+
+/* Floating Feature Node Micro-Ecosystem */
+.floating-features-ecosystem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+}
+
+.feature-telemetry-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    width: 280px;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+}
+
+/* Structural organic offset drift timings using asymmetrical keyframes */
+.card-variant-alpha { animation: floatDrift 5s ease-in-out infinite alternate; }
+.card-variant-beta { animation: floatDrift 6s ease-in-out infinite alternate-reverse; margin-left: auto; }
+.card-variant-gamma { animation: floatDrift 7s ease-in-out infinite alternate; animation-delay: 0.5s; }
+
+@keyframes floatDrift {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-15px) rotate(1deg); }
+}
+
+/* Feature Hover Matrices: Scaling interaction overrides native floating timeline vectors */
+.feature-telemetry-card:hover {
+    animation-play-state: paused;
+    transform: scale(1.05) translateY(-5px);
+    border-color: #facc15;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.card-icon {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    background-color: #fafafa;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.feature-telemetry-card:hover .card-icon {
+    background-color: #fef08a;
+}
+
+.card-info h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card-info .card-metric {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+/* Kinetic Scroll Indicator Visual Anchor */
+.scroll-context-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.mouse-wheel {
+    width: 24px;
+    height: 40px;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    display: block;
+    position: relative;
+}
+
+.mouse-wheel::after {
+    content: '';
+    width: 4px;
+    height: 8px;
+    background-color: #facc15;
+    border-radius: 2px;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: wheelScroll 1.6s infinite ease-out;
+}
+
+@keyframes wheelScroll {
+    0% { top: 6px; opacity: 1; }
+    100% { top: 22px; opacity: 0; }
+}
+
+/* Responsive Structural Engineering */
+@media (max-width: 1024px) {
+    .hero-canvas-content {
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 5rem;
+        text-align: center;
+    }
+    .scroll-word-reveal {
+        justify-content: center;
+        font-size: 3rem;
+    }
+    .slide-up-paragraph {
+        margin: 0 auto 3rem auto;
+    }
+    .cta-flank-container {
+        justify-content: center;
+    }
+    .floating-features-ecosystem {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    .card-variant-beta {
+        margin-left: 0;
+    }
+    .feature-telemetry-card {
+        width: calc(50% - 1rem);
+        min-width: 240px;
+    }
+}
+
+@media (max-width: 576px) {
+    .scroll-word-reveal {
+        font-size: 2.25rem;
+    }
+    .cta-flank-container {
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn-hero-flank {
+        width: 100%;
+        text-align: center;
+    }
+    .feature-telemetry-card {
+        width: 100%;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Precise Word-By-Word Intersection Scroll Engine
+    const words = document.querySelectorAll('.scroll-word-reveal span');
+    
+    function handleWordRevealScroll() {
+        const triggerMargin = window.innerHeight * 0.85;
+        
+        words.forEach((word, index) => {
+            const wordBoundingBox = word.getBoundingClientRect();
+            
+            // Evaluates exact distance context to reveal text iteratively
+            if (wordBoundingBox.top < triggerMargin) {
+                // Adds micro staggered structural delayed animation curves dynamically
+                setTimeout(() => {
+                    word.classList.add('active-word');
+                }, index * 90); 
+            }
+        });
+    }
+
+    // 2. Element Transitions Core Deployment (Paragraph & CTA Actions)
+    const paragraphElement = document.querySelector('.slide-up-paragraph');
+    const ctaContainerElement = document.querySelector('.cta-flank-container');
+
+    const heroBlockObserver = new IntersectionObserver((observedEntries) => {
+        observedEntries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Instantly unlock visibility targets matrix sequences
+                paragraphElement.classList.add('visible-element');
+                
+                // Slightly offset flanking button tracks to anchor focus loops cleanly
+                setTimeout(() => {
+                    ctaContainerElement.classList.add('visible-element');
+                }, 400);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    if (paragraphElement) {
+        heroBlockObserver.observe(document.querySelector('.hero-text-engine'));
+    }
+
+    // Process event loop listeners monitoring passive document layout states
+    window.addEventListener('scroll', handleWordRevealScroll, { passive: true });
+    // Run an evaluation immediately on load sequence to check current placement viewport metrics
+    handleWordRevealScroll();
+});
+
+</script>
+
+<section id="infrastructure" class="eco-matrix-section">
+    <div class="matrix-layout-container">
+        <!-- Section Header Row -->
+        <div class="matrix-header-row">
+            <h2 class="scroll-word-reveal" id="matrixTitle">
+                <span>Next-Gen</span> 
+                <span>Kinetic</span> 
+                <span>Harvesting</span> 
+                <span>Nodes.</span>
+            </h2>
+        </div>
+
+        <!-- Interactive Content Core Splitting Architecture -->
+        <div class="matrix-content-split">
+            <!-- Left Flank: Structural Text Data Block -->
+            <div class="matrix-text-block flank-slide-left">
+                <div class="glow-card-interactive">
+                    <span class="matrix-tag">Atmospheric Mesh</span>
+                    <h3>Distributed Autonomous Capture Cells</h3>
+                    <p>Each unit features custom photovoltaic micro-tracking sensors coupled with direct magnetic-levitation induction fields. By handling harvesting logic on local node layers, line-loss risks are minimized.</p>
+                </div>
+
+                <div class="glow-card-interactive">
+                    <span class="matrix-tag">Decentralized Storage</span>
+                    <h3>Solid-State Reserve Capacitors</h3>
+                    <p>Surplus energy payloads pass into solid-state battery arrays capable of handling instant discharge cycles without showing core thermal degradation over time.</p>
+                </div>
+            </div>
+
+            <!-- Right Flank: Spatial Image Display Frame -->
+            <div class="matrix-image-block flank-slide-right">
+                <div class="image-glow-wrapper">
+                    <!-- Replace with your actual structural asset paths -->
+                    <img src="infrastructure-node.jpg" alt="Stackly Clean Infrastructure Micro-Array" class="matrix-display-image">
+                    
+                    <!-- Floating Overlaid Architectural Stat Cell -->
+                    <div class="floating-overlay-badge">
+                        <span class="badge-glow-dot"></span>
+                        <p>Node Active: <strong>99.98%</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Row: Center-Aligned Anchor Point Elements -->
+        <div class="matrix-footer-action floor-slide-up">
+            <a href="#analytics" class="btn-matrix-action">Deploy Custom Infrastructure Matrix</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Section Base Architecture Layout Adjustments */
+.eco-matrix-section {
+    position: relative;
+    width: 100%;
+    /* Enforcing strict top: 50px and bottom: 30px padding constraints */
+    padding: 50px 0 30px 0;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.matrix-layout-container {
+    width: 80%; /* Consistent structural width alignment constraint */
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Config Mapping */
+.matrix-header-row {
+    margin-bottom: 2.5rem;
+}
+
+/* Core Matrix Split Configuration */
+.matrix-content-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4.5rem;
+    align-items: center;
+}
+
+/* Interactive Text Matrix Cards with Glow Dynamics */
+.matrix-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.glow-card-interactive {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 2.25rem;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+}
+
+.matrix-tag {
+    display: inline-block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #eab308; /* Brand Signature Accent Yellow */
+    margin-bottom: 0.75rem;
+}
+
+.glow-card-interactive h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+    transition: color 0.3s ease;
+}
+
+.glow-card-interactive p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #475569;
+}
+
+/* Creative Glow Engine Profile */
+.glow-card-interactive::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    background: radial-gradient(800px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(250, 204, 21, 0.08), transparent 40%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+/* Card Hover Enhancements */
+.glow-card-interactive:hover {
+    border-color: #facc15;
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(250, 204, 21, 0.05), 0 1px 3px rgba(0,0,0,0.01);
+}
+
+.glow-card-interactive:hover::before {
+    opacity: 1;
+}
+
+.glow-card-interactive:hover h3 {
+    color: #eab308;
+}
+
+/* Right Flank Image Wrapper Engine */
+.matrix-image-block {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.image-glow-wrapper {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: visible;
+    padding: 10px;
+}
+
+/* Diffused underlying ambient glowing asset drop-shadow layer */
+.image-glow-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    background: radial-gradient(circle, rgba(250, 204, 21, 0.4) 0%, transparent 70%);
+    filter: blur(30px);
+    z-index: -1;
+    opacity: 0.6;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.matrix-display-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1.25rem;
+    border: 1px solid #e2e8f0;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Image Cluster Hovers */
+.image-glow-wrapper:hover::after {
+    opacity: 1;
+    transform: scale(1.04);
+    filter: blur(40px);
+}
+
+.image-glow-wrapper:hover .matrix-display-image {
+    transform: scale(1.02);
+    border-color: #facc15;
+}
+
+/* Overlaid Floating Badge Node */
+.floating-overlay-badge {
+    position: absolute;
+    bottom: 2.5rem;
+    left: -1.5rem;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    z-index: 2;
+}
+
+.floating-overlay-badge p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.floating-overlay-badge strong {
+    color: #facc15;
+}
+
+.badge-glow-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #10b981;
+    animation: pulseDot 2s infinite alternate;
+}
+
+@keyframes pulseDot {
+    to { transform: scale(1.4); opacity: 0.5; }
+}
+
+/* Bottom Floor Action Block Configuration */
+.matrix-footer-action {
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-matrix-action {
+    font-family: 'Space Grotesk', sans-serif;
+    text-decoration: none;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 1.15rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.375rem;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-matrix-action:hover {
+    background-color: #facc15;
+    color: #000000;
+    box-shadow: 0 12px 24px rgba(250, 204, 21, 0.25);
+    transform: translateY(-2px);
+}
+
+/* --- Scroll Animation State Layers Initial Configs --- */
+.flank-slide-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.flank-slide-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.floor-slide-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Animation Reveal Triggers */
+.flank-slide-left.reveal-active,
+.flank-slide-right.reveal-active,
+.floor-slide-up.reveal-active {
+    opacity: 1;
+    transform: translate(0);
+}
+
+/* --- Responsive Interface Engineering --- */
+@media (max-width: 1024px) {
+    .matrix-layout-container {
+        width: 90%;
+    }
+    .matrix-content-split {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+    }
+    .matrix-image-block {
+        order: -1; /* Display technical image asset above copy blocks on medium screens */
+    }
+    .floating-overlay-badge {
+        left: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .eco-matrix-section {
+        /* Extra adaptation padding configurations for extreme mobile aspect views */
+        padding: 40px 0 25px 0;
+    }
+    .glow-card-interactive {
+        padding: 1.5rem;
+    }
+    .btn-matrix-action {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Dynamic Cursor Radial Tracking Logic for Interactive Card Glows
+    const targetCards = document.querySelectorAll('.glow-card-interactive');
+
+    targetCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const cardRect = card.getBoundingClientRect();
+            // Calculates custom position coordinates relative to card geometry bound traces
+            const cursorPositionX = e.clientX - cardRect.left;
+            const cursorPositionY = e.clientY - cardRect.top;
+
+            card.style.setProperty('--mouse-x', `${cursorPositionX}px`);
+            card.style.setProperty('--mouse-y', `${cursorPositionY}px`);
+        });
+    });
+
+    // 2. Staggered Core Element Scroll Triggers
+    const leftContentFlank = document.querySelector('.flank-slide-left');
+    const rightContentFlank = document.querySelector('.flank-slide-right');
+    const bottomActionRow = document.querySelector('.floor-slide-up');
+
+    const globalScrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Activate left and right flank reveals simultaneously
+                if (entry.target.classList.contains('flank-slide-left') || entry.target.classList.contains('flank-slide-right')) {
+                    leftContentFlank.classList.add('reveal-active');
+                    rightContentFlank.classList.add('reveal-active');
+                }
+                // Handle the action button entry independently as it enters from the floor track
+                if (entry.target.classList.contains('floor-slide-up')) {
+                    entry.target.classList.add('reveal-active');
+                }
+            }
+        });
+    }, { threshold: 0.12 });
+
+    if (leftContentFlank) globalScrollObserver.observe(leftContentFlank);
+    if (rightContentFlank) globalScrollObserver.observe(rightContentFlank);
+    if (bottomActionRow) globalScrollObserver.observe(bottomActionRow);
+});
+
+</script>
+
+<section id="about" class="mission-vision-section">
+    <div class="mission-container">
+        <!-- Section Subtitle & Main Header -->
+        <div class="mission-header-block">
+            <span class="section-badge-eyebrow">About Us</span>
+            <h2 class="scroll-word-reveal" id="aboutTitle">
+                <span>Powering</span> 
+                <span>Homes</span> 
+                <span>&</span> 
+                <span>Businesses</span> 
+                <span>with</span> 
+                <span>Smart</span> 
+                <span>Energy</span> 
+                <span>Solutions.</span>
+            </h2>
+        </div>
+
+        <!-- Layout Grid Containing Media & Dynamic Cards -->
+        <div class="mission-grid-matrix">
+            
+            <!-- Left Side: Group/Corporate Imagery (Slides in from Left Side) -->
+            <div class="mission-image-wrapper side-slide-left">
+                <img src="team-energy-experts.jpg" alt="Stackly Smart Energy Infrastructure Team" class="corporate-team-img">
+                <div class="ambient-image-glow"></div>
+            </div>
+
+            <!-- Right Side: Dual Structural Cards Container -->
+            <div class="cards-column-layout">
+                
+                <!-- Mission Card (First to appear) -->
+                <div class="vision-glow-card scroll-card-stagger">
+                    <div class="card-vector-icon-box">
+                        <!-- Custom Inline Target Vector Graphic -->
+                        <svg class="icon-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>Empowering homes and businesses with reliable, cost-saving renewable energy solutions for business and home architectures worldwide.</p>
+                </div>
+
+                <!-- Vision Card (Second to appear) -->
+                <div class="vision-glow-card scroll-card-stagger">
+                    <div class="card-vector-icon-box">
+                        <!-- Custom Inline Mountain/Flag Vector Graphic -->
+                        <svg class="icon-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 22V4c0-.5.2-1 .6-1.4C5 2.2 5.5 2 6 2h12c.5 0 1 .2 1.4.6.4.4.6.9.6 1.4v9c0 .5-.2 1-.6 1.4-.4.4-.9.6-1.4.6H6"></path>
+                            <path d="M18 22H4"></path>
+                            <path d="M4 15h14"></path>
+                        </svg>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To lead the transition to renewable energy by making clean, efficient power accessible to every home and business across decentralized grids.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Core Section Layout Framework */
+.mission-vision-section {
+    position: relative;
+    width: 100%;
+    /* Enforcing strict top: 50px and bottom: 30px padding constraints */
+    padding: 50px 0 30px 0;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.mission-container {
+    width: 80%; /* Maintaining strict structural width consistency */
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+/* Header & Eyebrow Layout */
+.mission-header-block {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section-badge-eyebrow {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #64748b;
+}
+
+/* Asymmetric Image/Card Grid Layout */
+.mission-grid-matrix {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: stretch;
+}
+
+/* Left Flank: Corporate Image Mask */
+.mission-image-wrapper {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 100%;
+    min-height: 400px;
+}
+
+.corporate-team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.mission-image-wrapper:hover .corporate-team-img {
+    transform: scale(1.03);
+}
+
+/* Underlaid Radial Yellow Ambient Energy Glow for Corporate Media */
+.ambient-image-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(250, 204, 21, 0.1) 0%, transparent 75%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.mission-image-wrapper:hover .ambient-image-glow {
+    opacity: 1;
+}
+
+/* Right Flank: Dual Cards Layout column */
+.cards-column-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+/* Modern Minimalist Card Foundations from Reference Image */
+.vision-glow-card {
+    background-color: #f8fafc; /* Crisp, ultra-light layout fill */
+    border: 1px solid #e2e8f0;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Vector Box Layout mapping back to your clean boxes layout */
+.card-vector-icon-box {
+    width: 54px;
+    height: 54px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.icon-vector {
+    width: 24px;
+    height: 24px;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.vision-glow-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.75rem;
+    color: #000000;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.vision-glow-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #475569;
+}
+
+/* Interactive Color-Glow Injection Mapping */
+.vision-glow-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    background: radial-gradient(600px circle at var(--card-mouse-x, 0px) var(--card-mouse-y, 0px), rgba(250, 204, 21, 0.12), transparent 45%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* Hover Adjustments */
+.vision-glow-card:hover {
+    background-color: #ffffff;
+    border-color: #facc15;
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(250, 204, 21, 0.06);
+}
+
+.vision-glow-card:hover::before {
+    opacity: 1;
+}
+
+.vision-glow-card:hover .card-vector-icon-box {
+    border-color: #facc15;
+    background-color: #fef08a; /* Soft Yellow Fill Accent */
+}
+
+/* --- Scroll Architecture Kinetic Animations States --- */
+
+/* Image Side Reveal */
+.side-slide-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Cards One-by-One Reveal Core Parameters */
+.scroll-card-stagger {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Active Intersection Application Classes */
+.side-slide-left.reveal-active,
+.scroll-card-stagger.reveal-active {
+    opacity: 1;
+    transform: translate(0);
+}
+
+/* --- Responsive Layout Modifiers --- */
+@media (max-width: 1024px) {
+    .mission-container {
+        width: 90%;
+    }
+    .mission-grid-matrix {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .mission-image-wrapper {
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 576px) {
+    .mission-vision-section {
+        padding: 40px 0 25px 0;
+    }
+    .vision-glow-card {
+        padding: 1.75rem;
+    }
+    .card-vector-icon-box {
+        margin-bottom: 1.25rem;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Dynamic Cursor Tracking Engine for Mission/Vision Cards
+    const glowCards = document.querySelectorAll('.vision-glow-card');
+
+    glowCards.forEach(card => {
+        card.addEventListener('mousemove', (event) => {
+            const boundaryRect = card.getBoundingClientRect();
+            const mouseCoordX = event.clientX - boundaryRect.left;
+            const mouseCoordY = event.clientY - boundaryRect.top;
+
+            card.style.setProperty('--card-mouse-x', `${mouseCoordX}px`);
+            card.style.setProperty('--card-mouse-y', `${mouseCoordY}px`);
+        });
+    });
+
+    // 2. Scrolling Stagger Mechanics: Cards Appear One by One & Image from Left
+    const corporateImage = document.querySelector('.side-slide-left');
+    const structuralCards = document.querySelectorAll('.scroll-card-stagger');
+
+    const componentObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // If it's the image container, trigger its lateral side slide slide immediately
+                if (entry.target.classList.contains('side-slide-left')) {
+                    entry.target.classList.add('reveal-active');
+                }
+
+                // If it's the right-hand column, step into item loops and stagger entry processing frames
+                if (entry.target.classList.contains('cards-column-layout')) {
+                    structuralCards.forEach((card, index) => {
+                        setTimeout(() => {
+                            card.classList.add('reveal-active');
+                        }, index * 250); // Exact sequential 250ms gap delay between cards
+                    });
+                }
+            }
+        });
+    }, { threshold: 0.15 });
+
+    // Arm target observers across layout structural reference nodes
+    if (corporateImage) componentObserver.observe(corporateImage);
+    
+    const wrapperColumn = document.querySelector('.cards-column-layout');
+    if (wrapperColumn) componentObserver.observe(wrapperColumn);
+});
+
+</script>
+
+<section id="case-studies" class="solutions-slider-section">
+    <div class="slider-layout-container">
+        <!-- Section Header Meta Track -->
+        <div class="slider-header-block">
+            <span class="section-badge-eyebrow">Case Studies</span>
+            <!-- Text reveals word-by-word from left flank -->
+            <h2 class="scroll-word-reveal lateral-word-mode" id="sliderTitle">
+                <span>Your</span> 
+                <span>One-Stop</span> 
+                <span>Solution</span> 
+                <span>for</span> 
+                <span>Clean</span> 
+                <span>Energy.</span>
+            </h2>
+        </div>
+
+        <!-- Horizontal Interactive Grid Strip -->
+        <div class="slider-viewport-mask">
+            <div class="slider-track-strip" id="caseStudiesTrack">
+                
+                <!-- Case Card 01 -->
+                <div class="case-study-glow-card scroll-card-sequential active-expansion">
+                    <div class="case-image-wrapper">
+                        <img src="ev-charging-hub.jpg" alt="Eco-Friendly EV Charging Architecture Node" class="case-bg-image">
+                        <div class="case-card-overlay"></div>
+                    </div>
+                    <div class="case-card-content">
+                        <span class="case-number-badge">01</span>
+                        <h3>Eco-Friendly EV Charging Hub</h3>
+                        <a href="404.html" class="btn-case-action">
+                            <span>Get a Free Estimate</span>
+                            <div class="arrow-vector-circle">→</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Case Card 02 -->
+                <div class="case-study-glow-card scroll-card-sequential">
+                    <div class="case-image-wrapper">
+                        <img src="homeowner-solar.jpg" alt="Residential Photovoltaic Success Deployment" class="case-bg-image">
+                        <div class="case-card-overlay"></div>
+                    </div>
+                    <div class="case-card-content">
+                        <span class="case-number-badge">02</span>
+                        <h3>A Homeowner's Solar Success</h3>
+                        <a href="404.html" class="btn-case-action minimal-trigger">
+                            <span>View Project</span>
+                            <div class="arrow-vector-circle">→</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Case Card 03 -->
+                <div class="case-study-glow-card scroll-card-sequential">
+                    <div class="case-image-wrapper">
+                        <img src="solar-transformation.jpg" alt="Commercial Solar Power Grid Transformation Matrix" class="case-bg-image">
+                        <div class="case-card-overlay"></div>
+                    </div>
+                    <div class="case-card-content">
+                        <span class="case-number-badge">03</span>
+                        <h3>Solar Power Transformation</h3>
+                        <a href="404.html" class="btn-case-action minimal-trigger">
+                            <span>View Project</span>
+                            <div class="arrow-vector-circle">→</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Case Card 04 -->
+                <div class="case-study-glow-card scroll-card-sequential">
+                    <div class="case-image-wrapper">
+                        <img src="smart-grid.jpg" alt="Decentralized Energy Distribution Matrix Grid" class="case-bg-image">
+                        <div class="case-card-overlay"></div>
+                    </div>
+                    <div class="case-card-content">
+                        <span class="case-number-badge">04</span>
+                        <h3>Autonomous Micro-Grid Deployments</h3>
+                        <a href="404.html" class="btn-case-action minimal-trigger">
+                            <span>View Project</span>
+                            <div class="arrow-vector-circle">→</div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Slider Progress & Navigation Controls Bar -->
+        <div class="slider-controls-footer">
+            <div class="progress-track-bar">
+                <div class="progress-fill-indicator" id="sliderProgressBar"></div>
+            </div>
+            <div class="navigation-arrows-box">
+                <button class="nav-arrow prev" id="slidePrevBtn" aria-label="Previous Case Study">←</button>
+                <button class="nav-arrow next" id="slideNextBtn" aria-label="Next Case Study">→</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Section Base Architecture Layout Rulesets */
+.solutions-slider-section {
+    position: relative;
+    width: 100%;
+    /* Enforcing strict top: 50px and bottom: 30px padding constraints */
+    padding: 50px 0 30px 0;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.slider-layout-container {
+    width: 80%; /* Consistent structural width architecture footprint */
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-header-block {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Word Reveal Left Side Slide Override */
+.lateral-word-mode.scroll-word-reveal span {
+    opacity: 0.1;
+    transform: translateX(-20px);
+    display: inline-block;
+    transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.lateral-word-mode.scroll-word-reveal span.active-word {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Horizontal Track System Mask */
+.slider-viewport-mask {
+    width: 100%;
+    overflow: visible;
+}
+
+.slider-track-strip {
+    display: flex;
+    gap: 1.75rem;
+    width: 100%;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Sliding Case Cards Configuration */
+.case-study-glow-card {
+    flex: 0 0 calc(33.333% - 1.25rem); /* Default grid width partition constraints */
+    min-width: 320px;
+    height: 480px;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2.5rem;
+    border: 1px solid #e2e8f0;
+    background-color: #000000;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.case-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.case-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.case-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 90%);
+    z-index: -1;
+    transition: opacity 0.4s ease;
+}
+
+/* Typography Content Layers inside Cards */
+.case-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+
+.case-number-badge {
+    position: absolute;
+    top: -120px;
+    left: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 99px;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+}
+
+.case-study-glow-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #ffffff;
+    font-size: 1.65rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+/* Call to Action Button Matrix with Glow Interfaces */
+.btn-case-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #facc15; /* Signature Brand Yellow Accent */
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.6rem 0.6rem 0.6rem 1.25rem;
+    border-radius: 99px;
+    width: fit-content;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.arrow-vector-circle {
+    width: 32px;
+    height: 32px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+/* Alternate State Card Initial Button Looks matching Image references */
+.btn-case-action.minimal-trigger {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 0;
+    width: auto;
+}
+
+.btn-case-action.minimal-trigger .arrow-vector-circle {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Creative Dynamic Glow and Expansion Effects on Hover */
+.case-study-glow-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(250, 204, 21, 0.15), transparent 50%);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* Hover States Matrix Hooks */
+.case-study-glow-card:hover {
+    border-color: #facc15;
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px rgba(250, 204, 21, 0.08);
+}
+
+.case-study-glow-card:hover::before {
+    opacity: 1;
+}
+
+.case-study-glow-card:hover .case-bg-image {
+    transform: scale(1.06);
+}
+
+.case-study-glow-card:hover .btn-case-action.minimal-trigger {
+    color: #facc15;
+}
+
+.case-study-glow-card:hover .btn-case-action.minimal-trigger .arrow-vector-circle {
+    background-color: #facc15;
+    color: #000000;
+    border-color: #facc15;
+}
+
+.case-study-glow-card:hover .arrow-vector-circle {
+    transform: rotate(-45deg);
+}
+
+/* --- Control Footer Block Layout (Image Base Reference lines) --- */
+.slider-controls-footer {
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-track-bar {
+    flex: 1;
+    max-width: 240px;
+    height: 2px;
+    background-color: #e2e8f0;
+    position: relative;
+}
+
+.progress-fill-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 25%; /* Dynamically processed relative tracking bar via script adjustments */
+    background-color: #000000;
+    transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.navigation-arrows-box {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-arrow {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #000000;
+    cursor: pointer;
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.nav-arrow:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+.nav-arrow.next {
+    background-color: #facc15;
+    border-color: #facc15;
+}
+
+.nav-arrow.next:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+/* --- Scrolling Sequential Stagger Animations Entry Parameters --- */
+.scroll-card-sequential {
+    opacity: 0;
+    transform: translateY(50px) scale(0.98);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.scroll-card-sequential.reveal-active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* --- Responsive Layout Modifiers --- */
+@media (max-width: 1200px) {
+    .case-study-glow-card {
+        flex: 0 0 calc(50% - 0.875rem); /* Toggle layout to display dual card sets */
+    }
+}
+
+@media (max-width: 1024px) {
+    .slider-layout-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .case-study-glow-card {
+        flex: 0 0 100%; /* Collapse tracks cleanly down into stacked rows metrics arrays */
+        height: 420px;
+        padding: 1.75rem;
+    }
+    .case-number-badge {
+        top: -80px;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Dynamic Cursor Radial Position Identifier for Case Grid Hover Glows
+    const caseCards = document.querySelectorAll('.case-study-glow-card');
+
+    caseCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const cardRect = card.getBoundingClientRect();
+            const posX = e.clientX - cardRect.left;
+            const posY = e.clientY - cardRect.top;
+
+            card.style.setProperty('--mouse-x', `${posX}px`);
+            card.style.setProperty('--mouse-y', `${posY}px`);
+        });
+    });
+
+    // 2. Incremental One-by-One Staggered Entry Triggers
+    const trackStrip = document.getElementById('caseStudiesTrack');
+    const sequentialCards = document.querySelectorAll('.scroll-card-sequential');
+
+    const trackObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                sequentialCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('reveal-active');
+                    }, index * 200); // 200ms sequential stagger incremental pop delay window
+                });
+                trackObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    if (trackStrip) trackObserver.observe(trackStrip);
+
+    // 3. Functional Horizontal Slider Carousel Translation System Mechanics
+    const prevBtn = document.getElementById('slidePrevBtn');
+    const nextBtn = document.getElementById('slideNextBtn');
+    const progressBar = document.getElementById('sliderProgressBar');
+    
+    let activeIndexPosition = 0;
+
+    function evaluateSliderPositionMetrics() {
+        const totalSlidesCount = caseCards.length;
+        // Determine layout dimensions to establish mobile threshold barriers dynamically
+        let visibleSplits = 3;
+        if (window.innerWidth <= 1200) visibleSplits = 2;
+        if (window.innerWidth <= 768) visibleSplits = 1;
+
+        const maxAvailableIndex = Math.max(0, totalSlidesCount - visibleSplits);
+        
+        // Enforce structural boundary limits checks
+        if (activeIndexPosition > maxAvailableIndex) activeIndexPosition = maxAvailableIndex;
+        if (activeIndexPosition < 0) activeIndexPosition = 0;
+
+        // Calculate horizontal CSS transform matrices values
+        const slideStepWidth = caseCards[0].getBoundingClientRect().width;
+        const gapSpacing = parseFloat(window.getComputedStyle(trackStrip).gap) || 0;
+        
+        const displacementValue = activeIndexPosition * (slideStepWidth + gapSpacing);
+        trackStrip.style.transform = `translateX(-${displacementValue}px)`;
+
+        // Adjust tracking progress indicators widths proportionally
+        const progressPercentage = maxAvailableIndex > 0 ? ((activeIndexPosition) / maxAvailableIndex) * 75 + 25 : 100;
+        progressBar.style.width = `${progressPercentage}%`;
+    }
+
+    if (nextBtn && prevBtn) {
+        nextBtn.addEventListener('click', () => {
+            activeIndexPosition++;
+            evaluateSliderPositionMetrics();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            activeIndexPosition--;
+            evaluateSliderPositionMetrics();
+        });
+
+        window.addEventListener('resize', evaluateSliderPositionMetrics);
+    }
+});
+
+</script>
+
+<section id="two-line-cta" class="two-line-cta-viewport">
+    <!-- Spatial Background Backdrop Imagery Layers Matrix -->
+    <div class="two-line-bg-container">
+        <!-- Replace src with your customized clean energy mesh asset path -->
+        <img src="cta-two-line-mesh.jpg" alt="Stackly Power Grid Network Mesh" class="two-line-bg-asset">
+        <div class="two-line-tint-overlay"></div>
+    </div>
+
+    <!-- Core Structural Canvas Container -->
+    <div class="two-line-canvas-matrix">
+        
+        <!-- Left Side Flank: Headings split cleanly into a strict 2-Line configuration (Slides from Left) -->
+        <div class="two-line-text-flank flank-slide-left">
+            <span class="two-line-eyebrow-tag">Immediate Grid Connection</span>
+            <h2 class="two-line-main-title">
+                <span class="line-break-node">Empower Your Enterprise Grid Architecture.</span>
+                <span class="line-break-node">Transition to Localized High-Yield Autonomy.</span>
+            </h2>
+        </div>
+
+        <!-- Right Side Flank: Trigger Action Card (Slides from Right) -->
+        <div class="two-line-action-flank flank-slide-right">
+            <div class="two-line-glow-card">
+                <p class="two-line-card-brief">Coordinate with our infrastructure team today to initiate a complete structural node simulation.</p>
+                <div class="two-line-buttons-cluster">
+                    <a href="404.html" class="btn-two-line-prime">Initialize Audit</a>
+                    <a href="404.html" class="btn-two-line-ghost">
+                        <span>Systems Map</span>
+                        <span class="vector-arrow-icon">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* Core Section Full-Width Layout Framework Configuration */
+.two-line-cta-viewport {
+    position: relative;
+    width: 100%; /* Explicit full-width constraint breaking past layout container boundaries */
+    /* Enforcing strict top: 50px and bottom: 30px padding constraints */
+    padding: 50px 0 30px 0;
+    background-color: #000000; /* Rich contrast dark infrastructure breakout segment */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background Control Array Elements Sheets Layout Layers */
+.two-line-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.two-line-bg-asset {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    mix-blend-mode: luminosity;
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.two-line-cta-viewport:hover .two-line-bg-asset {
+    transform: scale(1.03) rotate(0.2deg);
+}
+
+.two-line-tint-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 75% 50%, rgba(250, 204, 21, 0.05) 0%, rgba(0,0,0,0.95) 85%);
+    pointer-events: none;
+}
+
+/* Structural Interaction Canvas Layout Split Matrix */
+.two-line-canvas-matrix {
+    position: relative;
+    width: 80%; /* Aligned to strict master architectural tracking grids path width */
+    max-width: 1440px;
+    margin: 0 auto;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Left Flank Components Spacing Blocks */
+.two-line-text-flank {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.two-line-eyebrow-tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #facc15; /* Signature Accent Yellow Tint */
+    text-shadow: 0 0 20px rgba(250, 204, 21, 0.3);
+}
+
+.two-line-main-title {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #ffffff;
+    font-size: 2.5rem; /* Optimizing sizing scale to protect explicit 2-Line configuration grids layout */
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+    margin: 0;
+}
+
+/* Enforcing strict discrete layout text block behaviors on desktop views */
+.line-break-node {
+    display: block;
+}
+
+.line-break-node:last-child {
+    color: #facc15;
+}
+
+/* Right Flank Premium Lead Capture Card (Glow Matrices Anchored) */
+.two-line-glow-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(12px);
+    padding: 2.25rem;
+    border-radius: 1.25rem;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.two-line-card-brief {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 1.75rem;
+}
+
+.two-line-buttons-cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Interactive Triggers Styling Matrix */
+.btn-two-line-prime {
+    font-family: 'Space Grotesk', sans-serif;
+    text-decoration: none;
+    background-color: #facc15;
+    color: #000000;
+    padding: 0.9rem 1.75rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 15px rgba(250, 204, 21, 0.12);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-two-line-prime:hover {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-two-line-ghost {
+    font-family: 'Space Grotesk', sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 0.9rem 1.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.vector-arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.btn-two-line-ghost:hover {
+    background-color: rgba(255,255,255,0.04);
+    border-color: #facc15;
+    color: #facc15;
+    transform: translateY(-2px);
+}
+
+.btn-two-line-ghost:hover .vector-arrow-icon {
+    transform: translateX(4px);
+}
+
+/* Atmospheric Cursor Radial Tracking Glow Mappings */
+.two-line-glow-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25rem;
+    background: radial-gradient(400px circle at var(--twoline-x, 50%) var(--twoline-y, 50%), rgba(250, 204, 21, 0.12), transparent 45%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.two-line-glow-card:hover {
+    border-color: rgba(250, 204, 21, 0.25);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.two-line-glow-card:hover::before {
+    opacity: 1;
+}
+
+/* --- Lateral Kinetic Side Slide Entry Animation Configurations --- */
+.flank-slide-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.flank-slide-right {
+    opacity: 0;
+    transform: translateX(50px) scale(0.98);
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Intersection Reveal Trigger Hooks */
+.flank-slide-left.reveal-active,
+.flank-slide-right.reveal-active {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+/* --- Fully Fluid Responsive Breakpoints System --- */
+@media (max-width: 1200px) {
+    .two-line-main-title {
+        font-size: 2.15rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .two-line-canvas-matrix {
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 3rem;
+        text-align: center;
+    }
+    .two-line-text-flank {
+        align-items: center;
+    }
+    .line-break-node {
+        display: inline; /* Collapse line-breaks naturally into normal inline string flows on responsive breakpoints */
+    }
+    .two-line-glow-card {
+        padding: 2rem;
+        max-width: 540px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .two-line-buttons-cluster {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .two-line-cta-viewport {
+        padding: 45px 0 25px 0; /* Exact responsive adaptive padding control limits */
+    }
+    .two-line-main-title {
+        font-size: 1.75rem;
+    }
+    .two-line-glow-card {
+        padding: 1.5rem;
+    }
+    .two-line-buttons-cluster {
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn-two-line-prime, .btn-two-line-ghost {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+/* Two-line CTA visibility fix */
+#two-line-cta .two-line-text-flank,
+#two-line-cta .two-line-action-flank {
+    visibility: visible;
+}
+
+#two-line-cta .two-line-text-flank.reveal-active,
+#two-line-cta .two-line-action-flank.reveal-active {
+    opacity: 1 !important;
+    transform: translate(0) scale(1) !important;
+}
+
+</style>
+
+<script>
+
+// 2. CTA Section Reveal - Scoped to This Section Only
+const twoLineViewport = document.querySelector('#two-line-cta');
+
+if (twoLineViewport) {
+    const leftTextFlank = twoLineViewport.querySelector(
+        '.two-line-text-flank'
+    );
+
+    const rightCardFlank = twoLineViewport.querySelector(
+        '.two-line-action-flank'
+    );
+
+    const revealCTA = () => {
+        leftTextFlank?.classList.add('reveal-active');
+        rightCardFlank?.classList.add('reveal-active');
+    };
+
+    if ('IntersectionObserver' in window) {
+        const twoLineObserver = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        revealCTA();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0,
+                rootMargin: '0px'
+            }
+        );
+
+        twoLineObserver.observe(twoLineViewport);
+    } else {
+        revealCTA();
+    }
+
+    // Fallback in case the observer does not trigger
+    setTimeout(revealCTA, 1000);
+}
+</script>
+
+<section id="why-choose-us" class="differentiation-section">
+    <div class="diff-container">
+        <!-- Left Side: Img Component Layout Flank (Slides from Left) -->
+        <div class="diff-image-flank flank-slide-left">
+            <div class="image-glow-container">
+                <!-- Replace src with your renewable energy field engineers asset path -->
+                <img src="energy-engineers-field.jpg" alt="Stackly Certified Energy Infrastructure Architects" class="engineers-display-img">
+                <div class="ambient-field-glow"></div>
+            </div>
+        </div>
+
+        <!-- Right Side: Content Information Track Block (Slides from Right) -->
+        <div class="diff-content-flank flank-slide-right">
+            <span class="diff-eyebrow-tag">Why Choose Us</span>
+            
+            <!-- Title Reveals Word-by-Word on Scroll Tracking -->
+            <h2 class="scroll-word-reveal" id="diffTitle">
+                <span>Why</span> 
+                <span>Stackly</span> 
+                <span>Energy</span> 
+                <span>Stands</span> 
+                <span>Out</span>
+            </h2>
+
+            <!-- Paragraph & Features Block (Interactive Mouse Hover Glows Loaded) -->
+            <div class="diff-interactive-glow-box">
+                <p class="diff-description">
+                    With grid infrastructure modernization, tier-1 engineering architectures, and an automated load-balancing approach, Stackly goes beyond simple installations. We prioritize grid stability, edge intelligence, and highly secure micro-array energy networks, ensuring every node meets municipal payload requirements.
+                </p>
+
+                <!-- Custom Structured Features Tracking Index -->
+                <ul class="diff-features-list">
+                    <li>
+                        <span class="vector-check-circle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </span>
+                        <p>Certified Renewable Energy Infrastructure Architects</p>
+                    </li>
+                    <li>
+                        <span class="vector-check-circle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </span>
+                        <p>Tier-1 Photovoltaic & Micro-Wind Hardware Components</p>
+                    </li>
+                    <li>
+                        <span class="vector-check-circle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </span>
+                        <p>Tailored Smart Micro-Grids Synchronized to Your Load Profiles</p>
+                    </li>
+                    <li>
+                        <span class="vector-check-circle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </span>
+                        <p>Decades-Long Operational Guarantee on All Core Grid Cells</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Footer Action Anchor Block (Surfaces from Floor) -->
+            <div class="diff-action-floor floor-slide-up">
+                <a href="404.html" class="btn-diff-cta">
+                    <span>Get a Free Estimate</span>
+                    <div class="btn-arrow-circle">→</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Core Section Layout Framework Configuration */
+.differentiation-section {
+    position: relative;
+    width: 100%;
+    /* Enforcing strict top: 50px and bottom: 30px padding constraints */
+    padding: 50px 0 30px 0;
+    background-color: #ffffff; /* Consistent pristine white backdrop canvas */
+    overflow: hidden;
+}
+
+.diff-container {
+    width: 80%; /* Consistent master layout structural constraints tracking grid */
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+/* --- Left Image Area Layout --- */
+.diff-image-flank {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.image-glow-container {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.engineers-display-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.image-glow-container:hover .engineers-display-img {
+    transform: scale(1.03);
+}
+
+/* Underlaid Ambient Highlight Shadow Layer */
+.ambient-field-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(250, 204, 21, 0.1) 0%, transparent 80%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.image-glow-container:hover .ambient-field-glow {
+    opacity: 1;
+}
+
+/* --- Right Typography Content Layout --- */
+.diff-content-flank {
+    display: flex;
+    flex-direction: column;
+}
+
+.diff-eyebrow-tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #64748b;
+    margin-bottom: 0.75rem;
+}
+
+.diff-content-flank h2.scroll-word-reveal {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.75rem;
+}
+
+/* Content Box Interactive Glowing Profile */
+.diff-interactive-glow-box {
+    position: relative;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+    padding: 0.5rem 0; /* Tight spatial boundary padding lines inside stack elements */
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+.diff-description {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #475569;
+    margin-bottom: 2rem;
+    transition: color 0.3s ease;
+}
+
+/* Custom Icon List Management Layouts */
+.diff-features-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+    margin-bottom: 2.5rem;
+}
+
+.diff-features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.vector-check-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fef08a; /* Soft Yellow Indicator Background Fill Accent */
+    color: #eab308; /* Master Yellow Core Tint */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: all 0.3s ease;
+}
+
+.vector-check-circle svg {
+    width: 100%;
+    height: 100%;
+}
+
+.diff-features-list p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1e293b;
+    line-height: 1.4;
+}
+
+/* Content Hover & Glow Mechanics Trigger Mappings */
+.diff-interactive-glow-box::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    width: calc(100% + 2rem);
+    height: calc(100% + 2rem);
+    border-radius: 1.25rem;
+    background: radial-gradient(500px circle at var(--diff-mouse-x, 50%) var(--diff-mouse-y, 50%), rgba(250, 204, 21, 0.08), transparent 45%);
+    border: 1px solid rgba(250, 204, 21, 0.2);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.diff-interactive-glow-box:hover::before {
+    opacity: 1;
+}
+
+.diff-interactive-glow-box:hover .diff-description {
+    color: #000000;
+}
+
+.diff-interactive-glow-box:hover .vector-check-circle {
+    background-color: #facc15;
+    color: #000000;
+    transform: scale(1.1);
+}
+
+/* --- CTA Action Trigger Button Architecture (Matches Reference Image Layout) --- */
+.diff-action-floor {
+    display: block;
+    width: fit-content;
+}
+
+.btn-diff-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #facc15; /* Signature Brand Yellow Accent Profile */
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    border-radius: 99px;
+    gap: 1.75rem;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-arrow-circle {
+    width: 36px;
+    height: 36px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Tweaks */
+.btn-diff-cta:hover {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+.btn-diff-cta:hover .btn-arrow-circle {
+    background-color: #facc15;
+    color: #000000;
+    transform: rotate(-45deg);
+}
+
+/* --- Scroll Kinetic Transition Core Setups --- */
+.flank-slide-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.flank-slide-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.floor-slide-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Intersection Reveal Trigger Application classes state overrides */
+.flank-slide-left.reveal-active,
+.flank-slide-right.reveal-active,
+.floor-slide-up.reveal-active {
+    opacity: 1;
+    transform: translate(0);
+}
+
+/* --- Fully Fluid Responsive Breakpoints System --- */
+@media (max-width: 1024px) {
+    .diff-container {
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 3.5rem;
+    }
+    .diff-image-flank {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .diff-content-flank h2.scroll-word-reveal {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .differentiation-section {
+        padding: 40px 0 25px 0;
+    }
+    .diff-content-flank h2.scroll-word-reveal {
+        font-size: 2rem;
+    }
+    .btn-diff-cta {
+        width: 100%;
+    }
+}
+
+/* FIX: Ensure the Why Choose Us section content is visible */
+
+.differentiation-section .diff-image-flank,
+.differentiation-section .diff-content-flank,
+.differentiation-section .diff-action-floor {
+    opacity: 1;
+    transform: none;
+}
+
+/* Keep the section content visible on all screen sizes */
+.differentiation-section .diff-container {
+    position: relative;
+    z-index: 2;
+}
+
+.differentiation-section .image-glow-container,
+.differentiation-section .diff-interactive-glow-box,
+.differentiation-section .diff-features-list,
+.differentiation-section .btn-diff-cta {
+    visibility: visible;
+}
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Dynamic Cursor Position Processing Trace for Context Box Color Glow
+    const interactiveBox = document.querySelector('.diff-interactive-glow-box');
+
+    if (interactiveBox) {
+        interactiveBox.addEventListener('mousemove', (event) => {
+            const boundaries = interactiveBox.getBoundingClientRect();
+            const mouseX = event.clientX - boundaries.left;
+            const mouseY = event.clientY - boundaries.top;
+
+            interactiveBox.style.setProperty('--diff-mouse-x', `${mouseX}px`);
+            interactiveBox.style.setProperty('--diff-mouse-y', `${mouseY}px`);
+        });
+    }
+
+    // 2. Synchronized Section Scrolling Intersections Trigger Engine
+    const leftImgFlank = document.querySelector('.flank-slide-left');
+    const rightTextFlank = document.querySelector('.flank-slide-right');
+    const floorActionBtn = document.querySelector('.floor-slide-up');
+    const mainSectionTrack = document.querySelector('.differentiation-section');
+
+    const layoutIntersectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Instantly update layout state vectors
+                leftImgFlank?.classList.add('reveal-active');
+                rightTextFlank?.classList.add('reveal-active');
+                
+                // Slightly offset floor action button entry tracks to anchor loops cleanly
+                setTimeout(() => {
+                    floorActionBtn?.classList.add('reveal-active');
+                }, 350);
+
+                layoutIntersectionObserver.unobserve(entry.target);
+            }
+        });
+    }, { 
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    });
+
+    if (mainSectionTrack) {
+        layoutIntersectionObserver.observe(mainSectionTrack);
+    }
+});
+
+</script>
+
+<section id="grid-modernization" class="service-mesh-section">
+    <div class="mesh-layout-container">
+        <!-- Section Header Area -->
+        <div class="mesh-header-block">
+            <span class="section-badge-eyebrow">Core Specialization</span>
+            <!-- Letter-by-Letter interactive text container -->
+            <h2 class="scroll-letter-reveal" id="meshTitle">Architecting Energy Autonomy.</h2>
+        </div>
+
+        <!-- Asymmetric Service Array Grid -->
+        <div class="mesh-cards-grid">
+            
+            <!-- Matrix Cell 01 -->
+            <div class="mesh-interactive-card scroll-cell-pop">
+                <div class="mesh-card-media">
+                    <img src="solar-integration.jpg" alt="Stackly Solar Array Infrastructure Deployment" class="mesh-content-img">
+                    <div class="mesh-media-overlay"></div>
+                </div>
+                <div class="mesh-card-body">
+                    <div class="mesh-icon-node">⚡</div>
+                    <h3>Smart Solar Matrices</h3>
+                    <p>Deploy localized high-density photovoltaic micro-grids engineered to seamlessly balance supply and internal loads independently.</p>
+                </div>
+            </div>
+
+            <!-- Matrix Cell 02 -->
+            <div class="mesh-interactive-card scroll-cell-pop">
+                <div class="mesh-card-media">
+                    <img src="wind-kinetic.jpg" alt="Kinetic Micro-Turbine Installation Node" class="mesh-content-img">
+                    <div class="mesh-media-overlay"></div>
+                </div>
+                <div class="mesh-card-body">
+                    <div class="mesh-icon-node">💨</div>
+                    <h3>Wind Kinetic Harvesting</h3>
+                    <p>Low-velocity micro-turbines designed to optimize kinetic harvesting payloads near architectural roof boundaries.</p>
+                </div>
+            </div>
+
+            <!-- Matrix Cell 03 -->
+            <div class="mesh-interactive-card scroll-cell-pop">
+                <div class="mesh-card-media">
+                    <img src="storage-nodes.jpg" alt="Solid State Reserve Capacitor Enclosures" class="mesh-content-img">
+                    <div class="mesh-media-overlay"></div>
+                </div>
+                <div class="mesh-card-body">
+                    <div class="mesh-icon-node">🔋</div>
+                    <h3>Localized Storage Cells</h3>
+                    <p>Solid-state capacity reserves engineered to minimize utility line dropouts, preserving absolute microgrid power stability.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Core Section Layout Framework Configuration */
+.service-mesh-section {
+    position: relative;
+    width: 100%;
+    /* Enforcing strict top: 50px and bottom: 30px padding constraints */
+    padding: 50px 0 30px 0;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.mesh-layout-container {
+    width: 80%; /* Consistent master layout width layout track */
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+/* Header Config Mapping */
+.mesh-header-block {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section-badge-eyebrow {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #64748b;
+}
+
+/* Premium Letter-by-Letter Layout Grid Architecture */
+.scroll-letter-reveal {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: -0.04em;
+    line-height: 1.15;
+    display: inline-block;
+}
+
+/* Individual character properties generated on load via JS */
+.scroll-letter-reveal .reveal-letter {
+    opacity: 0.12;
+    display: inline-block;
+    transition: opacity 0.4s ease, color 0.4s ease;
+}
+
+.scroll-letter-reveal .reveal-letter.letter-active {
+    opacity: 1;
+    color: #000000;
+}
+
+/* Give special punctuation mark character deep yellow signature branding accent color */
+.scroll-letter-reveal .reveal-letter.is-punctuation {
+    color: #eab308;
+    opacity: 1;
+}
+
+/* Asymmetric Cards Array Template */
+.mesh-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.25rem;
+}
+
+/* Interactive Service Card Structures with Glow Matrices */
+.mesh-interactive-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.mesh-card-media {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.mesh-content-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.mesh-media-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%);
+    z-index: 2;
+}
+
+.mesh-card-body {
+    padding: 2.25rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.mesh-icon-node {
+    width: 48px;
+    height: 48px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.mesh-interactive-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.mesh-interactive-card p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #475569;
+}
+
+/* Atmospheric Glow Mechanics Injection Mapping for Grid Cells */
+.mesh-interactive-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25rem;
+    background: radial-gradient(600px circle at var(--mesh-x, 50%) var(--mesh-y, 50%), rgba(250, 204, 21, 0.15), transparent 45%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+/* Hover Tweaks & Back-Glow Deployment Parameters */
+.mesh-interactive-card:hover {
+    border-color: #facc15;
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px rgba(250, 204, 21, 0.08);
+}
+
+.mesh-interactive-card:hover::before {
+    opacity: 1;
+}
+
+.mesh-interactive-card:hover .mesh-content-img {
+    transform: scale(1.05);
+}
+
+.mesh-interactive-card:hover .mesh-icon-node {
+    background-color: #facc15;
+    border-color: #facc15;
+    color: #000000;
+    transform: rotate(-10deg) scale(1.05);
+}
+
+/* --- Scroll Entrance Pop Transitions Specifications --- */
+.scroll-cell-pop {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.scroll-cell-pop.reveal-active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* --- Fully Fluid Responsive Breakpoints System --- */
+@media (max-width: 1024px) {
+    .mesh-layout-container {
+        width: 90%;
+    }
+    .scroll-letter-reveal {
+        font-size: 2.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-mesh-section {
+        padding: 40px 0 25px 0;
+    }
+    .scroll-letter-reveal {
+        font-size: 2.15rem;
+    }
+    .mesh-card-body {
+        padding: 1.75rem;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Core Kinetic Letter-by-Letter Text Decomposition Setup Engine
+    const targetTitleElement = document.getElementById('meshTitle');
+    
+    if (targetTitleElement) {
+        const textContentString = targetTitleElement.textContent.trim();
+        targetTitleElement.textContent = ''; // Flush target containers clean
+
+        // Reassemble text string as single wrapped elements
+        [...textContentString].forEach(character => {
+            const letterSpan = document.createElement('span');
+            letterSpan.classList.add('reveal-letter');
+            
+            // Check if string characters are punctuation marks
+            if (character === '.') {
+                letterSpan.classList.add('is-punctuation');
+            }
+            
+            // Preserve empty white spaces strings correctly inside HTML matrices
+            letterSpan.innerHTML = character === ' ' ? '&nbsp;' : character;
+            targetTitleElement.appendChild(letterSpan);
+        });
+    }
+
+    // 2. Incremental Letter Reveal Scroll Tracking Matrix Loops
+    const generatedLetterSpans = document.querySelectorAll('.reveal-letter');
+    
+    function handleLetterRevealAnimation() {
+        const viewTriggerHeight = window.innerHeight * 0.85;
+
+        generatedLetterSpans.forEach((letter, positionIndex) => {
+            const letterBounds = letter.getBoundingClientRect();
+            
+            if (letterBounds.top < viewTriggerHeight) {
+                // Introduce structural stagger curves incrementally using character indexing position
+                setTimeout(() => {
+                    letter.classList.add('letter-active');
+                }, positionIndex * 35); // 35ms micro-interval transition time gap
+            }
+        });
+    }
+
+    // 3. Dynamic Cursor Radial Tracking Axis for Service Cards Glow
+    const meshCards = document.querySelectorAll('.mesh-interactive-card');
+
+    meshCards.forEach(card => {
+        card.addEventListener('mousemove', (event) => {
+            const cardBoundaries = card.getBoundingClientRect();
+            const posX = event.clientX - cardBoundaries.left;
+            const posY = event.clientY - cardBoundaries.top;
+
+            card.style.setProperty('--mesh-x', `${posX}px`);
+            card.style.setProperty('--mesh-y', `${posY}px`);
+        });
+    });
+
+    // 4. Grid Cells Scroll Trigger Reveal Observers
+    const popCells = document.querySelectorAll('.scroll-cell-pop');
+
+    const meshObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                popCells.forEach((cell, cellIndex) => {
+                    setTimeout(() => {
+                        cell.classList.add('reveal-active');
+                    }, cellIndex * 150); // Stagger entry columns pop sequential gaps parameters
+                });
+                meshObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    const parentGridTrack = document.querySelector('.mesh-cards-grid');
+    if (parentGridTrack) meshObserver.observe(parentGridTrack);
+
+    // Wire global event monitoring pathways loops parameters
+    window.addEventListener('scroll', handleLetterRevealAnimation, { passive: true });
+    handleLetterRevealAnimation(); // Pre-evaluate placement trace variables instantly on ready states
+});
+
+</script>
+
+<section id="testimonials" class="client-feedback-viewport">
+    <div class="feedback-layout-container">
+        
+        <!-- Section Header Metadata Header Row (Sweeps completely from side on scroll) -->
+        <div class="feedback-header-block header-slide-left">
+            <span class="feedback-eyebrow-tag">Testimonials</span>
+            <h2 class="feedback-main-title">What Our Happy Customers Are Saying</h2>
+        </div>
+
+        <!-- Four-Column Interactive Cards Grid Layout (Pop One-by-One) -->
+        <div class="feedback-cards-grid-strip" id="testimonialCardsTrack">
+            
+            <!-- Client Review Card 01 -->
+            <div class="feedback-glow-card scroll-card-pop-sequential">
+                <div class="client-avatar-wrapper">
+                    <img src="client-avatar-1.jpg" alt="Mahamud Hasan Stackly Client" class="avatar-img">
+                    <a href="404.html" class="avatar-vector-play-badge" aria-label="Play Video Testimonial">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    </a>
+                </div>
+                <div class="client-review-body">
+                    <p class="review-text">"Stackly transformed our home with an autonomous solar matrix. Professional, highly efficient load balancing, and deeply recommended!"</p>
+                    <div class="client-meta-data">
+                        <a href="404.html" class="client-name-link">Mahamud Hasan</a>
+                        <span class="client-role-tag">Infrastructure Director</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client Review Card 02 -->
+            <div class="feedback-glow-card scroll-card-pop-sequential">
+                <div class="client-avatar-wrapper">
+                    <img src="client-avatar-2.jpg" alt="Roger Schulist Stackly Client" class="avatar-img">
+                    <a href="404.html" class="avatar-vector-play-badge" aria-label="Play Video Testimonial">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    </a>
+                </div>
+                <div class="client-review-body">
+                    <p class="review-text">"The wind kinetic harvesting node deployment was incredibly clean, quiet, and works perfectly. My monthly grid utility bill is virtually gone."</p>
+                    <div class="client-meta-data">
+                        <a href="404.html" class="client-name-link">Roger Schulist</a>
+                        <span class="client-role-tag">Property Owner</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client Review Card 03 -->
+            <div class="feedback-glow-card scroll-card-pop-sequential">
+                <div class="client-avatar-wrapper">
+                    <img src="client-avatar-3.jpg" alt="Victor Jones Stackly Client" class="avatar-img">
+                    <a href="404.html" class="avatar-vector-play-badge" aria-label="Play Video Testimonial">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    </a>
+                </div>
+                <div class="client-review-body">
+                    <p class="review-text">"Seamless EV charger micro-grid pairing installation setup loop tracker! Fast, tidy architecture layout work trace lines. 10/10 engineers group."</p>
+                    <div class="client-meta-data">
+                        <a href="404.html" class="client-name-link">Victor Jones</a>
+                        <span class="client-role-tag">Operations Manager</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client Review Card 04 -->
+            <div class="feedback-glow-card scroll-card-pop-sequential">
+                <div class="client-avatar-wrapper">
+                    <img src="client-avatar-4.jpg" alt="Ms. Deanna Conestine Stackly Client" class="avatar-img">
+                    <a href="404.html" class="avatar-vector-play-badge" aria-label="Play Video Testimonial">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    </a>
+                </div>
+                <div class="client-review-body">
+                    <p class="review-text">"Battery storage nodes cell integration tracking layout was smooth. Incredible clean product support guarantees. Completely decentralized safety."</p>
+                    <div class="client-meta-data">
+                        <a href="404.html" class="client-name-link">Ms. Deanna Conestine</a>
+                        <span class="client-role-tag">Residential Developer</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* Core Section Layout Framework Configuration (Bold Brand Yellow Canvas Setup) */
+.client-feedback-viewport {
+    position: relative;
+    width: 100%;
+    /* Enforcing strict top: 50px and bottom: 30px padding constraints */
+    padding: 50px 0 30px 0;
+    background-color: #facc15; /* Signature High-Contrast Brand Yellow Background Base */
+    overflow: hidden;
+}
+
+.feedback-layout-container {
+    width: 80%; /* Consistent master framework structural boundaries grid tracking path */
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Header Text Meta Layout & Lateral Slide Base State (Appears Fully) */
+.feedback-header-block {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    
+    /* Core Title Side Slide Setup - Moves completely as one piece */
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Active side-sliding visual target trigger configuration */
+.feedback-header-block.reveal-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.feedback-eyebrow-tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.feedback-main-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin: 0;
+    color: #000000;
+}
+
+/* Testimonial Cards Layout Split Columns Matrix Grid */
+.feedback-cards-grid-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Enforces crisp matching layout from reference image */
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+/* Individual Testimonial Content Cards with Custom Tracking Glows Matrices */
+.feedback-glow-card {
+    background-color: #ffffff; /* Contrast white interior sheet layer plates */
+    border-radius: 0.75rem;
+    border: 1px solid rgba(0,0,0,0.04);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+/* Media/Avatar Housing Modules */
+.client-avatar-wrapper {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: #f1f5f9;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+/* Overlay play icon trigger anchor matching uploaded blueprint design nodes */
+.avatar-vector-play-badge {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    width: 32px;
+    height: 32px;
+    background-color: #facc15; /* Contrasting yellow circle button node trigger */
+    color: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 3;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.avatar-vector-play-badge svg {
+    width: 12px;
+    height: 12px;
+    fill: #000000;
+    transform: translateX(1px); /* Precision aesthetic center spacing offset trace */
+}
+
+.avatar-vector-play-badge:hover {
+    background-color: #000000;
+    color: #facc15;
+    transform: scale(1.1);
+}
+
+.avatar-vector-play-badge:hover svg {
+    fill: #facc15;
+    stroke: #facc15;
+}
+
+/* Card Body Review Copy Blocks Area */
+.client-review-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    gap: 1.5rem;
+}
+
+.review-text {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #334155;
+    margin: 0;
+    font-style: normal;
+}
+
+/* Client Navigation Identifiers Meta Block */
+.client-meta-data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1rem;
+}
+
+.client-name-link {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.client-name-link:hover {
+    color: #eab308;
+}
+
+.client-role-tag {
+    font-size: 0.78rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* Inverse Contrast Radial Glow Vector Mapping Engine */
+.feedback-glow-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.75rem;
+    background: radial-gradient(400px circle at var(--review-x, 50%) var(--review-y, 50%), rgba(0, 0, 0, 0.04), transparent 50%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+/* Review Cards Hover Dynamics Matrix overrides */
+.feedback-glow-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.feedback-glow-card:hover::before {
+    opacity: 1;
+}
+
+.feedback-glow-card:hover .avatar-img {
+    transform: scale(1.04);
+}
+
+/* --- One-by-One Staggered Slide Entrance Animation Configs --- */
+.scroll-card-pop-sequential {
+    opacity: 0;
+    transform: translateY(40px) scale(0.97);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.scroll-card-pop-sequential.reveal-active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* --- Fully Fluid Responsive Breakpoints Infrastructure --- */
+@media (max-width: 1200px) {
+    .feedback-cards-grid-strip {
+        grid-template-columns: repeat(2, 1fr); /* Collapse tracks seamlessly down to dual column tracks */
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .feedback-layout-container {
+        width: 90%;
+    }
+    .feedback-main-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .feedback-cards-grid-strip {
+        grid-template-columns: 1fr; /* Completely collapse columns straight into layout sheet tracks on phones */
+    }
+    .feedback-main-title {
+        font-size: 2rem;
+    }
+    .feedback-glow-card {
+        padding: 1.25rem;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Dynamic Cursor Radial Position Processing Track Loop for Feedback Cards Glow
+    const feedbackCards = document.querySelectorAll('.feedback-glow-card');
+
+    feedbackCards.forEach(card => {
+        card.addEventListener('mousemove', (event) => {
+            const boundaryBox = card.getBoundingClientRect();
+            const calcX = event.clientX - boundaryBox.left;
+            const calcY = event.clientY - boundaryBox.top;
+
+            card.style.setProperty('--review-x', `${calcX}px`);
+            card.style.setProperty('--review-y', `${calcY}px`);
+        });
+    });
+
+    // 2. Synchronized Full Header Lateral Slide Reveal Trigger
+    const feedbackHeaderBlock = document.querySelector('.feedback-header-block');
+
+    function handleHeaderRevealScroll() {
+        if (!feedbackHeaderBlock) return;
+        
+        const triggerLine = window.innerHeight * 0.88;
+        const headerBounds = feedbackHeaderBlock.getBoundingClientRect();
+
+        // Slide the entire title header container out at once when crossing screen threshold lines
+        if (headerBounds.top < triggerLine) {
+            feedbackHeaderBlock.classList.add('reveal-active');
+        }
+    }
+
+    // 3. Incremental One-by-One Staggered Cards Pop Reveal Scroll Trigger
+    const cardsGridContainer = document.getElementById('testimonialCardsTrack');
+    const sequentialReviewCards = document.querySelectorAll('.scroll-card-pop-sequential');
+
+    const reviewsScrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Step into card elements group arrays and incrementally trigger entry transitions
+                sequentialReviewCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('reveal-active');
+                    }, index * 180); // Staggers card layout presentation layers over 180ms steps traces
+                });
+                reviewsScrollObserver.unobserve(entry.target);
+            }
+        });
+    }, { 
+        threshold: 0.1,
+        rootMargin: "0px 0px -10px 0px"
+    });
+
+    if (cardsGridContainer) {
+        reviewsScrollObserver.observe(cardsGridContainer);
+    }
+
+    // Bind monitoring loops arrays parameters to frame tracking cycles
+    window.addEventListener('scroll', handleHeaderRevealScroll, { passive: true });
+    handleHeaderRevealScroll(); // Pre-evaluate placement trace variables instantly on load states
+});
+
+</script>
+
+<section id="faq-matrix" class="faq-viewport-section">
+    <div class="faq-layout-container">
+        
+        <!-- Asymmetrical Left/Right Split Workspace Grid Track -->
+        <div class="faq-split-grid">
+            
+            <!-- Left Side: Accordion Mechanics Column -->
+            <div class="faq-accordion-column">
+                <span class="section-badge-eyebrow">Intellectual Support</span>
+                
+                <!-- Title Reveals Word-by-Word on Viewport Scroll -->
+                <h2 class="scroll-word-reveal" id="faqTitle">
+                    <span>Frequently</span> 
+                    <span>Asked</span> 
+                    <span>Grid</span> 
+                    <span>Queries.</span>
+                </h2>
+
+                <!-- Staggered Accordion Group Stack (Pops One-by-One) -->
+                <div class="accordion-cards-stack" id="faqCardsStack">
+                    
+                    <!-- FAQ Card 01 -->
+                    <div class="faq-glow-card scroll-faq-card-sequential">
+                        <button class="faq-trigger-header" aria-expanded="false">
+                            <h3>How does Stackly's dynamic load balancing work?</h3>
+                            <div class="toggle-cross-vector">
+                                <span class="vector-line horizontal"></span>
+                                <span class="vector-line vertical"></span>
+                            </div>
+                        </button>
+                        <div class="faq-expansion-panel">
+                            <div class="panel-content-wrapper">
+                                <p>Our edge processing sensors monitor structural consumption metrics dynamically. If consumer appliances peak past localized baseline levels, the internal routing hub draws energy instantly from solid-state storage cells to balance line voltage seamlessly.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Card 02 -->
+                    <div class="faq-glow-card scroll-faq-card-sequential">
+                        <button class="faq-trigger-header" aria-expanded="false">
+                            <h3>Can micro-wind and solar run simultaneously?</h3>
+                            <div class="toggle-cross-vector">
+                                <span class="vector-line horizontal"></span>
+                                <span class="vector-line vertical"></span>
+                            </div>
+                        </button>
+                        <div class="faq-expansion-panel">
+                            <div class="panel-content-wrapper">
+                                <p>Yes. Stackly architectures are designed to accept multi-source kinetic payloads natively. The unified localized micro-grid prioritizes incoming kinetic inputs before distribution pathways touch active cell reserves.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Card 03 -->
+                    <div class="faq-glow-card scroll-faq-card-sequential">
+                        <button class="faq-trigger-header" aria-expanded="false">
+                            <h3>What is the typical lifecycle of localized cells?</h3>
+                            <div class="toggle-cross-vector">
+                                <span class="vector-line horizontal"></span>
+                                <span class="vector-line vertical"></span>
+                            </div>
+                        </button>
+                        <div class="faq-expansion-panel">
+                            <div class="panel-content-wrapper">
+                                <p>Our solid-state storage systems guarantee more than 10,000 complete charging and discharge operations. At normal operations parameters, the cell network maintains high efficiency layers for up to 25 operating years.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Side: Graphic Media Frame (Sweeps in from Right Flank) -->
+            <div class="faq-media-column flank-slide-right">
+                <div class="faq-image-glow-wrapper">
+                    <!-- Replace src with your custom structural blueprint asset path -->
+                    <img src="faq-hardware-blueprint.jpg" alt="Stackly Decentralized Microgrid Layout Blueprint" class="faq-display-image">
+                    <div class="ambient-blueprint-glow"></div>
+                    
+                    <!-- Creative Intersect Floating Node Overlay Badge -->
+                    <div class="floating-telemetry-badge">
+                        <div class="pulse-beacon-dot"></div>
+                        <p>Support Status: <strong>Online</strong></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* Core Section Layout Framework Configuration */
+.faq-viewport-section {
+    position: relative;
+    width: 100%;
+    /* Enforcing strict top: 50px and bottom: 30px padding constraints */
+    padding: 50px 0 30px 0;
+    background-color: #ffffff; /* Crisp canvas design profile */
+    overflow: hidden;
+}
+
+.faq-layout-container {
+    width: 80%; /* Consistent layout framework structural tracking grid width */
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Asymmetric Column Grid System */
+.faq-split-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.faq-accordion-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-badge-eyebrow {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #64748b;
+    margin-bottom: 0.75rem;
+}
+
+.faq-accordion-column h2.scroll-word-reveal {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin-bottom: 2.5rem;
+}
+
+/* Accordion Stack Enclosures */
+.accordion-cards-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+/* Individual Accordion Glow Cards Configuration */
+.faq-glow-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Header Trigger Component Track */
+.faq-trigger-header {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.75rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    gap: 1.5rem;
+    outline: none;
+}
+
+.faq-trigger-header h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    color: #000000;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+/* Custom Vector Kinetic Cross Transition Icon */
+.toggle-cross-vector {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.vector-line {
+    position: absolute;
+    background-color: #000000;
+    border-radius: 2px;
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease;
+}
+
+.vector-line.horizontal {
+    top: 8px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+
+.vector-line.vertical {
+    top: 0;
+    left: 8px;
+    width: 2px;
+    height: 100%;
+}
+
+/* Expansion panel logic container driven by script values */
+.faq-expansion-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.panel-content-wrapper {
+    padding: 0 2rem 1.75rem 2rem;
+}
+
+.panel-content-wrapper p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #475569;
+}
+
+/* Active State Styles Matrix */
+.faq-glow-card.active-panel {
+    border-color: #facc15;
+    box-shadow: 0 10px 25px rgba(250, 204, 21, 0.05);
+}
+
+.faq-glow-card.active-panel .faq-trigger-header h3 {
+    color: #eab308;
+}
+
+.faq-glow-card.active-panel .vector-line.vertical {
+    transform: rotate(90deg) scaleX(0); /* Hide vertical axis trace cleanly to reveal minus icon symbol look */
+}
+
+.faq-glow-card.active-panel .vector-line {
+    background-color: #eab308;
+}
+
+/* Cursor Glow Parameters Injection Mapping */
+.faq-glow-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.75rem;
+    background: radial-gradient(400px circle at var(--faq-x, 50%) var(--faq-y, 50%), rgba(250, 204, 21, 0.08), transparent 45%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.faq-glow-card:hover::before {
+    opacity: 1;
+}
+
+.faq-glow-card:hover {
+    border-color: #facc15;
+}
+
+/* --- Right Side Column Image Layout Design --- */
+.faq-media-column {
+    position: relative;
+    width: 100%;
+}
+
+.faq-image-glow-wrapper {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: visible;
+    padding: 10px;
+}
+
+/* Underlaid Diffused Glow Background Aura Trace for Media */
+.faq-image-glow-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    background: radial-gradient(circle, rgba(250, 204, 21, 0.3) 0%, transparent 75%);
+    filter: blur(35px);
+    z-index: -1;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+}
+
+.faq-display-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1.25rem;
+    border: 1px solid #e2e8f0;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.faq-image-glow-wrapper:hover::after {
+    opacity: 0.8;
+    transform: scale(1.03);
+}
+
+.faq-image-glow-wrapper:hover .faq-display-image {
+    transform: scale(1.01);
+    border-color: #facc15;
+}
+
+/* Floating Overlay badge node indicator */
+.floating-telemetry-badge {
+    position: absolute;
+    top: 2.5rem;
+    left: -1.5rem;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.85rem 1.25rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    z-index: 3;
+}
+
+.floating-telemetry-badge p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.floating-telemetry-badge strong {
+    color: #facc15;
+}
+
+.pulse-beacon-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #10b981;
+    animation: beaconAnimation 1.8s infinite alternate;
+}
+
+@keyframes beaconAnimation {
+    to { transform: scale(1.35); opacity: 0.6; }
+}
+
+/* --- Scroll Entrance Timelines Animations Specifications --- */
+.scroll-faq-card-sequential {
+    opacity: 0;
+    transform: translateY(35px) scale(0.98);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.scroll-faq-card-sequential.reveal-active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.flank-slide-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.flank-slide-right.reveal-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* --- Fully Fluid Responsive Breakpoints System --- */
+@media (max-width: 1024px) {
+    .faq-layout-container {
+        width: 90%;
+    }
+    .faq-split-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    .faq-media-column {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+    .floating-telemetry-badge {
+        left: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .faq-viewport-section {
+        padding: 40px 0 25px 0;
+    }
+    .faq-accordion-column h2.scroll-word-reveal {
+        font-size: 2.25rem;
+    }
+    .faq-trigger-header {
+        padding: 1.25rem 1.5rem;
+    }
+    .panel-content-wrapper {
+        padding: 0 1.5rem 1.25rem 1.5rem;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Dynamic Cursor Radial Tracking Axis for Accordion Cards Glow
+    const faqCardsList = document.querySelectorAll('.faq-glow-card');
+
+    faqCardsList.forEach(card => {
+        card.addEventListener('mousemove', (event) => {
+            const rect = card.getBoundingClientRect();
+            const posX = event.clientX - rect.left;
+            const posY = event.clientY - rect.top;
+
+            card.style.setProperty('--faq-x', `${posX}px`);
+            card.style.setProperty('--faq-y', `${posY}px`);
+        });
+    });
+
+    // 2. Core Functional Expand/Collapse Accordion Slide Logic Trace
+    const accordionTriggers = document.querySelectorAll('.faq-trigger-header');
+
+    accordionTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const currentCard = trigger.closest('.faq-glow-card');
+            const correspondingPanel = currentCard.querySelector('.faq-expansion-panel');
+            const isCurrentlyExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+            // Close out any active panels in the stack first to enforce a clean single-open layout
+            document.querySelectorAll('.faq-glow-card').forEach(openCard => {
+                if (openCard !== currentCard && openCard.classList.contains('active-panel')) {
+                    openCard.classList.remove('active-panel');
+                    openCard.querySelector('.faq-expansion-panel').style.maxHeight = '0';
+                    openCard.querySelector('.faq-trigger-header').setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Toggle active interface matrix layers dynamically on current element
+            if (!isCurrentlyExpanded) {
+                currentCard.classList.add('active-panel');
+                // Set explicitly via client target scroll height metrics paths vectors
+                correspondingPanel.style.maxHeight = `${correspondingPanel.scrollHeight}px`;
+                trigger.setAttribute('aria-expanded', 'true');
+            } else {
+                currentCard.classList.remove('active-panel');
+                correspondingPanel.style.maxHeight = '0';
+                trigger.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+
+    // 3. Staggered FAQ Columns & Cards Entry Scroll Observers
+    const cardsStackTrack = document.getElementById('faqCardsStack');
+    const structuralFaqCards = document.querySelectorAll('.scroll-faq-card-sequential');
+    const rightMediaFlank = document.querySelector('.flank-slide-right');
+
+    const faqScrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Trigger right flank media block reveal instantly
+                rightMediaFlank?.classList.add('reveal-active');
+
+                // Step sequentially through accordion elements and deploy pop classes
+                structuralFaqCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('reveal-active');
+                    }, index * 160); // Clean 160ms incremental delay step between list nodes
+                });
+
+                faqScrollObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+
+    if (cardsStackTrack) {
+        faqScrollObserver.observe(cardsStackTrack);
+    }
+});
+
+</script>
+
+<section id="insights" class="blog-grid-viewport">
+    <div class="blog-layout-container">
+        
+        <!-- Section Header Row (Surfaces from the Bottom) -->
+        <div class="blog-header-block floor-slide-up">
+            <span class="section-badge-eyebrow">Grid Insights</span>
+            <h2 class="blog-main-title">Latest Technical Infrastructure Briefings.</h2>
+        </div>
+
+        <!-- Asymmetric Blog Matrix (Cards sweep from left and right flanks) -->
+        <div class="blog-cards-grid" id="blogCardsGrid">
+            
+            <!-- Blog Card 01 (Sweeps in from Left Margin) -->
+            <div class="blog-glow-card flank-slide-left">
+                <div class="blog-card-media">
+                    <img src="blog-post-1.jpg" alt="Decentralized grid optimization arrays chart" class="blog-display-img">
+                    <span class="blog-category-tag">Engineering</span>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-date-meta">October 12, 2026</span>
+                    <h3>Architecting Edge Load-Balancing Models</h3>
+                    <p>An deep-dive analysis of how localized routing nodes process unexpected residential utility surges using solid-state micro-capacitors.</p>
+                    <a href="404.html" class="blog-read-more-btn">
+                        <span>Read Intelligence Briefing</span>
+                        <span class="vector-arrow-icon">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Blog Card 02 (Sweeps in from Right Margin) -->
+            <div class="blog-glow-card flank-slide-right">
+                <div class="blog-card-media">
+                    <img src="blog-post-2.jpg" alt="Kinetic macro turbine hardware systems" class="blog-display-img">
+                    <span class="blog-category-tag">Hardware</span>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-date-meta">October 08, 2026</span>
+                    <h3>Evaluating Kinetic Payloads in Low-Velocity Zones</h3>
+                    <p>Examining field-test diagnostics of mag-lev micro-turbines deployed across complex, high-density municipal roof boundaries.</p>
+                    <a href="404.html" class="blog-read-more-btn">
+                        <span>Read Intelligence Briefing</span>
+                        <span class="vector-arrow-icon">→</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Core Section Layout Framework Configuration */
+.blog-grid-viewport {
+    position: relative;
+    width: 100%;
+    /* Enforcing strict top: 50px and bottom: 30px padding constraints */
+    padding: 50px 0 30px 0;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.blog-layout-container {
+    width: 80%; /* Consistent structural master framework tracking constraint width */
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+/* Header Config Mapping */
+.blog-header-block {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section-badge-eyebrow {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #64748b;
+}
+
+.blog-main-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin: 0;
+}
+
+/* Dual Column Card Grid Layout */
+.blog-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: stretch;
+}
+
+/* Interactive Blog Cards Structure with Custom Tracking Glows Matrices */
+.blog-glow-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Card Media/Image Housing Modules */
+.blog-card-media {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+}
+
+.blog-display-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.blog-category-tag {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+/* Card Body Typography Spacing Blocks */
+.blog-card-body {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+}
+
+.blog-date-meta {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #64748b;
+}
+
+.blog-glow-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.65rem;
+    color: #000000;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.blog-glow-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #475569;
+    margin-bottom: 1rem;
+}
+
+/* Action Trigger Button Matrix */
+.blog-read-more-btn {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.vector-arrow-icon {
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Hover Tweaks & Back-Glow Dynamic Parameter Mappings */
+.blog-glow-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25rem;
+    background: radial-gradient(600px circle at var(--blog-x, 50%) var(--blog-y, 50%), rgba(250, 204, 21, 0.12), transparent 45%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.blog-glow-card:hover {
+    border-color: #facc15;
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px rgba(250, 204, 21, 0.06);
+}
+
+.blog-glow-card:hover::before {
+    opacity: 1;
+}
+
+.blog-glow-card:hover .blog-display-img {
+    transform: scale(1.04);
+}
+
+.blog-glow-card:hover .blog-category-tag {
+    background-color: #facc15;
+    color: #000000;
+}
+
+.blog-glow-card:hover h3 {
+    color: #eab308;
+}
+
+.blog-glow-card:hover .vector-arrow-icon {
+    transform: translateX(6px);
+}
+
+/* --- Scroll Kinetic Entry Animations Specifications --- */
+.floor-slide-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.flank-slide-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.flank-slide-right {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Active Intersection Application State Override Hooks */
+.floor-slide-up.reveal-active,
+.flank-slide-left.reveal-active,
+.flank-slide-right.reveal-active {
+    opacity: 1;
+    transform: translate(0);
+}
+
+/* --- Fully Fluid Responsive Breakpoints System --- */
+@media (max-width: 1024px) {
+    .blog-layout-container {
+        width: 90%;
+    }
+    .blog-cards-grid {
+        grid-template-columns: 1fr; /* Collapse card stack rows down to single columns on tablets */
+        gap: 2.5rem;
+    }
+    .blog-main-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .blog-grid-viewport {
+        padding: 40px 0 25px 0;
+    }
+    .blog-main-title {
+        font-size: 2rem;
+    }
+    .blog-card-media {
+        height: 200px;
+    }
+    .blog-card-body {
+        padding: 1.75rem;
+    }
+}
+
+
+/* Blog section visibility safeguard */
+#insights .blog-header-block,
+#insights .blog-glow-card {
+    visibility: visible;
+}
+
+/* Fallback if scroll animation is not triggered */
+#insights .blog-header-block,
+#insights .blog-glow-card {
+    opacity: 1;
+    transform: none;
+}
+
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Target only elements inside the Blog section
+    const blogSection = document.querySelector('#insights');
+
+    if (!blogSection) return;
+
+    const insightCardsList =
+        blogSection.querySelectorAll('.blog-glow-card');
+
+    const blogHeader =
+        blogSection.querySelector('.blog-header-block');
+
+    const blogCardsContainer =
+        blogSection.querySelector('#blogCardsGrid');
+
+    const blogLeftCard =
+        blogSection.querySelector('.blog-glow-card.flank-slide-left');
+
+    const blogRightCard =
+        blogSection.querySelector('.blog-glow-card.flank-slide-right');
+
+    // Cursor glow effect for blog cards
+    insightCardsList.forEach(card => {
+        card.addEventListener('mousemove', event => {
+            const rect = card.getBoundingClientRect();
+
+            card.style.setProperty(
+                '--blog-x',
+                `${event.clientX - rect.left}px`
+            );
+
+            card.style.setProperty(
+                '--blog-y',
+                `${event.clientY - rect.top}px`
+            );
+        });
+    });
+
+    // Reveal the blog header and cards when scrolled into view
+    const blogScrollObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+
+            if (entry.target === blogHeader) {
+                blogHeader.classList.add('reveal-active');
+            }
+
+            if (entry.target === blogCardsContainer) {
+                blogLeftCard?.classList.add('reveal-active');
+                blogRightCard?.classList.add('reveal-active');
+            }
+
+            blogScrollObserver.unobserve(entry.target);
+        });
+    }, {
+        threshold: 0.05,
+        rootMargin: '0px 0px 0px 0px'
+    });
+
+    if (blogHeader) {
+        blogScrollObserver.observe(blogHeader);
+    }
+
+    if (blogCardsContainer) {
+        blogScrollObserver.observe(blogCardsContainer);
+    }
+
+});
+</script>
+
+<section id="subscribe-terminal" class="fullwidth-subscribe-viewport">
+    <!-- Spatial Background Backdrop Imagery Layers Matrix -->
+    <div class="subscribe-backdrop-layer">
+        <!-- Replace src with your customized solar grid asset path -->
+        <img src="subscribe-matrix-mesh.jpg" alt="Stackly Distributed Cell Infrastructure network grid" class="subscribe-bg-asset">
+        <div class="subscribe-tint-overlay"></div>
+    </div>
+
+    <!-- Core Content Canvas Grid Layout Track -->
+    <div class="subscribe-canvas-matrix">
+        
+        <!-- Left Column: Typography Layout Briefing (Slides from Left Flank) -->
+        <div class="subscribe-text-flank flank-slide-left">
+            <span class="subscribe-badge-eyebrow">Telemetry Updates</span>
+            <h2 class="subscribe-main-heading">Subscribe to the <span>Stackly Grid Matrix.</span></h2>
+            <p class="subscribe-subtext">Receive automated technical node briefing logs, capacity optimization analysis, and decentralized architecture release telemetry notes.</p>
+        </div>
+
+        <!-- Right Column: Validating Lead Capture Control Card (Slides from Right Flank) -->
+        <div class="subscribe-form-flank flank-slide-right">
+            <div class="subscribe-glow-card">
+                <form id="gridSubscribeForm" class="terminal-capture-form" novalidate>
+                    
+                    <!-- Email Data Field Node Layout -->
+                    <div class="form-input-group">
+                        <label for="subscriberEmail">Secure Core Node Routing Email</label>
+                        <div class="input-vector-field-wrapper">
+                            <span class="input-field-icon">✉</span>
+                            <input type="email" id="subscriberEmail" placeholder="node@stackly-infrastructure.com" required autocomplete="off">
+                        </div>
+                    </div>
+
+                    <!-- Micro Prompt Matrix Notification Overlay Track Bar -->
+                    <div class="form-validation-prompt-box" id="validationPromptMessage">
+                        <!-- Content injected via modern script validation traces loops dynamically -->
+                    </div>
+
+                    <!-- Trigger Access Operational Activation Button -->
+                    <button type="submit" class="btn-terminal-submit-trigger">
+                        <span>Initialize Node Subscription</span>
+                        <div class="btn-arrow-vector-circle">→</div>
+                    </button>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* Core Section Full-Width Layout Framework Configuration */
+.fullwidth-subscribe-viewport {
+    position: relative;
+    width: 100%; /* Explicit full-width constraint breaking past layout container widths */
+    /* Enforcing strict top: 50px and bottom: 30px padding constraints */
+    padding: 50px 0 30px 0;
+    background-color: #000000; /* Deep charcoal dark infrastructure baseline accent */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background Control Array Elements Sheets Layout Layers */
+.subscribe-backdrop-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.subscribe-bg-asset {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25; /* Subdued structural background image layout tracking */
+    mix-blend-mode: luminosity;
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.fullwidth-subscribe-viewport:hover .subscribe-bg-asset {
+    transform: scale(1.03) rotate(-0.5deg);
+}
+
+.subscribe-tint-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(250, 204, 21, 0.06) 0%, rgba(0,0,0,0.95) 85%);
+    pointer-events: none;
+}
+
+/* Structural Interaction Canvas Layout Split Matrix */
+.subscribe-canvas-matrix {
+    position: relative;
+    width: 80%; /* Aligned to strict master architectural tracking grids path width */
+    max-width: 1440px;
+    margin: 0 auto;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+/* Left Flank Components Spacing Blocks */
+.subscribe-text-flank {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.subscribe-badge-eyebrow {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #facc15; /* Signature Accent Yellow Tint */
+    text-shadow: 0 0 20px rgba(250, 204, 21, 0.3);
+}
+
+.subscribe-main-heading {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #ffffff;
+    font-size: 3.25rem;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    margin: 0;
+}
+
+.subscribe-main-heading span {
+    color: #facc15;
+}
+
+.subscribe-subtext {
+    color: #94a3b8;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 540px;
+}
+
+/* Right Flank Premium Lead Capture Card (Glow Matrices Anchored) */
+.subscribe-glow-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.terminal-capture-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Input Fields Modules Configurations */
+.form-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.form-input-group label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.input-vector-field-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-field-icon {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.terminal-capture-form input[type="email"] {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 1.1rem 1.25rem 1.1rem 3.2rem;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.terminal-capture-form input[type="email"]:focus {
+    border-color: #facc15;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.05);
+}
+
+.terminal-capture-form input[type="email"]:focus + .input-field-icon {
+    color: #facc15;
+}
+
+/* Custom Notification Prompt Display Field Base */
+.form-validation-prompt-box {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-radius: 0.25rem;
+}
+
+.form-validation-prompt-box.error-alert {
+    color: #ef4444; /* Kinetic warning alert crimson red text look */
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.2);
+}
+
+/* Operation Submit Button Module */
+.btn-terminal-submit-trigger {
+    width: 100%;
+    background-color: #facc15; /* Signature brand core yellow fill profile */
+    border: none;
+    outline: none;
+    color: #000000;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.6rem 0.6rem 0.6rem 1.75rem;
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(250, 204, 21, 0.15);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-arrow-vector-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Button hover mappings profiles */
+.btn-terminal-submit-trigger:hover {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-terminal-submit-trigger:hover .btn-arrow-vector-circle {
+    background-color: #facc15;
+    color: #000000;
+    transform: rotate(-45deg);
+}
+
+/* Atmospheric Cursor Radial Tracking Glow Mappings */
+.subscribe-glow-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+    background: radial-gradient(500px circle at var(--sub-x, 50%) var(--sub-y, 50%), rgba(250, 204, 21, 0.12), transparent 45%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.subscribe-glow-card:hover {
+    border-color: rgba(250, 204, 21, 0.3);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+.subscribe-glow-card:hover::before {
+    opacity: 1;
+}
+
+/* --- Lateral Kinetic Side Slide Entry Animation Configurations --- */
+.flank-slide-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.flank-slide-right {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Active Intersection Reveal Application classes state overrides */
+.flank-slide-left.reveal-active,
+.flank-slide-right.reveal-active {
+    opacity: 1;
+    transform: translate(0);
+}
+
+/* --- Fully Fluid Responsive Breakpoints System --- */
+@media (max-width: 1200px) {
+    .subscribe-main-heading {
+        font-size: 2.75rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .subscribe-canvas-matrix {
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 3.5rem;
+        text-align: center;
+    }
+    .subscribe-text-flank {
+        align-items: center;
+    }
+    .subscribe-glow-card {
+        padding: 2.5rem;
+        max-width: 580px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .fullwidth-subscribe-viewport {
+        padding: 45px 0 25px 0;
+    }
+    .subscribe-main-heading {
+        font-size: 2.15rem;
+    }
+    .subscribe-glow-card {
+        padding: 1.75rem;
+    }
+    .btn-terminal-submit-trigger {
+        padding: 0.5rem 0.5rem 0.5rem 1.25rem;
+    }
+}
+
+
+/* Subscription section: prevent invisible content */
+#subscribe-terminal .subscribe-text-flank,
+#subscribe-terminal .subscribe-form-flank {
+    visibility: visible;
+}
+
+/* Ensure the content remains visible after the reveal animation */
+#subscribe-terminal .subscribe-text-flank.reveal-active,
+#subscribe-terminal .subscribe-form-flank.reveal-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+</style>
+
+<script>
+  
+// 3. Subscription Section Scroll Animation Fix
+const subscribeViewport = document.querySelector(
+    '#subscribe-terminal.fullwidth-subscribe-viewport'
+);
+
+if (subscribeViewport) {
+    const leftTextFlank = subscribeViewport.querySelector(
+        '.subscribe-text-flank'
+    );
+
+    const rightFormFlank = subscribeViewport.querySelector(
+        '.subscribe-form-flank'
+    );
+
+    const revealSubscribeContent = () => {
+        leftTextFlank?.classList.add('reveal-active');
+        rightFormFlank?.classList.add('reveal-active');
+    };
+
+    if ('IntersectionObserver' in window) {
+        const subscribeIntersectionObserver = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        revealSubscribeContent();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0,
+                rootMargin: '0px 0px 150px 0px'
+            }
+        );
+
+        subscribeIntersectionObserver.observe(subscribeViewport);
+    } else {
+        revealSubscribeContent();
+    }
+
+    // Fallback: reveal the content if the observer does not trigger
+    setTimeout(revealSubscribeContent, 1200);
+}
+
+</script>
+
+<footer class="global-footer-viewport">
+    <div class="footer-layout-container">
+        
+        <!-- Four-Column Principal Grid Architecture -->
+        <div class="footer-principal-grid">
+            
+            <!-- Column 1: Brand & Inline SVG Social Vectors -->
+            <div class="footer-brand-column">
+                <a href="#" id="footerBackToTop" class="footer-logo-link" aria-label="Scroll back to top">
+                    <img src="logo-yellow.svg" alt="Stackly Renewable Energy Logo" class="footer-brand-logo">
+                </a>
+                <p class="footer-brand-description">
+                    Delivering premier renewable energy solutions and high fidelity grid architectures engineered to fuel sustainable electrification straight to your infrastructure.
+                </p>
+                
+                <!-- SVG Vector Social Links Group -->
+                <div class="footer-social-cluster">
+                    <!-- Instagram -->
+                    <a href="404.html" class="social-icon-node" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    
+                    <!-- YouTube -->
+                    <a href="404.html" class="social-icon-node" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.95 1.96C5.12 19.5 12 19.5 12 19.5s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                        </svg>
+                    </a>
+                    
+                    <!-- LinkedIn -->
+                    <a href="404.html" class="social-icon-node" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+
+                    <!-- Facebook -->
+                    <a href="404.html" class="social-icon-node" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Explore Tracks -->
+            <div class="footer-links-column">
+                <h4 class="column-title-underline">Explore Tracks</h4>
+                <ul class="footer-links-list">
+                    <li><a href="404.html">Nearby Grids</a></li>
+                    <li><a href="404.html">Micro Solutions</a></li>
+                    <li><a href="404.html">Daily Power Flash</a></li>
+                    <li><a href="404.html">Eco-Friendly Pack</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Order Support -->
+            <div class="footer-links-column">
+                <h4 class="column-title-underline">Order Support</h4>
+                <ul class="footer-links-list">
+                    <li><a href="404.html">Live Courier Status</a></li>
+                    <li><a href="404.html">Refund Parameters</a></li>
+                    <li><a href="404.html">Help & FAQ Center</a></li>
+                    <li><a href="404.html">Safety Certifications</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Headquarters Location -->
+            <div class="footer-links-column contact-info-column">
+                <h4 class="column-title-underline">Headquarters Location</h4>
+                <div class="contact-meta-item">
+                    <span class="meta-icon">📍</span>
+                    <p class="meta-text">
+                        MMR Complex,<br>
+                        Periyakollappatty,<br>
+                        Chinna Thirupathi, Salem,<br>
+                        Tamil Nadu 636008
+                    </p>
+                </div>
+                <div class="contact-meta-item phone-highlight">
+                    <span class="meta-icon">📞</span>
+                    <a href="tel:+917010792745" class="phone-link">+91 7010792745</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Horizontal Sub-Footer Content Strip Row -->
+        <div class="footer-base-strip">
+            <p class="copyright-text">&copy; 2026 Stackly Industries. All delivery rights reserved.</p>
+            <div class="sub-footer-links">
+                <a href="404.html">Privacy Policy</a>
+                <a href="404.html">Terms of Service</a>
+                <a href="404.html">Cookie Management</a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<style>
+    /* --- Ultra-Premium Domain Footer Architecture --- */
+.global-footer-viewport {
+    width: 100%;
+    background-color: #0c0a09; /* Deep charcoal black theme from image */
+    padding: 60px 0 30px 0;
+    border-top: 1px solid #1c1917;
+}
+
+.footer-layout-container {
+    width: 80%; /* Consistent structural width alignment constraint */
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* Four-Column Master Grid Template Layout */
+.footer-principal-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
+    gap: 3rem;
+}
+
+/* Column 1 Content Styling Layout */
+.footer-brand-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-brand-logo {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.footer-brand-logo:hover {
+    transform: scale(1.02);
+}
+
+.footer-brand-description {
+    color: #a8a29e; /* Muted stone grey text font color from screenshot */
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 320px;
+}
+
+.footer-social-cluster {
+    display: flex;
+    gap: 0.75rem;
+}
+
+/* Inline SVG Wrapper Node Configuration */
+.social-icon-node {
+    width: 38px;
+    height: 38px;
+    background-color: #1c1917;
+    border: 1px solid #2e2a24;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #a8a29e; /* Initial gray icon profile */
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.social-icon-node svg {
+    width: 18px;
+    height: 18px;
+    transition: stroke 0.3s ease, fill 0.3s ease;
+}
+
+/* Hover Adjustments: Transforms stroke to signature crisp dark black outline inside yellow fill */
+.social-icon-node:hover {
+    background-color: #facc15; 
+    border-color: #facc15;
+    color: #000000;
+    transform: translateY(-3px);
+}
+
+.social-icon-node:hover svg {
+    color: #000000;
+}
+
+/* Links Columns Styling Layouts Setup */
+.column-title-underline {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1.75rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    width: fit-content;
+}
+
+/* The striking indicator accent underscore lines straight from the screenshot */
+.column-title-underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #facc15; /* Signature brand yellow line target */
+}
+
+.footer-links-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.footer-links-list a {
+    color: #a8a29e;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.25s ease, padding-left 0.25s ease;
+}
+
+.footer-links-list a:hover {
+    color: #facc15;
+    padding-left: 4px;
+}
+
+/* Column 4 Context Info Specific Modules styling */
+.contact-info-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-meta-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    margin-bottom: 1.25rem;
+}
+
+.meta-icon {
+    color: #facc15;
+    font-size: 1.1rem;
+    margin-top: 2px;
+}
+
+.meta-text {
+    color: #a8a29e;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.phone-highlight {
+    margin-top: 1.5rem;
+}
+
+.phone-link {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #facc15; /* Highlighted telephone value from reference image */
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: color 0.25s ease;
+}
+
+.phone-link:hover {
+    color: #ffffff;
+}
+
+/* --- Base Strip Rows Footprints --- */
+.footer-base-strip {
+    border-top: 1px solid #1c1917;
+    padding-top: 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright-text {
+    color: #78716c;
+    font-size: 0.8rem;
+}
+
+.sub-footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.sub-footer-links a {
+    color: #78716c;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.2s ease;
+}
+
+.sub-footer-links a:hover {
+    color: #ffffff;
+}
+
+/* --- Fully Fluid Responsive Breakpoints Infrastructure --- */
+@media (max-width: 1024px) {
+    .footer-layout-container {
+        width: 90%;
+    }
+    .footer-principal-grid {
+        grid-template-columns: 1fr 1fr; /* Toggle down columns tracks grid layout on tablets */
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer-principal-grid {
+        grid-template-columns: 1fr; /* Completely collapse columns on phones */
+        gap: 2.5rem;
+    }
+    .footer-base-strip {
+        flex-direction: column;
+        gap: 1.25rem;
+        text-align: center;
+    }
+    .sub-footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // Programmatic Back-To-Top Anchor Click Handler Action
+    const backToTopTrigger = document.getElementById('footerBackToTop');
+
+    if (backToTopTrigger) {
+        backToTopTrigger.addEventListener('click', (event) => {
+            event.preventDefault(); // Stop raw anchor hop navigation trace lines
+            
+            // Execute premium smooth tracking scroll velocity up to coordinate index zero
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
+
+</script>
+</body>
+</html>
