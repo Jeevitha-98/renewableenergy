@@ -1,0 +1,3327 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | Eco-Energy Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Creative Preloader Core Infrastructure -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <!-- SVG Vector Stackly Kinetic Icon -->
+            <svg class="stackly-logo-vector" viewBox="0 0 100 100" xmlns="http://w3.org">
+                <rect class="stack-layer layer-1" x="25" y="65" width="50" height="12" rx="4" fill="#eab308" />
+                <rect class="stack-layer layer-2" x="25" y="47" width="50" height="12" rx="4" fill="#facc15" />
+                <rect class="stack-layer layer-3" x="25" y="29" width="50" height="12" rx="4" fill="#fef08a" />
+            </svg>
+            <h1 class="preloader-brand">Stackly</h1>
+            <div class="loading-track">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Default Main Website Body Template -->
+ 
+
+ <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // Core Preloader Dismissal Protocol
+    const preloader = document.getElementById('preloader');
+    
+    // Explicit 2-second timeout window matching system constraints
+    setTimeout(() => {
+        if (preloader) {
+            preloader.classList.add('fade-out');
+        }
+    }, 2000); 
+});
+
+ </script>
+
+ <header class="header-container">
+    <div class="header-content">
+        
+        <a href="#" id="brandLogo" class="logo-link" aria-label="Stackly Home">
+            <img src="logo.svg" alt="Stackly Logo" class="brand-logo">
+        </a>
+
+        <!-- Main Navigation Links Container -->
+        <nav class="nav-wrapper" id="navWrapper">
+             <ul class="nav-menu">
+                <li><a href="index.html" class="nav-item ">Home</a></li>
+                <li><a href="infrastructure.html" class="nav-item active">Infrastructure</a></li>
+                <li><a href="Analytics.html" class="nav-item">Analytics</a></li>
+                <li><a href="blogs.html" class="nav-item">Blogs</a></li>
+                <li><a href="contact.html" class="nav-item">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Access Controls (Right Aligned) -->
+        <div class="auth-wrapper">
+            <a href="login.html" class="btn-auth">Launch App</a>
+            <!-- Accessible Kinetic Vector Hamburger Mechanism -->
+            <button class="hamburger" id="mobileMenuToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Core Brand Logo Page Refresh Event Mechanism
+    const brandLogo = document.getElementById('brandLogo');
+    if (brandLogo) {
+        brandLogo.addEventListener('click', (event) => {
+            event.preventDefault(); // Halt standard anchor routing paths execution trace
+            window.location.reload(); // Enforce strict clear programmatic cache refresh
+        });
+    }
+
+    // 2. Mobile Vector Hamburger Navigation Overlay & Scroll Lock Controller
+    const toggleButton = document.getElementById('mobileMenuToggle');
+    const navigationMenu = document.getElementById('navWrapper');
+    const applicationBody = document.body;
+
+    if (toggleButton && navigationMenu) {
+        toggleButton.addEventListener('click', () => {
+            const isMenuCurrentlyExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+            
+            // Toggle active interface matrix layers classes
+            toggleButton.classList.toggle('active');
+            navigationMenu.classList.toggle('active');
+            
+            // Lock background window page viewing metrics scroll traces dynamically
+            applicationBody.classList.toggle('scroll-lock');
+            
+            // Adjust system context access states
+            toggleButton.setAttribute('aria-expanded', !isMenuCurrentlyExpanded);
+        });
+    }
+
+    // 3. Dynamic Active Navigation Link State Controller
+    const navigationItems = document.querySelectorAll('.nav-item');
+    
+    navigationItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Strip out out-dated system target items indicators cleanly
+            document.querySelector('.nav-item.active')?.classList.remove('active');
+            
+            // Enforce focus state targets metrics updates
+            item.classList.add('active');
+
+            // Force close navigation views states arrays dynamically when browsing steps execute targets via viewport screen scales 
+            if (navigationMenu.classList.contains('active')) {
+                toggleButton.classList.remove('active');
+                navigationMenu.classList.remove('active');
+                applicationBody.classList.remove('scroll-lock');
+                toggleButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+});
+
+</script>
+
+<section id="infrastructure-hero" class="infra-hero-viewport">
+    <!-- Abstract Tech Mesh Vector Graphic Backdrop (Positioned Left) -->
+    <div class="infra-vector-backdrop">
+        <svg viewBox="0 0 100 100" fill="none" stroke="rgba(250, 204, 21, 0.04)" stroke-width="0.5">
+            <circle cx="50" cy="50" r="40" stroke-dasharray="2 2" />
+            <path d="M10 50h80M50 10v80" />
+        </svg>
+    </div>
+
+    <!-- Core Structural Content Layout Framework Container -->
+    <div class="infra-hero-container">
+        
+        <!-- Top Workspace: Split Text & Imagery Row -->
+        <div class="infra-hero-split-grid">
+            
+            <!-- Left Grid Flank: Headings & Copy Blocks -->
+            <div class="infra-text-engine">
+                <span class="infra-eyebrow-tag">Hardware Architecture Matrix</span>
+                
+                <!-- Title Appears Word-by-Word on Viewport Scrolling Track Triggers -->
+                <h1 class="scroll-word-reveal" id="infraHeroTitle">
+                    <span>Industrial</span> 
+                    <span>Grade</span> 
+                    <span>Decentralized</span> 
+                    <span>Energy</span> 
+                    <span>Hardware.</span>
+                </h1>
+
+                <!-- Paragraph Sweeps In Gracefully from the Side Left Flank -->
+                <p class="infra-side-paragraph flank-slide-left">
+                    Stackly engineered harvesting cells isolate local climatic kinetic variables, processing atmospheric payload fluctuations into pure, high-volume localized resource networks natively.
+                </p>
+
+                <!-- CTA Action Trigger Buttons Surface from Floor Track -->
+                <div class="infra-cta-floor floor-slide-up">
+                    <a href="404.html" class="btn-infra-prime">Deploy Core Node</a>
+                    <a href="404.html" class="btn-infra-ghost">
+                        <span>Technical Documentation</span>
+                        <span class="btn-vector-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Grid Flank: Architectural Showcase Image Container -->
+            <div class="infra-media-engine">
+                <div class="infra-image-glow-wrapper">
+                    <!-- Replace src with your custom hardware architecture array asset path -->
+                    <img src="infrastructure-hardware-core.jpg" alt="Stackly Renewable Grid Generation Cell Array" class="infra-main-image">
+                    <div class="infra-ambient-yellow-glow"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Workspace: Floating Telemetry Feature Nodes Ecosystem (Arranged Below Image) -->
+        <div class="infra-floating-features-row" id="infraFeaturesStack">
+            
+            <!-- Floating Feature Node 01 -->
+            <div class="infra-floating-feature-card card-drift-alpha">
+                <div class="infra-card-icon-node">☀️</div>
+                <div class="infra-card-info-block">
+                    <h4>Photovoltaic Array</h4>
+                    <p>Monocrystalline micro-grids processing direct ambient loads.</p>
+                </div>
+            </div>
+
+            <!-- Floating Feature Node 02 -->
+            <div class="infra-floating-feature-card card-drift-beta">
+                <div class="infra-card-icon-node">💨</div>
+                <div class="infra-card-info-block">
+                    <h4>Kinetic Harvesting</h4>
+                    <p>Mag-lev induction capture nodes targeting low-velocity zones.</p>
+                </div>
+            </div>
+
+            <!-- Floating Feature Node 03 -->
+            <div class="infra-floating-feature-card card-drift-gamma">
+                <div class="infra-card-icon-node">🔋</div>
+                <div class="infra-card-info-block">
+                    <h4>Solid-State Cells</h4>
+                    <p>High-capacity storage cells stabilizing line dropouts.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* Unique Typography Import for Stackly Brand Identity */
+@import url('https://googleapis.com');
+
+/* Core Section Layout Framework Configuration */
+.infra-hero-viewport {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 140px 0 60px 0; /* Expanded top padding padding boundary to account for fixed navbar paths */
+    background-color: #ffffff; /* Pristine white backdrop canvas profile */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+/* Background Technical Matrix Wireframe SVG Vector Elements Mask */
+.infra-vector-backdrop {
+    position: absolute;
+    top: 5%;
+    left: -10%;
+    width: 50%;
+    height: auto;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.infra-hero-container {
+    width: 80%; /* Consistent structural width architecture tracking grid footprint */
+    max-width: 1440px;
+    margin: 0 auto;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+/* Top Workspace Split Row Blueprint Layout */
+.infra-hero-split-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.infra-text-engine {
+    display: flex;
+    flex-direction: column;
+}
+
+.infra-eyebrow-tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+/* Staggered Word-by-Word Title Configuration */
+.infra-text-engine h1.scroll-word-reveal {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3.75rem;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.85rem;
+    row-gap: 0.4rem;
+}
+
+.infra-text-engine h1.scroll-word-reveal span {
+    opacity: 0.12;
+    transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.infra-text-engine h1.scroll-word-reveal span.active-word {
+    opacity: 1;
+}
+
+/* Target ending entity point highlighting using brand neon core yellow */
+.infra-text-engine h1.scroll-word-reveal span:last-child.active-word {
+    color: #eab308;
+}
+
+/* Left Flank Lateral Entry Side Paragraph with Interactive Hover Glow Effects */
+.infra-side-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: #475569;
+    max-width: 560px;
+    margin-bottom: 2.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.4s ease;
+    cursor: default;
+}
+
+.infra-side-paragraph:hover {
+    color: #000000;
+    background-color: #fafafa;
+    box-shadow: 0 10px 30px rgba(250, 204, 21, 0.04);
+}
+
+/* Bottom Floor Surfacing CTA Actions Track */
+.infra-cta-floor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.btn-infra-prime {
+    font-family: 'Space Grotesk', sans-serif;
+    text-decoration: none;
+    background-color: #000000; /* Minimalist strict dark silhouette look */
+    color: #ffffff;
+    padding: 1.1rem 2.25rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 0.375rem;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-infra-prime:hover {
+    background-color: #facc15; /* Shifts flawlessly into core brand yellow code */
+    color: #000000;
+    box-shadow: 0 12px 24px rgba(250, 204, 21, 0.25);
+    transform: translateY(-2px);
+}
+
+.btn-infra-ghost {
+    font-family: 'Space Grotesk', sans-serif;
+    text-decoration: none;
+    color: #000000;
+    border: 1px solid #e2e8f0;
+    padding: 1.1rem 2.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-vector-arrow {
+    transition: transform 0.3s ease;
+}
+
+.btn-infra-ghost:hover {
+    background-color: #fafafa;
+    border-color: #000000;
+    transform: translateY(-2px);
+}
+
+.btn-infra-ghost:hover .btn-vector-arrow {
+    transform: translateX(4px);
+}
+
+/* --- Right Column Imagery Housing Enclosures --- */
+.infra-media-engine {
+    position: relative;
+    width: 100%;
+}
+
+.infra-image-glow-wrapper {
+    position: relative;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.02);
+}
+
+.infra-main-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Ambient Underlaid Yellow Energy Glow for Media Box */
+.infra-ambient-yellow-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(250, 204, 21, 0.08) 0%, transparent 75%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.infra-image-glow-wrapper:hover .infra-main-image {
+    transform: scale(1.025);
+}
+
+.infra-image-glow-wrapper:hover .infra-ambient-yellow-glow {
+    opacity: 1;
+}
+
+/* --- Bottom Area: Floating Telemetry Feature Cards Matrix --- */
+.infra-floating-features-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.infra-floating-feature-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 1.75rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Organic Asymmetrical Drift Timelines Animation Mapping for Below Cards Stack */
+.card-drift-alpha { animation: cellDrift 5.5s ease-in-out infinite alternate; }
+.card-drift-beta  { animation: cellDrift 6.5s ease-in-out infinite alternate-reverse; animation-delay: 0.2s; }
+.card-drift-gamma { animation: cellDrift 7.5s ease-in-out infinite alternate; animation-delay: 0.5s; }
+
+@keyframes cellDrift {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-12px); }
+}
+
+/* Premium Feature Hover Interaction Overrides */
+.infra-floating-feature-card:hover {
+    animation-play-state: paused; /* Freeze floating path vector tracing on focus locks */
+    border-color: #facc15;
+    transform: scale(1.04) translateY(-6px);
+    box-shadow: 0 20px 40px rgba(250, 204, 21, 0.06);
+}
+
+.infra-card-icon-node {
+    width: 44px;
+    height: 44px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.infra-floating-feature-card:hover .infra-card-icon-node {
+    background-color: #fef08a; /* Soft Yellow Highlight Glow Base */
+    border-color: #facc15;
+    transform: rotate(-8deg) scale(1.05);
+}
+
+.infra-card-info-block h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 0.35rem;
+    letter-spacing: -0.01em;
+}
+
+.infra-card-info-block p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #475569;
+}
+
+/* --- Dynamic Entry Presentation Animations Infrastructure Setup --- */
+.flank-slide-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.floor-slide-up {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.scroll-feature-reveal-pop {
+    opacity: 0;
+    transform: translateY(40px) scale(0.97);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Active Class Intersection Deployment States overrides links triggers */
+.flank-slide-left.reveal-active,
+.floor-slide-up.reveal-active,
+.scroll-feature-reveal-pop.reveal-active {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+/* --- Fully Fluid Responsive Breakpoints System --- */
+@media (max-width: 1200px) {
+    .infra-text-engine h1.scroll-word-reveal {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .infra-hero-container {
+        width: 90%;
+        gap: 4rem;
+    }
+    .infra-hero-split-grid {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+        text-align: center;
+    }
+    .infra-text-engine h1.scroll-word-reveal {
+        justify-content: center;
+    }
+    .infra-side-paragraph {
+        margin: 0 auto 2.5rem auto;
+    }
+    .infra-cta-floor {
+        justify-content: center;
+    }
+    .infra-media-engine {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .infra-floating-features-row {
+        grid-template-columns: 1fr; /* Completely collapse cards straight down on medium devices */
+        gap: 1.25rem;
+    }
+    .infra-floating-feature-card {
+        animation: none !important; /* Suspend active drift vectors on smaller device viewport matrix sizes */
+    }
+}
+
+@media (max-width: 576px) {
+    .infra-hero-viewport {
+        padding: 120px 0 45px 0;
+    }
+    .infra-text-engine h1.scroll-word-reveal {
+        font-size: 2.25rem;
+    }
+    .infra-floating-feature-card {
+        padding: 1.25rem;
+    }
+    .btn-infra-prime, .btn-infra-ghost {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Precise Word-By-Word Intersection Scroll Engine for Hero Title
+    const titleWords = document.querySelectorAll('.scroll-word-reveal span');
+    
+    function handleTitleWordReveal() {
+        const viewportTriggerHeight = window.innerHeight * 0.85;
+        
+        titleWords.forEach((word, wordIndex) => {
+            const wordRect = word.getBoundingClientRect();
+            
+            if (wordRect.top < viewportTriggerHeight) {
+                // Sequentially stagger opacities using character indices increments trace values
+                setTimeout(() => {
+                    word.classList.add('active-word');
+                }, wordIndex * 85); // 85ms crisp delay window step
+            }
+        });
+    }
+
+    // 2. Synchronized Intersections Elements Controllers (Paragraph, CTAs & Bottom Features Stack)
+    const textCopyBlock = document.querySelector('.flank-slide-left');
+    const actionFloorButtons = document.querySelector('.floor-slide-up');
+    const bottomFeaturesGrid = document.getElementById('infraFeaturesStack');
+    const singleFeatureCards = document.querySelectorAll('.infra-floating-feature-card');
+
+    const infraHeroObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Instantly update visibility class vectors
+                textCopyBlock?.classList.add('reveal-active');
+                
+                setTimeout(() => {
+                    actionFloorButtons?.classList.add('reveal-active');
+                }, 350);
+
+                // Observe if bottom features rows passes threshold parameters lines group
+                if (entry.target.id === 'infraFeaturesStack') {
+                    singleFeatureCards.forEach((card, cardIndex) => {
+                        // Apply custom class to trigger fade up entry rules profiles sequentially
+                        card.classList.add('scroll-feature-reveal-pop');
+                        setTimeout(() => {
+                            card.classList.add('reveal-active');
+                        }, cardIndex * 180); // Stagger cards assembly popup gaps parameters across 180ms
+                    });
+                }
+            }
+        });
+    }, { 
+        threshold: 0.05,
+        rootMargin: "0px 0px 50px 0px"
+    });
+
+    // Fire observers monitoring anchor elements locations context variables
+    const parentTriggerGrid = document.querySelector('.infra-hero-split-grid');
+    if (parentTriggerGrid) infraHeroObserver.observe(parentTriggerGrid);
+    if (bottomFeaturesGrid) infraHeroObserver.observe(bottomFeaturesGrid);
+
+    // Register active global passive screen scroll listeners track sequences
+    window.addEventListener('scroll', handleTitleWordReveal, { passive: true });
+    handleTitleWordReveal(); // Evaluate current load trace positions arrays instantly on ready states
+});
+
+</script>
+
+<section id="infra-blueprint" class="blueprint-section">
+    <div class="blueprint-container">
+        
+        <!-- Section Header Area -->
+        <div class="blueprint-header-block">
+            <h2 class="blueprint-main-title">Digital Steps Toward A Cleaner Earth.</h2>
+        </div>
+
+        <!-- Upper Core Tri-Column Workspace Layout Layer -->
+        <div class="blueprint-upper-grid">
+            
+            <!-- Left Flank: Highlighted Yellow Energy Anchor Card -->
+            <div class="highlight-anchor-card">
+                <div class="anchor-glow-mask"></div>
+                <span class="card-meta-tag">⚡ Architecture Alpha</span>
+                <h3>Inspired by nature, driven by purpose.</h3>
+                <p>Deploying modular photovoltaic networks, automated micro-wind arrays, and edge-intelligence load balancers engineered to secure your long-term energy protection footprint.</p>
+            </div>
+
+            <!-- Center Track: Core Generation Image Enclosure Frame -->
+            <div class="blueprint-center-media">
+                <div class="center-glow-wrapper">
+                    <div class="image-fallback-placeholder">
+                        <span class="placeholder-icon">🔋</span>
+                        <p>Stackly Hardware Deployment Ecosystem</p>
+                        <span class="telemetry-subtext">Node Sync: 99.98% Active</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Flank: Descriptive Profile Context Box Layout -->
+            <div class="blueprint-right-context">
+                <div class="right-glow-mask-box">
+                    <h3>Building a sustainable future online</h3>
+                    <p>Discover an interconnected, decentralized utility network that prioritizes local environmental resources. We optimize localized distribution lines, provide actionable power logs, and deliver hardware templates to scale grid performance effortlessly.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Lower Workspace: Numbered Sequential Checklist Rows Grid Area -->
+        <div class="blueprint-lower-matrix">
+            
+            <!-- Row Item 01 -->
+            <div class="matrix-list-row">
+                <div class="row-left-index">
+                    <span class="index-num">[1]</span>
+                    <h4>Eco-Tech or Business Solutions</h4>
+                </div>
+                <div class="row-right-desc">
+                    <p>We combine innovation with sustainability to build a smarter and greener world synchronized to localized corporate energy load networks.</p>
+                </div>
+            </div>
+
+            <!-- Row Item 02 -->
+            <div class="matrix-list-row">
+                <div class="row-left-index">
+                    <span class="index-num">[2]</span>
+                    <h4>Eco Lifestyle or Product-Based Infrastructure</h4>
+                </div>
+                <div class="row-right-desc">
+                    <p>We combine innovation with sustainability to build a smarter and greener world using optimized solid-state reserve matrices.</p>
+                </div>
+            </div>
+
+            <!-- Row Item 03 -->
+            <div class="matrix-list-row">
+                <div class="row-left-index">
+                    <span class="index-num">[3]</span>
+                    <h4>General Eco-Friendly Brand Management</h4>
+                </div>
+                <div class="row-right-desc">
+                    <p>We're on a mission to make sustainable living simple, inspiring, and highly accessible via completely decentralized hardware nodes.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* Unique Typography Imports for Strict Brand Alignment */
+@import url('https://googleapis.com');
+
+/* Section Base Parameters Config */
+.blueprint-section {
+    position: relative;
+    width: 100%;
+    /* Enforcing strict top: 50px and bottom: 30px padding constraints */
+    padding: 50px 0 30px 0;
+    background-color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.blueprint-container {
+    width: 80%; /* Consistent structural width alignment grid constraints tracking path */
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Text Meta Layout Rules */
+.blueprint-header-block {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.blueprint-main-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: -0.04em;
+    line-height: 1.15;
+    margin: 0;
+}
+
+/* --- Upper Tri-Column Layout Workspace --- */
+.blueprint-upper-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr 1fr; /* Rigid architectural baseline layout ratios split */
+    gap: 3rem;
+    align-items: stretch;
+    margin-bottom: 5rem;
+}
+
+/* Left Highlight Yellow Energy Card Module */
+.highlight-anchor-card {
+    background-color: #facc15; /* Signature Core Brand Yellow Theme Background */
+    padding: 2.5rem 2rem;
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.25rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 30px rgba(250, 204, 21, 0.1);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.card-meta-tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #000000;
+    opacity: 0.6;
+}
+
+.highlight-anchor-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+.highlight-anchor-card p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #000000;
+    opacity: 0.85;
+    margin: 0;
+}
+
+/* Center Image Container Black Hardware Plate Config */
+.blueprint-center-media {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+}
+
+.center-glow-wrapper {
+    position: relative;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    height: 100%;
+    border: 1px solid #000000;
+    background-color: #000000; /* Sleek structural dark layout panel */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.image-fallback-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    gap: 0.75rem;
+}
+
+.placeholder-icon {
+    font-size: 2.5rem;
+    animation: flashPulse 2s infinite alternate;
+}
+
+@keyframes flashPulse {
+    to { transform: scale(1.1); filter: drop-shadow(0 0 15px #facc15); }
+}
+
+.image-fallback-placeholder p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.telemetry-subtext {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #facc15; /* Accented yellow metric label text */
+    letter-spacing: 0.05em;
+}
+
+/* Right Flank Data Context Box Layout Configuration */
+.blueprint-right-context {
+    display: flex;
+    align-items: flex-start;
+}
+
+.right-glow-mask-box {
+    position: relative;
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.4s ease;
+}
+
+.right-glow-mask-box h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.right-glow-mask-box p {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: #475569;
+    margin: 0;
+}
+
+/* Interactive Cursor Radial Hover Glow Implementations variables maps */
+.highlight-anchor-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    background: radial-gradient(300px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.5), transparent 50%);
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.right-glow-mask-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    z-index: -1;
+    opacity: 0;
+    background: radial-gradient(400px circle at var(--mx, 50%) var(--my, 50%), rgba(250, 204, 21, 0.08), transparent 45%);
+    border: 1px solid rgba(250, 204, 21, 0.25);
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.highlight-anchor-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(250, 204, 21, 0.25);
+}
+
+.right-glow-mask-box:hover {
+    transform: translateY(-4px);
+    border-color: #facc15;
+    box-shadow: 0 15px 30px rgba(250, 204, 21, 0.03);
+}
+
+.highlight-anchor-card:hover::before,
+.right-glow-mask-box:hover::before {
+    opacity: 1;
+}
+
+/* --- Lower Workspace Checklist Rows --- */
+.blueprint-lower-matrix {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #f1f5f9;
+}
+
+.matrix-list-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid #f1f5f9;
+    align-items: center;
+    gap: 4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.row-left-index {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.index-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #eab308; /* Consistent numbered array brand index matching styling rules */
+    flex-shrink: 0;
+}
+
+.row-left-index h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #000000;
+    margin: 0;
+    transition: color 0.25s ease;
+}
+
+.row-right-desc p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #475569;
+    margin: 0;
+    transition: color 0.25s ease;
+}
+
+/* Checklist Hover Micro-Interactions adjustments variables loop */
+.matrix-list-row:hover {
+    padding-left: 1.25rem;
+    background-color: #fafafa;
+}
+
+.matrix-list-row:hover h4 {
+    color: #eab308; /* Brand Signature Yellow highlight */
+}
+
+.matrix-list-row:hover .row-right-desc p {
+    color: #000000;
+}
+
+/* --- Fully Fluid Responsive Breakpoints System --- */
+@media (max-width: 1100px) {
+    .blueprint-upper-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    .blueprint-right-context {
+        grid-column: span 2; /* Stretch context block full-width underneath columns layout */
+    }
+    .right-glow-mask-box {
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .blueprint-container {
+        width: 90%;
+    }
+    .blueprint-upper-grid {
+        grid-template-columns: 1fr;
+    }
+    .blueprint-right-context {
+        grid-column: span 1;
+    }
+    .matrix-list-row {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        padding: 1.75rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .blueprint-main-title {
+        font-size: 2.25rem;
+    }
+    .highlight-anchor-card {
+        padding: 1.75rem;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // Dynamic Cursor Tracking Coordinate Engine for Hover Glow Elements Grid
+    const glowTargetsList = document.querySelectorAll('.highlight-anchor-card, .right-glow-mask-box');
+
+    glowTargetsList.forEach(container => {
+        container.addEventListener('mousemove', (event) => {
+            const boundaryBox = container.getBoundingClientRect();
+            const posX = event.clientX - boundaryBox.left;
+            const posY = event.clientY - boundaryBox.top;
+
+            container.style.setProperty('--mx', `${posX}px`);
+            container.style.setProperty('--my', `${posY}px`);
+        });
+    });
+});
+
+</script>
+
+<section id="infra-showcase" class="deck-showcase-section">
+    <div class="deck-layout-container">
+        
+        <!-- Header Workspace Row -->
+        <div class="deck-header-row">
+            <h2 class="scroll-word-reveal" id="deckTitle">
+                <span>Rooted</span> <span>In</span> <span>Care,</span> <span>Growing</span> <span>With</span> <span>Change.</span>
+            </h2>
+            <a href="404.html" class="btn-deck-discover">Discover</a>
+        </div>
+
+        <!-- Four-Column Interactive Cards Grid Layout -->
+        <div class="deck-cards-matrix" id="deckCardsMatrix">
+            
+            <!-- Card 01 -->
+            <div class="deck-interactive-card scroll-deck-stagger">
+                <!-- Hidden Background Image Asset Layer -->
+                <div class="card-image-back-layer">
+                    <img src="solar-matrix-core.jpg" alt="Stackly Solar Array Field" class="deck-bg-asset-img">
+                </div>
+                <!-- Overlaid Content Layer -->
+                <div class="card-content-front-layer">
+                    <h3>Together for a Greener Tomorrow</h3>
+                    <p>Join a decentralized local utility community that believes in positive environmental change.</p>
+                </div>
+            </div>
+
+            <!-- Card 02 -->
+            <div class="deck-interactive-card scroll-deck-stagger">
+                <div class="card-image-back-layer">
+                    <img src="wind-turbine-mesh.jpg" alt="Stackly Wind Harvesting Array" class="deck-bg-asset-img">
+                </div>
+                <div class="card-content-front-layer">
+                    <h3>Where Innovation Meets Nature</h3>
+                    <p>We merge modern technology with environmental awareness to create smart, sustainable solutions.</p>
+                </div>
+            </div>
+
+            <!-- Card 03 -->
+            <div class="deck-interactive-card scroll-deck-stagger">
+                <div class="card-image-back-layer">
+                    <img src="battery-storage-cells.jpg" alt="Stackly Solid-State Energy Cells" class="deck-bg-asset-img">
+                </div>
+                <div class="card-content-front-layer">
+                    <h3>Because the Earth Deserves Better</h3>
+                    <p>Every action matters. Our infrastructure platforms promote sustainable, low-loss energy management habits.</p>
+                </div>
+            </div>
+
+            <!-- Card 04 -->
+            <div class="deck-interactive-card scroll-deck-stagger">
+                <div class="card-image-back-layer">
+                    <img src="smart-grid-telemetry.jpg" alt="Stackly Digital Grid Distribution Terminal" class="deck-bg-asset-img">
+                </div>
+                <div class="card-content-front-layer">
+                    <h3>Sustainability Made Simple</h3>
+                    <p>Explore high-efficiency photovoltaic micro-grids, intuitive power logs, and modular energy hardware resources.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* Unique Typography Imports for Strict Brand Alignment */
+@import url('https://googleapis.com');
+
+/* Section Base Parameters Configuration */
+.deck-showcase-section {
+    position: relative;
+    width: 100%;
+    /* Enforcing strict top: 50px and bottom: 30px padding constraints */
+    padding: 50px 0 30px 0;
+    background-color: #fafafa; /* Clean layout background backdrop */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.deck-layout-container {
+    width: 80%; /* Consistent master layout structural constraints tracking path width */
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* Header Action Row Layout */
+.deck-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.deck-header-row h2.scroll-word-reveal {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: -0.03em;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.65rem;
+    line-height: 1.2;
+}
+
+.deck-header-row h2.scroll-word-reveal span {
+    opacity: 0.15;
+    transition: opacity 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.deck-header-row h2.scroll-word-reveal span.active-word {
+    opacity: 1;
+}
+
+/* CTA Discover Link Component */
+.btn-deck-discover {
+    font-family: 'Space Grotesk', sans-serif;
+    text-decoration: none;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.75rem 2rem;
+    border-radius: 0.375rem;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    flex-shrink: 0;
+}
+
+.btn-deck-discover:hover {
+    background-color: #facc15; /* Signature brand core yellow fill profile on hover */
+    color: #000000;
+    box-shadow: 0 10px 20px rgba(250, 204, 21, 0.25);
+    transform: translateY(-2px);
+}
+
+/* --- Four-Column Deck Layout Matrix --- */
+.deck-cards-matrix {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+/* Base Interactive Card Architecture (All Initialized as White Cards) */
+.deck-interactive-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    min-height: 360px; /* Rigid baseline container height */
+    z-index: 1;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Underlaid Background Image Layer Asset */
+.card-image-back-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0; /* Hidden by default matching your condition */
+    transform: scale(1.05);
+    transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.deck-bg-asset-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlaid Forefront Active Text Plate */
+.card-content-front-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2.25rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+    opacity: 1;
+    background-color: #ffffff;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Strict MEDIUM Font Size Specifications Constraints Rulesets */
+.card-content-front-layer h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem; /* Strict Medium Heading Font Sizing Scale */
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.35;
+    margin: 0;
+}
+
+.card-content-front-layer p {
+    font-size: 0.95rem; /* Strict Medium Body Paragraph Sizing Scale */
+    line-height: 1.6;
+    color: #475569;
+    margin: 0;
+}
+
+/* --- THE HOVER SWAP ACTION ENGINE --- */
+/* When hovering over any card, fade out text layout sheet and reveal underlying background hardware image plate */
+.deck-interactive-card:hover {
+    border-color: #facc15; /* Yellow theme card outline accent */
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(250, 204, 21, 0.08);
+}
+
+.deck-interactive-card:hover .card-image-back-layer {
+    opacity: 1; /* Background image becomes completely visible */
+    transform: scale(1);
+}
+
+.deck-interactive-card:hover .card-content-front-layer {
+    opacity: 0; /* Content completely fades out smoothly */
+    pointer-events: none;
+}
+
+/* --- One-by-One Staggered Slide Entrance Animation Configs --- */
+.scroll-deck-stagger {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.scroll-deck-stagger.reveal-active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* --- Fully Fluid Responsive Breakpoints System --- */
+@media (max-width: 1200px) {
+    .deck-cards-matrix {
+        grid-template-columns: repeat(2, 1fr); /* Break columns down to dual sets on medium devices */
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .deck-layout-container {
+        width: 90%;
+    }
+    .deck-header-row h2.scroll-word-reveal {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .deck-cards-matrix {
+        grid-template-columns: 1fr; /* Collapse down to single column layout on phone screens */
+        gap: 1.5rem;
+    }
+    .deck-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+    .btn-deck-discover {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Precise Word-By-Word Intersection Scroll Engine for Section Header
+    const titleWordsList = document.querySelectorAll('.deck-header-row .scroll-word-reveal span');
+    
+    function handleHeaderReveal() {
+        const viewTriggerLine = window.innerHeight * 0.85;
+        
+        titleWordsList.forEach((word, wordIndex) => {
+            const boundingBoxRect = word.getBoundingClientRect();
+            
+            if (boundingBoxRect.top < viewTriggerLine) {
+                setTimeout(() => {
+                    word.classList.add('active-word');
+                }, wordIndex * 90); // Staggers presentation sequence dynamically 
+            }
+        });
+    }
+
+    // 2. Incremental One-by-One Staggered Cards Entry Scroll Trigger Observers
+    const gridMatrixTrack = document.getElementById('deckCardsMatrix');
+    const scrollStaggerCards = document.querySelectorAll('.scroll-deck-stagger');
+
+    const matrixObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Step sequentially through cards array to deploy reveal states classes
+                scrollStaggerCards.forEach((card, cardIndex) => {
+                    setTimeout(() => {
+                        card.classList.add('reveal-active');
+                    }, cardIndex * 160); // Clean 160ms incremental delay step between columns block nodes
+                });
+                matrixObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    if (gridMatrixTrack) {
+        matrixObserver.observe(gridMatrixTrack);
+    }
+
+    // Connect global scroll monitoring tracing loops vectors parameters
+    window.addEventListener('scroll', handleHeaderReveal, { passive: true });
+    handleHeaderReveal(); // Pre-evaluate placement trace metrics instantly on ready states
+});
+
+</script>
+
+<section id="infra-dual-cta" class="dual-banner-viewport">
+    <!-- Full-Width Background Media Layer -->
+    <div class="dual-banner-bg-container">
+        <!-- Replace src with your customized clean infrastructure matrix path -->
+        <img src="infra-dual-mesh-bg.jpg" alt="Stackly Distributed Cell Infrastructure Grid Network" class="dual-banner-bg-asset">
+        <div class="dual-banner-tint-overlay"></div>
+    </div>
+
+    <!-- Core Structural Interactive Content Workspace -->
+    <div class="dual-banner-content-matrix" id="dualCtaContentGrid">
+        
+        <!-- Left Action Block (Surfaces from the Bottom) -->
+        <div class="dual-action-card floor-slide-up">
+            <div class="card-glow-tracker-matrix"></div>
+            <div class="card-body-wrapper">
+                <span class="card-meta-tag">⚡ System Integration Alpha</span>
+                <h3>Request an Enterprise Node Simulation</h3>
+                <p>Coordinate directly with our field engineering architects to map your facility's baseline load profiles, configure cell layouts, and calculate long-term reduction metrics.</p>
+                <a href="404.html" class="btn-dual-banner-action">
+                    <span>Initialize Simulation</span>
+                    <div class="btn-arrow-vector-circle">→</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Action Block (Surfaces from the Bottom) -->
+        <div class="dual-action-card floor-slide-up">
+            <div class="card-glow-tracker-matrix"></div>
+            <div class="card-body-wrapper">
+                <span class="card-meta-tag">⚙️ Developer Ecosystem</span>
+                <h3>Access Open Grid Telemetry Documentation</h3>
+                <p>Review comprehensive technical core APIs, download modular cell wireframes, and explore decentralized load-balancing source files to deploy local nodes safely.</p>
+                <a href="404.html" class="btn-dual-banner-action ghost-variant">
+                    <span>Explore API Specs</span>
+                    <div class="btn-arrow-vector-circle">→</div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* Unique Typography Imports for Strict Brand Alignment */
+@import url('https://googleapis.com');
+
+/* Core Section Full-Width Layout Framework Configuration */
+.dual-banner-viewport {
+    position: relative;
+    width: 100%; /* Explicit full-width breaking out past standard layout boxes */
+    /* Enforcing strict top: 50px and bottom: 30px padding constraints */
+    padding: 50px 0 30px 0;
+    background-color: #000000; /* Dark contrast breakout profile */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background Asset Control Layers */
+.dual-banner-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.dual-banner-bg-asset {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+    mix-blend-mode: luminosity;
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.dual-banner-viewport:hover .dual-banner-bg-asset {
+    transform: scale(1.035);
+}
+
+.dual-banner-tint-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(250, 204, 21, 0.04) 0%, rgba(0,0,0,0.96) 90%);
+    pointer-events: none;
+}
+
+/* Structural Split Grid Canvas Layout Track */
+.dual-banner-content-matrix {
+    position: relative;
+    width: 80%; /* Aligned to match master architectural layout tracks */
+    max-width: 1440px;
+    margin: 0 auto;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Crisp side-by-side layout split */
+    gap: 2.5rem;
+    align-items: stretch;
+}
+
+/* Premium Interactive Action Blocks */
+.dual-action-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 1.25rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.card-body-wrapper {
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 1rem;
+}
+
+.card-meta-tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #facc15; /* Signature brand accent yellow tint */
+    opacity: 0.85;
+}
+
+.dual-action-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #ffffff;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.dual-action-card p {
+    color: #a3a3a3;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+}
+
+/* --- Action Button Module Engineering --- */
+.btn-dual-banner-action {
+    margin-top: auto; /* Secure placement cleanly pinned to card floors track boundaries */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #facc15; /* Signature Yellow Core Fill */
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    border-radius: 99px;
+    width: fit-content;
+    gap: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-arrow-vector-circle {
+    width: 36px;
+    height: 36px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Secondary Button Code Variant Setup */
+.btn-dual-banner-action.ghost-variant {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+}
+
+.btn-dual-banner-action.ghost-variant .btn-arrow-vector-circle {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* Atmospheric Glow Mechanics Injection Mapping for the Dual Card Elements */
+.dual-action-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25rem;
+    background: radial-gradient(500px circle at var(--b-x, 50%) var(--b-y, 50%), rgba(250, 204, 21, 0.12), transparent 45%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+/* Hover Matrices Interactions Hooks */
+.dual-action-card:hover {
+    border-color: rgba(250, 204, 21, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.dual-action-card:hover::before {
+    opacity: 1;
+}
+
+.dual-action-card:hover h3 {
+    color: #facc15;
+}
+
+.dual-action-card:hover .btn-dual-banner-action {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+}
+
+.dual-action-card:hover .btn-dual-banner-action .btn-arrow-vector-circle {
+    background-color: #facc15;
+    color: #000000;
+    transform: rotate(-45deg);
+}
+
+/* --- Bottom Floor Surfacing Presentation Animation Setup --- */
+.floor-slide-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Active State Overrides Hooks for Observers */
+.floor-slide-up.reveal-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Fully Fluid Responsive Breakpoints System --- */
+@media (max-width: 1024px) {
+    .dual-banner-content-matrix {
+        grid-template-columns: 1fr; /* Collapse split column layout downwards cleanly on tablets */
+        width: 90%;
+        gap: 2rem;
+    }
+    .card-body-wrapper {
+        padding: 2.25rem 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .dual-banner-viewport {
+        padding: 45px 0 25px 0;
+    }
+    .dual-action-card h3 {
+        font-size: 1.45rem;
+    }
+    .card-body-wrapper {
+        padding: 1.75rem 1.5rem;
+    }
+    .btn-dual-banner-action {
+        width: 100%;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Dynamic Cursor Radial Tracking Axis for Dual CTA Cards Glow
+    const dualBannerCards = document.querySelectorAll('.dual-action-card');
+
+    dualBannerCards.forEach(card => {
+        card.addEventListener('mousemove', (event) => {
+            const boundaryRect = card.getBoundingClientRect();
+            const posX = event.clientX - boundaryRect.left;
+            const posY = event.clientY - boundaryBox.top;
+
+            card.style.setProperty('--b-x', `${posX}px`);
+            card.style.setProperty('--b-y', `${posY}px`);
+        });
+    });
+
+    // 2. Symmetrical Floor-Up Surfacing Entry Scroll Observer with Instant Fallback
+    const contentGridTrack = document.getElementById('dualCtaContentGrid');
+    const bottomSurfacingCards = document.querySelectorAll('.dual-action-card.floor-slide-up');
+
+    const dualCtaObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Symmetrically pop both action blocks upward one by one from the base track
+                bottomSurfacingCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('reveal-active');
+                    }, index * 180); // Stagger interval gap curve metrics 
+                });
+                dualCtaObserver.unobserve(entry.target);
+            }
+        });
+    }, { 
+        threshold: 0.05, /* Safe structural low trigger barrier limits */
+        rootMargin: "0px 0px 100px 0px"
+    });
+
+    if (contentGridTrack) {
+        dualCtaObserver.observe(contentGridTrack);
+        
+        // Instant Fallback Check: Reveal immediately if the section loads inside the viewport boundaries area
+        const boxBoundsRect = contentGridTrack.getBoundingClientRect();
+        if (boxBoundsRect.top >= 0 && boxBoundsRect.top <= window.innerHeight) {
+            bottomSurfacingCards.forEach(card => card.classList.add('reveal-active'));
+        }
+    } else {
+        bottomSurfacingCards.forEach(card => card.classList.add('reveal-active'));
+    }
+});
+
+</script>
+
+<section id="infra-matrix-blueprint" class="matrix-blueprint-viewport">
+    <!-- Full-Width Dynamic Underlying Grid Mask Layer -->
+    <div class="matrix-blueprint-bg-container">
+        <div class="blueprint-mesh-tint-overlay"></div>
+    </div>
+
+    <!-- Core Layout Matrix Container -->
+    <div class="blueprint-matrix-content">
+        
+        <!-- Section Header Row -->
+        <div class="blueprint-matrix-header-row">
+            <span class="blueprint-badge-eyebrow">Grid Architecture Spec</span>
+            <h2 class="blueprint-main-title">Synchronizing Ambient Fluctuations Into Predictable Payloads.</h2>
+        </div>
+
+        <!-- Upper Balanced Dual Column Grid Track Workspace -->
+        <div class="blueprint-matrix-split-grid">
+            
+            <!-- Left Side Flank: Translucent Context Card (Forced 100% Fixed Visibility) -->
+            <div class="blueprint-interactive-glass-card">
+                <span class="card-meta-tag-index">[ Node Topology Alpha ]</span>
+                <h3>Automated Edge-Intelligence Micro-Arrays</h3>
+                <p class="blueprint-hover-paragraph-trigger">
+                    Stackly infrastructure units prioritize localized distribution lines natively. By handling grid integration variables directly on edge node processing layers, utility line dropouts and transmission payloads are dynamically managed without line-loss risks.
+                </p>
+                <div class="blueprint-media-embedded-frame">
+                    <div class="image-fallback-placeholder">
+                        <span class="placeholder-icon">⚡</span>
+                        <p>Stackly Circuit Topology Core Matrix</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Flank: Translucent Context Card (Forced 100% Fixed Visibility) -->
+            <div class="blueprint-interactive-glass-card">
+                <span class="card-meta-tag-index">[ Storage Topology Beta ]</span>
+                <h3>Solid-State Reserve Capacitor Nodes</h3>
+                <p class="blueprint-hover-paragraph-trigger">
+                    Surplus generation passes directly into solid-state cell structures capable of executing infinite complete discharge and storage loops. Every node operates independently, preserving absolute grid balancing metrics even during total utility blackouts.
+                </p>
+                <div class="blueprint-media-embedded-frame">
+                    <div class="image-fallback-placeholder">
+                        <span class="placeholder-icon">🔋</span>
+                        <p>Stackly Energy Cell Assembly Array</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Row: Center-Aligned Anchor Point Elements -->
+        <div class="blueprint-matrix-action-row">
+            <a href="404.html" class="btn-blueprint-matrix-action">
+                <span>Deploy Node Framework Matrix</span>
+                <div class="btn-arrow-vector-circle">→</div>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* Unique Typography Imports for Strict Brand Alignment */
+@import url('https://googleapis.com');
+
+/* Core Section Layout Framework Configuration */
+.matrix-blueprint-viewport {
+    position: relative;
+    width: 100%;
+    /* Enforcing strict top: 50px and bottom: 30px padding constraints */
+    padding: 50px 0 30px 0;
+    background-color: #ffffff; /* Pristine clear backdrop canvas */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow: hidden;
+}
+
+/* Background Control Layers */
+.matrix-blueprint-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.blueprint-mesh-tint-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    pointer-events: none;
+}
+
+/* Structural Interaction Canvas Layout */
+.blueprint-matrix-content {
+    position: relative;
+    width: 80%; /* Aligned perfectly to structural tracking layout width constraints */
+    max-width: 1440px;
+    margin: 0 auto;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Config Mapping */
+.blueprint-matrix-header-row {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.blueprint-badge-eyebrow {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #64748b;
+}
+
+.blueprint-main-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* --- Rigid Rigid Asymmetric Balanced Dual Column Split Layout Track Workspace --- */
+.blueprint-matrix-split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Rigid architectural side-by-side layout split */
+    gap: 3rem;
+    align-items: stretch;
+    margin-bottom: 3.5rem;
+}
+
+/* Premium Interactive Translucent Glassmorphism Cards */
+.blueprint-interactive-glass-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 2.5rem;
+    border-radius: 1.25rem;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    
+    /* Strict Visibility Override Rulesets */
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+.card-meta-tag-index {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #eab308; /* Brand core yellow signature code */
+}
+
+.blueprint-interactive-glass-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: -0.02em;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+/* Paragraph Micro-Hover Interaction Matrix Profiles */
+.blueprint-hover-paragraph-trigger {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #475569;
+    margin: 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Embedded Media Code Fallback Placeholder Plates */
+.blueprint-media-embedded-frame {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin-top: auto; /* Secure placement cleanly pinned to card floors track boundaries */
+    border: 1px dashed #cbd5e1;
+    background-color: #f8fafc;
+}
+
+.image-fallback-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.placeholder-icon {
+    font-size: 1.75rem;
+}
+
+.image-fallback-placeholder p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #64748b;
+    margin: 0;
+}
+
+/* Atmospheric Glow Mechanics Injection Mapping for Grid Cells */
+.blueprint-interactive-glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25rem;
+    background: radial-gradient(600px circle at var(--bpx, 50%) var(--bpy, 50%), rgba(250, 204, 21, 0.12), transparent 45%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+/* Hover Matrices Interactions Hooks */
+.blueprint-interactive-glass-card:hover {
+    border-color: #facc15; /* Signature brand yellow theme card outline accent */
+    transform: translateY(-5px) !important;
+    box-shadow: 0 25px 50px rgba(250, 204, 21, 0.05);
+}
+
+.blueprint-interactive-glass-card:hover::before {
+    opacity: 1;
+}
+
+.blueprint-interactive-glass-card:hover h3 {
+    color: #eab308;
+}
+
+.blueprint-interactive-glass-card:hover .blueprint-hover-paragraph-trigger {
+    color: #000000;
+}
+
+/* --- Bottom Floor Action Row Layout --- */
+.blueprint-matrix-action-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-blueprint-matrix-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000; /* Minimalist strict dark silhouette look */
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.5rem 0.5rem 0.5rem 1.75rem;
+    border-radius: 99px;
+    gap: 1.75rem;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-arrow-vector-circle {
+    width: 38px;
+    height: 38px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-blueprint-matrix-action:hover {
+    background-color: #facc15; /* Shift into brand core signature yellow fill profile */
+    color: #000000;
+    box-shadow: 0 12px 24px rgba(250, 204, 21, 0.2);
+    transform: translateY(-3px);
+}
+
+.btn-blueprint-matrix-action:hover .btn-arrow-vector-circle {
+    background-color: #000000;
+    color: #ffffff;
+    transform: rotate(-45deg);
+}
+
+/* --- Fully Fluid Responsive Breakpoints System --- */
+@media (max-width: 1024px) {
+    .blueprint-matrix-content {
+        width: 90%;
+    }
+    .blueprint-main-title {
+        font-size: 2.25rem;
+    }
+    .blueprint-matrix-split-grid {
+        grid-template-columns: 1fr; /* Collapse card stack rows down to single columns safely on tablets */
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .matrix-blueprint-viewport {
+        padding: 40px 0 25px 0;
+    }
+    .blueprint-main-title {
+        font-size: 1.85rem;
+    }
+    .blueprint-interactive-glass-card {
+        padding: 1.75rem;
+    }
+    .blueprint-media-embedded-frame {
+        height: 140px;
+    }
+    .btn-blueprint-matrix-action {
+        width: 100%;
+    }
+}
+
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // Dynamic Cursor Radial Position Processing Track Loop for Glass Cards Glow
+    const glassCardsList = document.querySelectorAll('.blueprint-interactive-glass-card');
+
+    glassCardsList.forEach(card => {
+        card.addEventListener('mousemove', (event) => {
+            const boundaryBox = card.getBoundingClientRect();
+            const posX = event.clientX - boundaryBox.left;
+            const posY = event.clientY - boundaryBox.top;
+
+            card.style.setProperty('--bpx', `${posX}px`);
+            card.style.setProperty('--bpy', `${posY}px`);
+        });
+    });
+});
+
+</script>
+
+<section id="infra-specs" class="spec-matrix-viewport">
+    <div class="spec-layout-container">
+        
+        <!-- Section Header Row (Title sweeps completely from the side) -->
+        <div class="spec-header-row flank-slide-left">
+            <span class="section-badge-eyebrow">Technical Parameters</span>
+            <h2 class="spec-main-title">Optimized Microgrid Architectural Specifications.</h2>
+        </div>
+
+        <!-- Asymmetric Technical Grid (Content surfaces from the bottom) -->
+        <div class="spec-cards-grid" id="specCardsGrid">
+            
+            <!-- Matrix Card 01 -->
+            <div class="spec-glow-card floor-slide-up">
+                <div class="spec-card-media">
+                    <img src="inverter-topology.jpg" alt="Stackly Phase Synchronizer Module" class="spec-asset-img">
+                    <div class="spec-media-tint"></div>
+                </div>
+                <div class="spec-card-body">
+                    <span class="spec-node-index">Node Unit 01</span>
+                    <h3>Automated Load Phase Balancer</h3>
+                    <p>Integrates ultra-fast solid-state circuit switches capable of dynamically synchronizing local harvesting payloads inside 2 milliseconds.</p>
+                </div>
+            </div>
+
+            <!-- Matrix Card 02 -->
+            <div class="spec-glow-card floor-slide-up">
+                <div class="spec-card-media">
+                    <img src="thermal-management.jpg" alt="Solid-State Core Thermal Enclosure" class="spec-asset-img">
+                    <div class="spec-media-tint"></div>
+                </div>
+                <div class="spec-card-body">
+                    <span class="spec-node-index">Node Unit 02</span>
+                    <h3>Thermal Dissipation Armor</h3>
+                    <p>Liquid-cooled conduction plates engineered to maximize optimal capacitor lifecycle thresholds under high structural storage payloads.</p>
+                </div>
+            </div>
+
+            <!-- Matrix Card 03 -->
+            <div class="spec-glow-card floor-slide-up">
+                <div class="spec-card-media">
+                    <img src="telemetry-uplink.jpg" alt="Decentralized Network Gateway Antenna" class="spec-asset-img">
+                    <div class="spec-media-tint"></div>
+                </div>
+                <div class="spec-card-body">
+                    <span class="spec-node-index">Node Unit 03</span>
+                    <h3>Edge Cryptographic Gateway</h3>
+                    <p>Secures inter-node wireless mesh communication pathways, preventing telemetry injection risks over localized distribution grids.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Flanking Action Trigger Buttons (Emerge outward from the sides) -->
+        <div class="spec-action-flanks-row" id="specActionRow">
+            <a href="404.html" class="btn-spec-flank flank-slide-left">Request Technical Blueprint</a>
+            <a href="404.html" class="btn-spec-flank flank-slide-right">Initialize Node Simulation</a>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* Unique Typography Imports for Strict Brand Alignment */
+@import url('https://googleapis.com');
+
+/* Core Section Layout Framework Configuration */
+.spec-matrix-viewport {
+    position: relative;
+    width: 100%;
+    /* Enforcing strict top: 50px and bottom: 30px padding constraints */
+    padding: 50px 0 30px 0;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.spec-layout-container {
+    width: 80%; /* Consistent structural width alignment grid tracking constraints */
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+/* Header Config Mapping */
+.spec-header-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.section-badge-eyebrow {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #64748b;
+}
+
+.spec-main-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin: 0;
+    max-width: 720px;
+}
+
+/* Three-Column Asymmetric Matrix Grid Layout */
+.spec-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
+}
+
+/* Interactive Spec Cards with Glow Engineering */
+.spec-glow-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.spec-card-media {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.spec-asset-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.spec-media-tint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.4) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.spec-card-body {
+    padding: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.spec-node-index {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #eab308; /* Core yellow indicator tint */
+}
+
+.spec-glow-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: -0.01em;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.spec-glow-card p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #475569;
+    margin: 0;
+}
+
+/* Cursor Glow Parameters Injection Mapping */
+.spec-glow-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25rem;
+    background: radial-gradient(500px circle at var(--sx, 50%) var(--sy, 50%), rgba(250, 204, 21, 0.12), transparent 45%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+/* Hover Matrices Interactions Hooks */
+.spec-glow-card:hover {
+    border-color: #facc15;
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px rgba(250, 204, 21, 0.06);
+}
+
+.spec-glow-card:hover::before {
+    opacity: 1;
+}
+
+.spec-glow-card:hover .spec-asset-img {
+    transform: scale(1.04);
+}
+
+.spec-glow-card:hover h3 {
+    color: #eab308;
+}
+
+/* --- Flanking Action Trigger Buttons Clusters --- */
+.spec-action-flanks-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn-spec-flank {
+    font-family: 'Space Grotesk', sans-serif;
+    text-decoration: none;
+    padding: 1.1rem 2.25rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 0.375rem;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    text-align: center;
+}
+
+.btn-spec-flank.flank-slide-left {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.btn-spec-flank.flank-slide-right {
+    background-color: #f1f5f9;
+    color: #000000;
+    border: 1px solid #e2e8f0;
+}
+
+.btn-spec-flank.flank-slide-left:hover {
+    background-color: #facc15;
+    color: #000000;
+    box-shadow: 0 12px 24px rgba(250, 204, 21, 0.25);
+    transform: translateY(-2px);
+}
+
+.btn-spec-flank.flank-slide-right:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000;
+    transform: translateY(-2px);
+}
+
+/* --- Lateral Kinetic & Floor Entrance Presentations Configurations --- */
+.flank-slide-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.flank-slide-right {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.floor-slide-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Active Class Intersection Deployment States */
+.flank-slide-left.reveal-active,
+.flank-slide-right.reveal-active,
+.floor-slide-up.reveal-active {
+    opacity: 1;
+    transform: translate(0);
+}
+
+/* --- Fully Fluid Responsive Breakpoints System --- */
+@media (max-width: 1024px) {
+    .spec-layout-container {
+        width: 90%;
+    }
+    .spec-main-title {
+        font-size: 2.5rem;
+    }
+    .spec-action-flanks-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .btn-spec-flank {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .spec-matrix-viewport {
+        padding: 40px 0 25px 0;
+    }
+    .spec-main-title {
+        font-size: 2rem;
+    }
+    .spec-card-body {
+        padding: 1.75rem;
+    }
+    .spec-card-media {
+        height: 180px;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Dynamic Cursor Radial Position Processing Track Loop for Spec Cards Glow
+    const specCardsList = document.querySelectorAll('.spec-glow-card');
+
+    specCardsList.forEach(card => {
+        card.addEventListener('mousemove', (event) => {
+            const boundaryBox = card.getBoundingClientRect();
+            const posX = event.clientX - boundaryBox.left;
+            const posY = event.clientY - boundaryBox.top;
+
+            card.style.setProperty('--sx', `${posX}px`);
+            card.style.setProperty('--sy', `${posY}px`);
+        });
+    });
+
+    // 2. Symmetrical Side Reveal and Floor Surfacing Observers System
+    const headerRowBlock = document.querySelector('.spec-header-row');
+    const cardsGridContainer = document.getElementById('specCardsGrid');
+    const bottomSurfacingCards = document.querySelectorAll('.spec-glow-card.floor-slide-up');
+    const actionFlankRow = document.getElementById('specActionRow');
+    const leftActionBtn = document.querySelector('.btn-spec-flank.flank-slide-left');
+    const rightActionBtn = document.querySelector('.btn-spec-flank.flank-slide-right');
+
+    const specLayoutObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Drop header side slide hidden state instantly
+                if (entry.target.classList.contains('spec-header-row')) {
+                    entry.target.classList.add('reveal-active');
+                }
+
+                // Step sequentially through card elements and trigger floor pop reveals
+                if (entry.target.id === 'specCardsGrid') {
+                    bottomSurfacingCards.forEach((card, index) => {
+                        setTimeout(() => {
+                            card.classList.add('reveal-active');
+                        }, index * 160); // 160ms sequential stagger incremental pop delay window
+                    });
+                }
+
+                // Deploy flanking action button reveals symmetrically from sides
+                if (entry.target.id === 'specActionRow') {
+                    leftActionBtn?.classList.add('reveal-active');
+                    rightActionBtn?.classList.add('reveal-active');
+                }
+
+                specLayoutObserver.unobserve(entry.target);
+            }
+        });
+    }, { 
+        threshold: 0.05,
+        rootMargin: "0px 0px 60px 0px"
+    });
+
+    if (headerRowBlock) specLayoutObserver.observe(headerRowBlock);
+    if (cardsGridContainer) specLayoutObserver.observe(cardsGridContainer);
+    if (actionFlankRow) specLayoutObserver.observe(actionFlankRow);
+
+    // Instant Fallback Check: Reveal elements immediately if page bounds are already visible inside viewport on start up
+    const rectCheck = headerRowBlock?.getBoundingClientRect();
+    if (rectCheck && rectCheck.top >= 0 && rectCheck.top <= window.innerHeight) {
+        headerRowBlock.classList.add('reveal-active');
+        bottomSurfacingCards.forEach(card => card.classList.add('reveal-active'));
+        leftActionBtn?.classList.add('reveal-active');
+        rightActionBtn?.classList.add('reveal-active');
+    }
+});
+
+</script>
+
+<section id="subscribe-terminal" class="fullwidth-subscribe-viewport">
+    <!-- Spatial Background Backdrop Imagery Layers Matrix -->
+    <div class="subscribe-backdrop-layer">
+        <!-- Replace src with your customized solar grid asset path -->
+        <img src="subscribe-matrix-mesh.jpg" alt="Stackly Distributed Cell Infrastructure network grid" class="subscribe-bg-asset">
+        <div class="subscribe-tint-overlay"></div>
+    </div>
+
+    <!-- Core Content Canvas Grid Layout Track -->
+    <div class="subscribe-canvas-matrix">
+        
+        <!-- Left Column: Typography Layout Briefing (Slides from Left Flank) -->
+        <div class="subscribe-text-flank flank-slide-left">
+            <span class="subscribe-badge-eyebrow">Telemetry Updates</span>
+            <h2 class="subscribe-main-heading">Subscribe to the <span>Stackly Grid Matrix.</span></h2>
+            <p class="subscribe-subtext">Receive automated technical node briefing logs, capacity optimization analysis, and decentralized architecture release telemetry notes.</p>
+        </div>
+
+        <!-- Right Column: Validating Lead Capture Control Card (Slides from Right Flank) -->
+        <div class="subscribe-form-flank flank-slide-right">
+            <div class="subscribe-glow-card">
+                <form id="gridSubscribeForm" class="terminal-capture-form" novalidate>
+                    
+                    <!-- Email Data Field Node Layout -->
+                    <div class="form-input-group">
+                        <label for="subscriberEmail">Secure Core Node Routing Email</label>
+                        <div class="input-vector-field-wrapper">
+                            <span class="input-field-icon">✉</span>
+                            <input type="email" id="subscriberEmail" placeholder="node@stackly-infrastructure.com" required autocomplete="off">
+                        </div>
+                    </div>
+
+                    <!-- Micro Prompt Matrix Notification Overlay Track Bar -->
+                    <div class="form-validation-prompt-box" id="validationPromptMessage">
+                        <!-- Content injected via modern script validation traces loops dynamically -->
+                    </div>
+
+                    <!-- Trigger Access Operational Activation Button -->
+                    <button type="submit" class="btn-terminal-submit-trigger">
+                        <span>Initialize Node Subscription</span>
+                        <div class="btn-arrow-vector-circle">→</div>
+                    </button>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* Core Section Full-Width Layout Framework Configuration */
+.fullwidth-subscribe-viewport {
+    position: relative;
+    width: 100%; /* Explicit full-width constraint breaking past layout container widths */
+    /* Enforcing strict top: 50px and bottom: 30px padding constraints */
+    padding: 50px 0 30px 0;
+    background-color: #000000; /* Deep charcoal dark infrastructure baseline accent */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background Control Array Elements Sheets Layout Layers */
+.subscribe-backdrop-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.subscribe-bg-asset {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25; /* Subdued structural background image layout tracking */
+    mix-blend-mode: luminosity;
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.fullwidth-subscribe-viewport:hover .subscribe-bg-asset {
+    transform: scale(1.03) rotate(-0.5deg);
+}
+
+.subscribe-tint-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(250, 204, 21, 0.06) 0%, rgba(0,0,0,0.95) 85%);
+    pointer-events: none;
+}
+
+/* Structural Interaction Canvas Layout Split Matrix */
+.subscribe-canvas-matrix {
+    position: relative;
+    width: 80%; /* Aligned to strict master architectural tracking grids path width */
+    max-width: 1440px;
+    margin: 0 auto;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+/* Left Flank Components Spacing Blocks */
+.subscribe-text-flank {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.subscribe-badge-eyebrow {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #facc15; /* Signature Accent Yellow Tint */
+    text-shadow: 0 0 20px rgba(250, 204, 21, 0.3);
+}
+
+.subscribe-main-heading {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #ffffff;
+    font-size: 3.25rem;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    margin: 0;
+}
+
+.subscribe-main-heading span {
+    color: #facc15;
+}
+
+.subscribe-subtext {
+    color: #94a3b8;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 540px;
+}
+
+/* Right Flank Premium Lead Capture Card (Glow Matrices Anchored) */
+.subscribe-glow-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.terminal-capture-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Input Fields Modules Configurations */
+.form-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.form-input-group label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.input-vector-field-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-field-icon {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.terminal-capture-form input[type="email"] {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 1.1rem 1.25rem 1.1rem 3.2rem;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.terminal-capture-form input[type="email"]:focus {
+    border-color: #facc15;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.05);
+}
+
+.terminal-capture-form input[type="email"]:focus + .input-field-icon {
+    color: #facc15;
+}
+
+/* Custom Notification Prompt Display Field Base */
+.form-validation-prompt-box {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-radius: 0.25rem;
+}
+
+.form-validation-prompt-box.error-alert {
+    color: #ef4444; /* Kinetic warning alert crimson red text look */
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.2);
+}
+
+/* Operation Submit Button Module */
+.btn-terminal-submit-trigger {
+    width: 100%;
+    background-color: #facc15; /* Signature brand core yellow fill profile */
+    border: none;
+    outline: none;
+    color: #000000;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.6rem 0.6rem 0.6rem 1.75rem;
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(250, 204, 21, 0.15);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-arrow-vector-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Button hover mappings profiles */
+.btn-terminal-submit-trigger:hover {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-terminal-submit-trigger:hover .btn-arrow-vector-circle {
+    background-color: #facc15;
+    color: #000000;
+    transform: rotate(-45deg);
+}
+
+/* Atmospheric Cursor Radial Tracking Glow Mappings */
+.subscribe-glow-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+    background: radial-gradient(500px circle at var(--sub-x, 50%) var(--sub-y, 50%), rgba(250, 204, 21, 0.12), transparent 45%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.subscribe-glow-card:hover {
+    border-color: rgba(250, 204, 21, 0.3);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+.subscribe-glow-card:hover::before {
+    opacity: 1;
+}
+
+/* --- Lateral Kinetic Side Slide Entry Animation Configurations --- */
+.flank-slide-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.flank-slide-right {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Active Intersection Reveal Application classes state overrides */
+.flank-slide-left.reveal-active,
+.flank-slide-right.reveal-active {
+    opacity: 1;
+    transform: translate(0);
+}
+
+/* --- Fully Fluid Responsive Breakpoints System --- */
+@media (max-width: 1200px) {
+    .subscribe-main-heading {
+        font-size: 2.75rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .subscribe-canvas-matrix {
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 3.5rem;
+        text-align: center;
+    }
+    .subscribe-text-flank {
+        align-items: center;
+    }
+    .subscribe-glow-card {
+        padding: 2.5rem;
+        max-width: 580px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .fullwidth-subscribe-viewport {
+        padding: 45px 0 25px 0;
+    }
+    .subscribe-main-heading {
+        font-size: 2.15rem;
+    }
+    .subscribe-glow-card {
+        padding: 1.75rem;
+    }
+    .btn-terminal-submit-trigger {
+        padding: 0.5rem 0.5rem 0.5rem 1.25rem;
+    }
+}
+
+
+/* Subscription section: prevent invisible content */
+#subscribe-terminal .subscribe-text-flank,
+#subscribe-terminal .subscribe-form-flank {
+    visibility: visible;
+}
+
+/* Ensure the content remains visible after the reveal animation */
+#subscribe-terminal .subscribe-text-flank.reveal-active,
+#subscribe-terminal .subscribe-form-flank.reveal-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+</style>
+
+<script>
+  
+// 3. Subscription Section Scroll Animation Fix
+const subscribeViewport = document.querySelector(
+    '#subscribe-terminal.fullwidth-subscribe-viewport'
+);
+
+if (subscribeViewport) {
+    const leftTextFlank = subscribeViewport.querySelector(
+        '.subscribe-text-flank'
+    );
+
+    const rightFormFlank = subscribeViewport.querySelector(
+        '.subscribe-form-flank'
+    );
+
+    const revealSubscribeContent = () => {
+        leftTextFlank?.classList.add('reveal-active');
+        rightFormFlank?.classList.add('reveal-active');
+    };
+
+    if ('IntersectionObserver' in window) {
+        const subscribeIntersectionObserver = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        revealSubscribeContent();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0,
+                rootMargin: '0px 0px 150px 0px'
+            }
+        );
+
+        subscribeIntersectionObserver.observe(subscribeViewport);
+    } else {
+        revealSubscribeContent();
+    }
+
+    // Fallback: reveal the content if the observer does not trigger
+    setTimeout(revealSubscribeContent, 1200);
+}
+
+</script>
+
+<footer class="global-footer-viewport">
+    <div class="footer-layout-container">
+        
+        <!-- Four-Column Principal Grid Architecture -->
+        <div class="footer-principal-grid">
+            
+            <!-- Column 1: Brand & Inline SVG Social Vectors -->
+            <div class="footer-brand-column">
+                <a href="#" id="footerBackToTop" class="footer-logo-link" aria-label="Scroll back to top">
+                    <img src="logo-yellow.svg" alt="Stackly Renewable Energy Logo" class="footer-brand-logo">
+                </a>
+                <p class="footer-brand-description">
+                    Delivering premier renewable energy solutions and high fidelity grid architectures engineered to fuel sustainable electrification straight to your infrastructure.
+                </p>
+                
+                <!-- SVG Vector Social Links Group -->
+                <div class="footer-social-cluster">
+                    <!-- Instagram -->
+                    <a href="404.html" class="social-icon-node" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    
+                    <!-- YouTube -->
+                    <a href="404.html" class="social-icon-node" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.95 1.96C5.12 19.5 12 19.5 12 19.5s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                        </svg>
+                    </a>
+                    
+                    <!-- LinkedIn -->
+                    <a href="404.html" class="social-icon-node" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+
+                    <!-- Facebook -->
+                    <a href="404.html" class="social-icon-node" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Explore Tracks -->
+            <div class="footer-links-column">
+                <h4 class="column-title-underline">Explore Tracks</h4>
+                <ul class="footer-links-list">
+                    <li><a href="404.html">Nearby Grids</a></li>
+                    <li><a href="404.html">Micro Solutions</a></li>
+                    <li><a href="404.html">Daily Power Flash</a></li>
+                    <li><a href="404.html">Eco-Friendly Pack</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Order Support -->
+            <div class="footer-links-column">
+                <h4 class="column-title-underline">Order Support</h4>
+                <ul class="footer-links-list">
+                    <li><a href="404.html">Live Courier Status</a></li>
+                    <li><a href="404.html">Refund Parameters</a></li>
+                    <li><a href="404.html">Help & FAQ Center</a></li>
+                    <li><a href="404.html">Safety Certifications</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Headquarters Location -->
+            <div class="footer-links-column contact-info-column">
+                <h4 class="column-title-underline">Headquarters Location</h4>
+                <div class="contact-meta-item">
+                    <span class="meta-icon">📍</span>
+                    <p class="meta-text">
+                        MMR Complex,<br>
+                        Periyakollappatty,<br>
+                        Chinna Thirupathi, Salem,<br>
+                        Tamil Nadu 636008
+                    </p>
+                </div>
+                <div class="contact-meta-item phone-highlight">
+                    <span class="meta-icon">📞</span>
+                    <a href="tel:+917010792745" class="phone-link">+91 7010792745</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Horizontal Sub-Footer Content Strip Row -->
+        <div class="footer-base-strip">
+            <p class="copyright-text">&copy; 2026 Stackly Industries. All delivery rights reserved.</p>
+            <div class="sub-footer-links">
+                <a href="404.html">Privacy Policy</a>
+                <a href="404.html">Terms of Service</a>
+                <a href="404.html">Cookie Management</a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<style>
+    /* --- Ultra-Premium Domain Footer Architecture --- */
+.global-footer-viewport {
+    width: 100%;
+    background-color: #0c0a09; /* Deep charcoal black theme from image */
+    padding: 60px 0 30px 0;
+    border-top: 1px solid #1c1917;
+}
+
+.footer-layout-container {
+    width: 80%; /* Consistent structural width alignment constraint */
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* Four-Column Master Grid Template Layout */
+.footer-principal-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
+    gap: 3rem;
+}
+
+/* Column 1 Content Styling Layout */
+.footer-brand-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-brand-logo {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.footer-brand-logo:hover {
+    transform: scale(1.02);
+}
+
+.footer-brand-description {
+    color: #a8a29e; /* Muted stone grey text font color from screenshot */
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 320px;
+}
+
+.footer-social-cluster {
+    display: flex;
+    gap: 0.75rem;
+}
+
+/* Inline SVG Wrapper Node Configuration */
+.social-icon-node {
+    width: 38px;
+    height: 38px;
+    background-color: #1c1917;
+    border: 1px solid #2e2a24;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #a8a29e; /* Initial gray icon profile */
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.social-icon-node svg {
+    width: 18px;
+    height: 18px;
+    transition: stroke 0.3s ease, fill 0.3s ease;
+}
+
+/* Hover Adjustments: Transforms stroke to signature crisp dark black outline inside yellow fill */
+.social-icon-node:hover {
+    background-color: #facc15; 
+    border-color: #facc15;
+    color: #000000;
+    transform: translateY(-3px);
+}
+
+.social-icon-node:hover svg {
+    color: #000000;
+}
+
+/* Links Columns Styling Layouts Setup */
+.column-title-underline {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1.75rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    width: fit-content;
+}
+
+/* The striking indicator accent underscore lines straight from the screenshot */
+.column-title-underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #facc15; /* Signature brand yellow line target */
+}
+
+.footer-links-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.footer-links-list a {
+    color: #a8a29e;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.25s ease, padding-left 0.25s ease;
+}
+
+.footer-links-list a:hover {
+    color: #facc15;
+    padding-left: 4px;
+}
+
+/* Column 4 Context Info Specific Modules styling */
+.contact-info-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-meta-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    margin-bottom: 1.25rem;
+}
+
+.meta-icon {
+    color: #facc15;
+    font-size: 1.1rem;
+    margin-top: 2px;
+}
+
+.meta-text {
+    color: #a8a29e;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.phone-highlight {
+    margin-top: 1.5rem;
+}
+
+.phone-link {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #facc15; /* Highlighted telephone value from reference image */
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: color 0.25s ease;
+}
+
+.phone-link:hover {
+    color: #ffffff;
+}
+
+/* --- Base Strip Rows Footprints --- */
+.footer-base-strip {
+    border-top: 1px solid #1c1917;
+    padding-top: 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright-text {
+    color: #78716c;
+    font-size: 0.8rem;
+}
+
+.sub-footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.sub-footer-links a {
+    color: #78716c;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.2s ease;
+}
+
+.sub-footer-links a:hover {
+    color: #ffffff;
+}
+
+/* --- Fully Fluid Responsive Breakpoints Infrastructure --- */
+@media (max-width: 1024px) {
+    .footer-layout-container {
+        width: 90%;
+    }
+    .footer-principal-grid {
+        grid-template-columns: 1fr 1fr; /* Toggle down columns tracks grid layout on tablets */
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer-principal-grid {
+        grid-template-columns: 1fr; /* Completely collapse columns on phones */
+        gap: 2.5rem;
+    }
+    .footer-base-strip {
+        flex-direction: column;
+        gap: 1.25rem;
+        text-align: center;
+    }
+    .sub-footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // Programmatic Back-To-Top Anchor Click Handler Action
+    const backToTopTrigger = document.getElementById('footerBackToTop');
+
+    if (backToTopTrigger) {
+        backToTopTrigger.addEventListener('click', (event) => {
+            event.preventDefault(); // Stop raw anchor hop navigation trace lines
+            
+            // Execute premium smooth tracking scroll velocity up to coordinate index zero
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
+
+</script>
+</body>
+</html>
