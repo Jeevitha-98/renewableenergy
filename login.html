@@ -1,0 +1,667 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Infrastructure - Portal Access Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="portal-body-wrapper">
+
+    <!-- Primary Asymmetric Workspace Canvas Box (Replicating Image Split Design) -->
+    <main class="login-layout-container">
+        
+        <!-- Left Column Flank: Brand Value Showcase Branding Sheet -->
+        <div class="login-left-brand-panel">
+            <div class="brand-eyebrow-wrapper">
+                <span class="brand-beacon-dot"></span>
+                <span class="brand-eyebrow-text">Stackly Grid Matrix</span>
+            </div>
+            
+            <h1 class="brand-main-heading">
+                Decentralized.<br>
+                <span class="yellow-text-mode">Autonomous.</span>
+            </h1>
+            
+            <p class="brand-sub-description">
+                Isolate local consumption fluctuations, monitor live microgrid generation arrays, and manage distributed storage reserves natively on edge terminal layers.
+            </p>
+
+            <!-- Center Showcase Media Module Frame -->
+            <div class="brand-image-showcase-box">
+                <div class="vector-card-placeholder">
+                    <span class="placeholder-icon">⚡</span>
+                    <p>Stackly Infrastructure Hub Console</p>
+                    <span class="telemetry-subtext">Secure Synchronization Active</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column Flank: Interactive Form Control Terminal Dashboard -->
+        <div class="login-right-terminal-panel">
+            <!-- Programmatic Back-To-Home Action Link -->
+            <a href="404.html" class="link-back-navigation">← Back to Registry</a>
+            
+            <div class="terminal-header-block">
+                <h2>Welcome Back</h2>
+                <p>Sign in to manage your microgrid nodes, utility logs, and cryptographic core configurations accounts.</p>
+            </div>
+
+            <!-- Access Control Core Authorization Form Input Stack -->
+            <form id="portalAuthTerminalForm" class="portal-auth-form" novalidate>
+                
+                <!-- Input Node 01: Account Role Selector Matrix -->
+                <div class="auth-input-element-group">
+                    <label for="accountRoleType">Login As</label>
+                    <div class="input-vector-field-wrapper">
+                        <span class="input-field-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </span>
+                        <select id="accountRoleType" required>
+                            <option value="" disabled selected hidden>Select account type</option>
+                            <option value="partner">Partner / Grid Node Operator</option>
+                            <option value="client">Client / Energy Consumer</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Input Node 02: Secure Core Node Routing Email -->
+                <div class="auth-input-element-group">
+                    <label for="subscriberEmail">Email Address</label>
+                    <div class="input-vector-field-wrapper">
+                        <span class="input-field-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </span>
+                        <input type="email" id="subscriberEmail" placeholder="Enter your registered email address" required autocomplete="off">
+                    </div>
+                </div>
+
+                <!-- Input Node 03: Passkey Key String Token -->
+                <div class="auth-input-element-group">
+                    <label for="subscriberPassword">Password</label>
+                    <div class="input-vector-field-wrapper">
+                        <span class="input-field-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        </span>
+                        <input type="password" id="subscriberPassword" placeholder="Enter your passkey string" required>
+                        <button type="button" class="btn-toggle-password-reveal" id="passwordMaskToggler" aria-label="Toggle password visibility">👁</button>
+                    </div>
+                </div>
+
+                <!-- Secondary Navigational Options Row Area -->
+                <div class="auth-auxiliary-navigation-row">
+                    <a href="404.html" class="link-forgot-password-token">Forgot Password?</a>
+                </div>
+
+                <!-- Dynamic Micro Notification System Validation Alert Bar -->
+                <div class="auth-validation-prompt-box" id="terminalAlertLogMessage"></div>
+
+                <!-- Authorization Access Submission Trigger Button -->
+                <button type="submit" class="btn-auth-submit-trigger">Sign In to Dashboard</button>
+
+                <!-- Divider Framework Strip Row Lines -->
+                <div class="auth-separator-strip">
+                    <span>OR CONTINUE WITH</span>
+                </div>
+
+                <!-- Social Authentication Vector Button Rows Split -->
+                <div class="social-auth-split-row">
+                    <a href="404.html" class="btn-social-node-trigger google-variant">
+                        <span class="social-icon-vector">G</span>
+                        <span>Google Registry</span>
+                    </a>
+                    <a href="404.html" class="btn-social-node-trigger facebook-variant">
+                        <span class="social-icon-vector">f</span>
+                        <span>Facebook Console</span>
+                    </a>
+                </div>
+
+                <!-- Base Account Creation Intersect Lead Trigger Link -->
+                <p class="auth-base-signup-prompt">Don't have an account? <a href="signup.html" class="link-create-account-matrix">Register New Node</a></p>
+
+            </form>
+        </div>
+
+    </main>
+
+
+    <style>
+        /* Unique Typography Imports for Strict Brand Alignment */
+@import url('https://googleapis.com');
+
+/* Core Setup Canvas Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.portal-body-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f8fafc; /* Crisp outer background canvas */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Master Asymmetric Two-Column Split Grid Enclosure Plate Box */
+.login-layout-container {
+    width: 100%;
+    max-width: 1120px;
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.02);
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* absolute half-and-half proportions system split */
+    align-items: stretch;
+}
+
+/* --- Left Column Flank Brand Module Panel Configs --- */
+.login-left-brand-panel {
+    background-color: #0c0a09; /* Deep charcoal black theme matching infrastructure profile */
+    padding: 4rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-right: 1px solid #1c1917;
+}
+
+.brand-eyebrow-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.brand-beacon-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #facc15;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #facc15;
+}
+
+.brand-eyebrow-text {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #facc15; /* Signature brand core yellow text */
+}
+
+.brand-main-heading {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+}
+
+.yellow-text-mode {
+    color: #facc15; /* Swapping brand core yellow highlights cleanly */
+}
+
+.brand-sub-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #a8a29e; /* Muted stone grey text */
+    max-width: 400px;
+}
+
+/* Center Core Infrastructure Placeholder Plate Frame Box */
+.brand-image-showcase-box {
+    margin-top: auto; /* Push down to card base limits */
+    width: 100%;
+    height: 220px;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 1px solid #1c1917;
+    background-color: #1c1917;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vector-card-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 0.5rem;
+}
+
+.placeholder-icon {
+    font-size: 2.25rem;
+    filter: drop-shadow(0 0 10px rgba(250, 204, 21, 0.3));
+    animation: beaconPulse 2s infinite alternate;
+}
+
+@keyframes beaconPulse {
+    to { transform: scale(1.1); }
+}
+
+.vector-card-placeholder p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.telemetry-subtext {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #facc15;
+    letter-spacing: 0.05em;
+}
+
+/* --- Right Column Flank Interactive Portal Forms Configs --- */
+.login-right-terminal-panel {
+    padding: 4rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.link-back-navigation {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0c0a09;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    width: fit-content;
+    transition: all 0.25s ease;
+}
+
+.link-back-navigation:hover {
+    color: #eab308;
+    transform: translateX(-3px);
+}
+
+.terminal-header-block {
+    margin-bottom: 2.25rem;
+}
+
+.terminal-header-block h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #0c0a09;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.5rem;
+}
+
+.terminal-header-block p {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* Input Fields Modules Configurations Framework Base */
+.portal-auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.auth-input-element-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.auth-input-element-group label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #0c0a09;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.input-vector-field-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-field-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-field-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Input Field Elements Architecture Sheets */
+.portal-auth-form input[type="email"],
+.portal-auth-form input[type="password"],
+.portal-auth-form select {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 0.85rem 1rem 0.85rem 2.75rem; /* Expanded left margin boundary path to fit vector icon models cleanly */
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    color: #0c0a09;
+    outline: none;
+    appearance: none; /* Strip browser native chevron arrows from select boxes safely */
+    transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Injecting custom drop-down menu chevron icon */
+.input-vector-field-wrapper select {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' xmlns='http://w3.org points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 14px;
+    padding-right: 2.5rem;
+}
+
+.portal-auth-form input:focus,
+.portal-auth-form select:focus {
+    border-color: #facc15; /* Focus highlight transitions to brand yellow core strings */
+    box-shadow: 0 0 15px rgba(250, 204, 21, 0.05);
+}
+
+/* Password visibility button toggler link node */
+.btn-toggle-password-reveal {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #64748b;
+    z-index: 3;
+}
+
+/* Auxiliary options alignment strings layouts rows */
+.auth-auxiliary-navigation-row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin-top: -0.25rem;
+}
+
+.link-forgot-password-token {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #0c0a09;
+    text-decoration: none;
+}
+
+.link-forgot-password-token:hover {
+    color: #eab308;
+    text-decoration: underline;
+}
+
+/* Custom Interactive Notification Warning System Logs alert strips */
+.auth-validation-prompt-box {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    min-height: 18px;
+    color: #ef4444; /* Alert crimson red warning color profile text */
+    transition: all 0.2s ease;
+}
+
+/* Master Primary Core Submission Sign In Button Module Configs */
+.btn-auth-submit-trigger {
+    width: 100%;
+    background-color: #000000; /* Minimalist strict dark silhouette look */
+    color: #ffffff;
+    border: none;
+    outline: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-auth-submit-trigger:hover {
+    background-color: #facc15; /* Shift to brand core signature yellow fill profile on hover */
+    color: #000000;
+    box-shadow: 0 12px 24px rgba(250, 204, 21, 0.25);
+    transform: translateY(-1px);
+}
+
+/* OR separator indicator strips framework text strings layout elements */
+.auth-separator-strip {
+    text-align: center;
+    position: relative;
+    margin: 0.5rem 0;
+    width: 100%;
+}
+
+.auth-separator-strip::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background-color: #e2e8f0;
+    z-index: 1;
+}
+
+.auth-separator-strip span {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #94a3b8;
+    background-color: #ffffff;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 2;
+    letter-spacing: 0.05em;
+}
+
+/* Social Authenticators split row buttons groups block */
+.social-auth-split-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+.btn-social-node-trigger {
+    border: 1px solid #cbd5e1;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #0c0a09;
+    background-color: #ffffff;
+    transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.social-icon-vector {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.google-variant .social-icon-vector { color: #ea4335; }
+.facebook-variant .social-icon-vector { color: #1877f2; }
+
+.btn-social-node-trigger:hover {
+    border-color: #facc15;
+    background-color: #fafafa;
+    transform: translateY(-1px);
+}
+
+/* Base signup interlock message indicators lines */
+.auth-base-signup-prompt {
+    text-align: center;
+    font-size: 0.88rem;
+    color: #64748b;
+    margin-top: 0.75rem;
+}
+
+.link-create-account-matrix {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    color: #0c0a09;
+    text-decoration: none;
+}
+
+.link-create-account-matrix:hover {
+    color: #eab308;
+text-decoration: underline;
+}
+/* --- Fully Fluid Responsive Breakpoints System Layout Overrides --- /
+@media (max-width: 968px) {
+.portal-body-wrapper {
+padding: 1rem;
+}
+.login-layout-container {
+grid-template-columns: 1fr; / Collapse asymmetric columns block cleanly directly down to stacked tracking lists maps rows on tablets */
+}
+.login-left-brand-panel {
+border-right: none;
+border-bottom: 1px solid #e2e8f0;
+padding: 3rem 2rem;
+align-items: center;
+text-align: center;
+}
+.brand-sub-description {
+margin: 0 auto;
+}
+.brand-image-showcase-box {
+max-width: 480px;
+margin: 1rem auto 0 auto;
+}
+.login-right-terminal-panel {
+padding: 3rem 2rem;
+}
+}
+@media (max-width: 480px) {
+.login-left-brand-panel h1 {
+font-size: 2.25rem;
+}
+.login-right-terminal-panel h2 {
+font-size: 1.75rem;
+}
+.social-auth-split-row {
+grid-template-columns: 1fr; /* Stack social authentication rows natively on tiny mobile screen windows sizes */
+}
+}
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Password Visibility Reveal Mask Masking Toggler Interface Action Link
+    const passwordInput = document.getElementById('subscriberPassword');
+    const maskTogglerButton = document.getElementById('passwordMaskToggler');
+
+    if (passwordInput && maskTogglerButton) {
+        maskTogglerButton.addEventListener('click', () => {
+            const isCurrentlyMaskedType = passwordInput.getAttribute('type') === 'password';
+            
+            if (isCurrentlyMaskedType) {
+                passwordInput.setAttribute('type', 'text');
+                maskTogglerButton.textContent = '🙈';
+            } else {
+                passwordInput.setAttribute('type', 'password');
+                maskTogglerButton.textContent = '👁';
+            }
+        });
+    }
+
+    // 2. Strict Custom Real-Time Dropdown Field Verification Validation Loop
+    const portalForm = document.getElementById('portalAuthTerminalForm');
+    const displayValidationMessageBox = document.getElementById('terminalAlertLogMessage');
+
+    const roleSelectorField = document.getElementById('accountRoleType');
+    const emailInputField = document.getElementById('subscriberEmail');
+    const passwordInputField = document.getElementById('subscriberPassword');
+
+    if (portalForm && displayValidationMessageBox && roleSelectorField && emailInputField && passwordInputField) {
+        
+        portalForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Halt default browser document mapping route lines
+
+            const chosenRoleString = roleSelectorField.value;
+            const typedEmailValue = emailInputField.value.trim();
+            const typedPasswordValue = passwordInputField.value;
+
+            // Validation Rule Trace 01: Audit for absolute clear null empty index selector state parameters strings
+            if (!chosenRoleString || typedEmailValue === '' || typedPasswordValue === '') {
+                displayValidationMessageBox.textContent = '⚠ Operational Error: please fill all the fields before attempting validation authorization access loops.';
+                
+                // Set explicit element cursor focus based on earliest found empty entry segment
+                if (!chosenRoleString) roleSelectorField.focus();
+                else if (typedEmailValue === '') emailInputField.focus();
+                else passwordInputField.focus();
+                return;
+            }
+
+            // Success Pass Route Layer: Store core mail identity metrics inside local client storage array parameters instantly
+            localStorage.setItem('cachedSubscriberNodeEmail', typedEmailValue);
+            localStorage.setItem('activeAuthorizationRoleToken', chosenRoleString);
+
+            displayValidationMessageBox.textContent = '';
+            portalForm.reset();
+
+            // Programmatic Adaptive Redirect Matrix: Route user precisely to their individual custom dashboards paths
+            if (chosenRoleString === 'partner') {
+                window.location.href = 'partner-dashboard.html'; /* Navigates directly to partner metrics array console fallback */
+            } else if (chosenRoleString === 'client') {
+                window.location.href = 'client-dashboard.html'; /* Navigates directly to client operations panel metrics array console fallback */
+            } else {
+                window.location.href = '404.html'; /* Complete system escape safety latch routing map parameter */
+            }
+        });
+
+        // Interactive validation clear flush loops: drop alert strips as soon as user types key data strings
+        const inputElementsArray = [roleSelectorField, emailInputField, passwordInputField];
+        inputElementsArray.forEach(input => {
+            input.addEventListener('input', () => {
+                if (displayValidationMessageBox.textContent !== '') {
+                    displayValidationMessageBox.textContent = '';
+                }
+            });
+            input.addEventListener('change', () => {
+                if (displayValidationMessageBox.textContent !== '') {
+                    displayValidationMessageBox.textContent = '';
+                }
+            });
+        });
+          }
+});
+    </script>
+</body>
+</html>

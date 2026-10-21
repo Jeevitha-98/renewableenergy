@@ -1,0 +1,2334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Infrastructure - Partner Node Control Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-root-body">
+
+    <!-- Header Operations Command Control Bar Panel -->
+    <header class="dashboard-global-header">
+        <div class="header-left-brand-block">
+            <!-- Hamburger Toggle Trigger Icon for Responsive Viewports View -->
+            <button class="btn-hamburger-menu-trigger" id="sidebarMenuDrawerToggle" aria-label="Toggle Navigation Console Drawer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+            
+            <!-- Clicking the Brand Link triggers a programmatic dashboard state refresh execution loop -->
+            <a href="#" id="dashboardBrandRefresh" class="header-brand-logo-link" aria-label="Refresh Dashboard Matrix State">
+                <img src="logo-yellow.svg" alt="Stackly Renewable Energy Industrial Control Grid Logo" class="header-brand-img">
+            </a>
+        </div>
+
+        <div class="header-right-telemetry-block">
+            <!-- Telemetry Notification Alert Bell Vector Icon Group -->
+            <button class="header-telemetry-bell-btn" aria-label="Open Telemetry Notifications Feed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                <span class="active-alert-beacon-dot"></span>
+            </button>
+
+            
+            <div class="header-user-profile-plate">
+                <div class="profile-avatar-circle">👤</div>
+                
+                    <span class="profile-greeting-text">Welcome,</span>
+                    <!-- Fallback default string initialized before app.js script binder loads -->
+                    <span class="profile-parsed-name-node" id="headerProfileGreetingName">Grid Operator</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Master Workspace Layout Framework Row -->
+    <div class="dashboard-core-canvas-layout">
+        
+        <!-- Backdrop Tint Sheet Cover Overlay Track for Sidebar Drawers -->
+        <div class="sidebar-drawer-tint-backdrop" id="drawerTintOverlay"></div>
+
+        <!-- Left Column Flank: Side Navigation Control Console Drawer Grid -->
+        <aside class="dashboard-sidebar-drawer" id="dashboardSidebarConsole">
+            <nav class="sidebar-navigation-menu-links">
+                <!-- Navigation Tab Trigger 01 -->
+                <button class="sidebar-tab-nav-link link-state-active" data-section-target="partner-overview-section">
+                    <span class="sidebar-vector-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+                    </span>
+                    <span>Node Grid Overview</span>
+                </button>
+
+                <!-- Navigation Tab Trigger 02 -->
+                <button class="sidebar-tab-nav-link" data-section-target="partner-analytics-section">
+                    <span class="sidebar-vector-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    </span>
+                    <span>Power Load Analytics</span>
+                </button>
+
+                <!-- Navigation Tab Trigger 03 -->
+                <button class="sidebar-tab-nav-link" data-section-target="partner-hardware-section">
+                    <span class="sidebar-vector-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="16" height="12" rx="2" ry="2"></rect><line x1="6" y1="7" x2="6" y2="19"></line><line x1="12" y1="7" x2="12" y2="19"></line><path d="M22 11v2"></path></svg>
+                    </span>
+                    <span>Generation Hardware</span>
+                </button>
+
+                <!-- Navigation Tab Trigger 04 -->
+                <button class="sidebar-tab-nav-link" data-section-target="partner-ledgers-section">
+                    <span class="sidebar-vector-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </span>
+                    <span>Immutable Ledgers</span>
+                </button>
+
+                <!-- Programmatic Logout Return Core Action Button Pin -->
+                <button class="sidebar-logout-action-btn" id="portalLogoutTriggerAction">
+                    <span class="sidebar-vector-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    </span>
+                    <span>Disconnect Session</span>
+                </button>
+            </nav>
+        </aside>
+
+        <!-- Right Column Flank Principal Section Workspace Container Display Frame -->
+        <main class="dashboard-main-content-display" id="dashboardMainDisplayViewport">
+            
+            <!-- Structural Section Title Node 01: Overview (Visible by default) -->
+           <section id="partner-overview-section" class="workspace-tab-panel-route section-display-active">
+    <div class="overview-grid-workspace">
+        
+        <!-- Top Metrics Ribbon (Responsive 3-Column Strip) -->
+        <div class="overview-ribbon-grid">
+            
+            <!-- Metric Node 01 -->
+            <div class="telemetry-summary-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="summary-card-header">
+                    <div class="metric-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    </div>
+                    <span class="metric-label-tag">Live System Yield</span>
+                </div>
+                <div class="summary-card-body">
+                    <h4 class="metric-big-digits">94.8 <span class="unit-text">MWh</span></h4>
+                    <p class="metric-telemetry-status text-green">
+                        <span class="pulse-beacon-dot"></span> Generation Stable (+4.2%)
+                    </p>
+                </div>
+            </div>
+
+            <!-- Metric Node 02 -->
+            <div class="telemetry-summary-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="summary-card-header">
+                    <div class="metric-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="16" height="12" rx="2" ry="2"></rect><line x1="6" y1="7" x2="6" y2="19"></line><line x1="12" y1="7" x2="12" y2="19"></line><path d="M22 11v2"></path></svg>
+                    </div>
+                    <span class="metric-label-tag">Active Cell Capacity</span>
+                </div>
+                <div class="summary-card-body">
+                    <h4 class="metric-big-digits">82.3 <span class="unit-text">%</span></h4>
+                    <p class="metric-telemetry-status text-yellow">Solid-State Sync Active</p>
+                </div>
+            </div>
+
+            <!-- Metric Node 03 -->
+            <div class="telemetry-summary-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="summary-card-header">
+                    <div class="metric-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <span class="metric-label-tag">Grid Safety Rating</span>
+                </div>
+                <div class="summary-card-body">
+                    <h4 class="metric-big-digits">100 <span class="unit-text">%</span></h4>
+                    <p class="metric-telemetry-status text-green">0 Anomaly Logs Traced</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Lower Split Layout: Live Grid Logs & Action Panel -->
+        <div class="overview-split-matrix-row">
+            
+            <!-- Left Side: Node Telemetry Log Registry Panel -->
+            <div class="panel-card-container panel-wide-span">
+                <div class="panel-card-header-row">
+                    <div class="panel-header-titles">
+                        <h4>Regional Infrastructure Node Log</h4>
+                        <p>Real-time telemetry stream across verified harvesting cells.</p>
+                    </div>
+                    <a href="404.html" class="btn-panel-action-link">
+                        <span>View Registry Archive</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Responsive Registry Table Matrix Wrapper -->
+                <div class="responsive-table-scroll-mask">
+                    <table class="telemetry-data-matrix-table">
+                        <thead>
+                            <tr>
+                                <th>Node ID Axis</th>
+                                <th>Topology Class</th>
+                                <th>Current Payload</th>
+                                <th>Node State</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-tabular-nums">#ST-N01-SLM</td>
+                                <td>Photovoltaic Alpha</td>
+                                <td class="font-tabular-nums">42.5 kW</td>
+                                <td><span class="status-badge-chip success-chip">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-tabular-nums">#ST-N02-SLM</td>
+                                <td>Solid-State Beta</td>
+                                <td class="font-tabular-nums">18.9 kW</td>
+                                <td><span class="status-badge-chip success-chip">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-tabular-nums">#ST-N03-SLM</td>
+                                <td>Photovoltaic Alpha</td>
+                                <td class="font-tabular-nums">31.2 kW</td>
+                                <td><span class="status-badge-chip standard-chip">Balancing</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Right Side: Translucent Quick Actions Command Module -->
+            <div class="panel-card-container panel-narrow-span background-dark-theme">
+                <div class="panel-card-header-row">
+                    <div class="panel-header-titles">
+                        <h4 class="text-white">Node Simulation Hub</h4>
+                        <p class="text-stone-muted">Execute virtual diagnostic fluctuations packages parameters links.</p>
+                    </div>
+                </div>
+                
+                <div class="simulation-quick-links-stack">
+                    <p class="simulation-hover-paragraph">
+                        Isolate local consumer load adjustments natively before deploying grid configurations changes to active distribution assets layers.
+                    </p>
+                    <a href="404.html" class="btn-simulation-trigger-prime">Initialize Grid Simulation Matrix</a>
+                    <a href="404.html" class="btn-simulation-trigger-ghost">Verify Cryptographic Handshakes Matrix</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<style>
+    /* --- Enhanced Node Grid Overview Workspace --- */
+.overview-grid-workspace {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    width: 100%;
+}
+
+/* Top Metrics Ribbon Layer */
+.overview-ribbon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.telemetry-summary-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.summary-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.metric-icon-box {
+    width: 36px;
+    height: 36px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0c0a09;
+    transition: all 0.3s ease;
+}
+
+.metric-icon-box svg {
+    width: 16px;
+    height: 16px;
+}
+
+.metric-label-tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.summary-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.metric-big-digits {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.1;
+}
+
+.metric-big-digits .unit-text {
+    font-size: 1.15rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.metric-telemetry-status {
+    font-size: 0.825rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.metric-telemetry-status.text-green { color: #10b981; }
+.metric-telemetry-status.text-yellow { color: #d97706; }
+
+.pulse-beacon-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #10b981;
+    border-radius: 50%;
+    animation: flashBeacon 1.5s infinite alternate;
+}
+
+@keyframes flashBeacon { to { transform: scale(1.3); opacity: 0.6; } }
+
+/* Mouse Radar Hover Coordinates Engine Glow Mask */
+.card-radar-glow-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    z-index: -1;
+    background: radial-gradient(300px circle at var(--mx, 50%) var(--my, 50%), rgba(250, 204, 21, 0.08), transparent 45%);
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* Metric Cards Hovers Interaction Rules */
+.telemetry-summary-card:hover {
+    border-color: #facc15;
+    transform: translateY(-3px);
+}
+
+.telemetry-summary-card:hover .card-radar-glow-mask { opacity: 1; }
+.telemetry-summary-card:hover .metric-icon-box { background-color: #facc15; border-color: #facc15; }
+
+/* --- Lower Split Workspace Sections Rows Matrix --- */
+.overview-split-matrix-row {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: stretch;
+}
+
+.panel-card-container {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 2.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-card-container.background-dark-theme {
+    background-color: #0c0a09; /* Deep dark chassis base lookup template matching logo layouts */
+    border-color: #1c1917;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.panel-card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.panel-header-titles h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0c0a09;
+    margin-bottom: 0.25rem;
+}
+
+.panel-header-titles p {
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+.text-white { color: #ffffff !important; }
+.text-stone-muted { color: #a8a29e !important; }
+
+/* 404 Deep Test Action Buttons Links Indicators Configs */
+.btn-panel-action-link {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.25s ease;
+}
+
+.btn-panel-action-link svg {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-panel-action-link:hover { color: #eab308; }
+.btn-panel-action-link:hover svg { transform: translateX(3px); }
+
+/* --- Table Registry System Grid Mask Sheets Configuration --- */
+.responsive-table-scroll-mask {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.telemetry-data-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.telemetry-data-matrix-table th {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    padding: 0.85rem 1rem;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.telemetry-data-matrix-table td {
+    padding: 1.1rem 1rem;
+    font-size: 0.925rem;
+    color: #0f172a;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.font-tabular-nums { font-variant-numeric: tabular-nums; font-weight: 500; }
+
+.telemetry-data-matrix-table tr:last-child td { border-bottom: none; }
+
+.status-badge-chip {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 99px;
+    text-transform: uppercase;
+}
+
+.status-badge-chip.success-chip { background-color: #f0fdf4; color: #16a34a; }
+.status-badge-chip.standard-chip { background-color: #fff7ed; color: #d97706; }
+
+/* Simulation Right Column Panel Interactive Blocks */
+.simulation-quick-links-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    height: 100%;
+}
+
+.simulation-hover-paragraph {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #a8a29e;
+    margin-bottom: auto; /* Secure button locking alignment pinned down to card floors */
+    transition: color 0.3s ease;
+}
+
+.simulation-hover-paragraph:hover { color: #ffffff; }
+
+.btn-simulation-trigger-prime,
+.btn-simulation-trigger-ghost {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-simulation-trigger-prime { background-color: #facc15; color: #000000; }
+.btn-simulation-trigger-prime:hover { background-color: #ffffff; transform: translateY(-1px); }
+
+.btn-simulation-trigger-ghost { border: 1px solid rgba(255,255,255,0.15); color: #ffffff; }
+.btn-simulation-trigger-ghost:hover { background-color: rgba(255,255,255,0.04); border-color: #ffffff; }
+
+/* --- Fully Fluid Responsive Breakpoints System Layout Overrides --- */
+@media (max-width: 1200px) {
+    .overview-ribbon-grid {
+        grid-template-columns: 1fr; /* Stack telemetry matrix summary blocks vertically on tiny spaces paths */
+        gap: 1.25rem;
+    }
+    .overview-split-matrix-row {
+        grid-template-columns: 1fr; /* Force table log lists and simulation blocks straight down inside rows arrays */
+        gap: 1.25rem;
+    }
+}
+
+</style>
+
+<script>
+    // Initialize mouse coordinate tracking matrix loops for active overview metrics cards
+const summaryMetricCardsList = document.querySelectorAll('.telemetry-summary-card');
+
+summaryMetricCardsList.forEach(card => {
+    card.addEventListener('mousemove', (event) => {
+        const boundsBoxRect = card.getBoundingClientRect();
+        const axisX = event.clientX - boundsBoxRect.left;
+        const axisY = event.clientY - boundsBoxRect.top;
+
+        card.style.setProperty('--mx', `${axisX}px`);
+        card.style.setProperty('--my', `${axisY}px`);
+    });
+});
+
+</script>
+
+            <!-- Structural Section Title Node 02: Analytics (Hidden by default) -->
+         <section id="partner-analytics-section" class="workspace-tab-panel-route">
+    <div class="analytics-grid-workspace">
+        
+        <!-- Live Analytics Control Header Row -->
+        <div class="analytics-control-header-row">
+            <div class="analytics-header-titles">
+                <h4>Grid Telemetry Metrics Engine</h4>
+                <p>Algorithmic capacity forecasting down to individual edge microgrid nodes.</p>
+            </div>
+            <!-- Live Export System deep-linked to test target matrix -->
+            <a href="404.html" class="btn-analytics-export">
+                <span class="btn-vector-icon">📥</span>
+                <span>Export Telemetry Dataset</span>
+            </a>
+        </div>
+
+        <!-- Upper Row: Main Line Chart Sheet Placeholder & Quick Metrics Flank -->
+        <div class="analytics-upper-matrix-row">
+            
+            <!-- Left Side: Live Yield & Optimization Line Graph Container -->
+            <div class="analytics-chart-canvas-box">
+                <div class="chart-canvas-header">
+                    <h5>24-Hour Active Power Fluctuations Waveform</h5>
+                    <div class="chart-legend-row">
+                        <span class="legend-indicator dot-yellow"></span> <p>Photovoltaic Yield</p>
+                        <span class="legend-indicator dot-dark"></span> <p>Consumer Demand Load</p>
+                    </div>
+                </div>
+                <!-- Structural Wireframe Chart Graphic Simulator Grid -->
+                <div class="chart-simulator-graphic-frame">
+                    <svg viewBox="0 0 800 240" class="chart-svg-mesh-vector" fill="none">
+                        <!-- Background Grid Mapping Lines -->
+                        <line x1="0" y1="40" x2="800" y2="40" stroke="#f1f5f9" stroke-width="1" stroke-dasharray="4 4" />
+                        <line x1="0" y1="100" x2="800" y2="100" stroke="#f1f5f9" stroke-width="1" stroke-dasharray="4 4" />
+                        <line x1="0" y1="160" x2="800" y2="160" stroke="#f1f5f9" stroke-width="1" stroke-dasharray="4 4" />
+                        
+                        <!-- Photovoltaic Yield Wave Curve Tracking Profile (Yellow Line) -->
+                        <path d="M0,180 Q100,60 200,120 T400,40 T600,140 T800,90" stroke="#facc15" stroke-width="3" stroke-linecap="round" />
+                        <!-- Consumer Demand Load Curve Tracking Profile (Dark Line) -->
+                        <path d="M0,140 Q150,160 300,90 T600,160 T800,130" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 2" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Right Side: Secondary Analytical Metrics Stack (2 Cards Stacked) -->
+            <div class="analytics-secondary-stack">
+                
+                <!-- Metric Card A -->
+                <div class="analytics-stats-glow-card">
+                    <div class="card-radar-glow-mask"></div>
+                    <span class="stats-label-index">[ Peak Generation ]</span>
+                    <div class="stats-digits-row">
+                        <h4>142.6 <span class="unit-lbl">kW</span></h4>
+                    </div>
+                    <p class="stats-telemetry-meta">Recorded at Axis Node #ST-N01-SLM</p>
+                </div>
+
+                <!-- Metric Card B -->
+                <div class="analytics-stats-glow-card">
+                    <div class="card-radar-glow-mask"></div>
+                    <span class="stats-label-index">[ Transmission Loss ]</span>
+                    <div class="stats-digits-row">
+                        <h4 class="text-green">0.02 <span class="unit-lbl">%</span></h4>
+                    </div>
+                    <p class="stats-telemetry-meta">Optimized solid-state reserve matrices</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Lower Row: 3-Column Granular Node Diagnostics Matrix List -->
+        <div class="analytics-lower-bento-grid">
+            
+            <!-- Bento Box Card 01 -->
+            <div class="bento-analytics-diagnostic-card">
+                <div class="diagnostic-card-header">
+                    <span class="diagnostic-node-index">Node #ST-N01</span>
+                    <a href="404.html" class="btn-node-inspect-trigger">→</a>
+                </div>
+                <h3>Photovoltaic Alpha Array</h3>
+                <p>Operating load payload balancing stable at peak yield capacity metrics tracking vectors paths.</p>
+                <div class="diagnostic-efficiency-badge-strip">
+                    <span class="efficiency-metric-badge">98.4% Efficiency</span>
+                </div>
+            </div>
+
+            <!-- Bento Box Card 02 -->
+            <div class="bento-analytics-diagnostic-card">
+                <div class="diagnostic-card-header">
+                    <span class="diagnostic-node-index">Node #ST-N02</span>
+                    <a href="404.html" class="btn-node-inspect-trigger">→</a>
+                </div>
+                <h3>Solid-State Reserve Beta</h3>
+                <p>Storage capacity reserve units completely synchronized to municipal distribution lines track logs.</p>
+                <div class="diagnostic-efficiency-badge-strip">
+                    <span class="efficiency-metric-badge">99.1% Efficiency</span>
+                </div>
+            </div>
+
+            <!-- Bento Box Card 03 -->
+            <div class="bento-analytics-diagnostic-card">
+                <div class="diagnostic-card-header">
+                    <span class="diagnostic-node-index">Node #ST-N03</span>
+                    <a href="404.html" class="btn-node-inspect-trigger">→</a>
+                </div>
+                <h3>Photovoltaic Gamma Hub</h3>
+                <p>Isolating minor harmonic line noise fluctuations through edge node load phase parameters.</p>
+                <div class="diagnostic-efficiency-badge-strip">
+                    <span class="efficiency-metric-badge">96.7% Efficiency</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- Enhanced Power Load Analytics Workspace --- */
+.analytics-grid-workspace {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    width: 100%;
+}
+
+/* Control Header Row Block */
+.analytics-control-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.btn-analytics-export {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: #0c0a09; /* Minimalist strict dark silhouette look */
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-analytics-export:hover {
+    background-color: #facc15; /* Shift into brand core signature yellow fill profile */
+    color: #000000;
+    box-shadow: 0 10px 20px rgba(250, 204, 21, 0.2);
+    transform: translateY(-1px);
+}
+
+/* --- Upper Grid Row Configuration Block --- */
+.analytics-upper-matrix-row {
+    display: grid;
+    grid-template-columns: 1.35fr 0.65fr; /* Asymmetric grid layout system split */
+    gap: 1.5rem;
+    width: 100%;
+    align-items: stretch;
+}
+
+.analytics-chart-canvas-box {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 2.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.chart-canvas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.chart-canvas-header h5 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0c0a09;
+}
+
+.chart-legend-row {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.chart-legend-row p {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #64748b;
+    margin: 0;
+}
+
+.legend-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.legend-indicator.dot-yellow { background-color: #facc15; box-shadow: 0 0 6px #facc15; }
+.legend-indicator.dot-dark { background-color: #1e293b; }
+
+.chart-simulator-graphic-frame {
+    width: 100%;
+    background-color: #fafafa;
+    border: 1px solid #f1f5f9;
+    border-radius: 0.75rem;
+    padding: 1.5rem 1rem;
+    overflow: hidden;
+}
+
+.chart-svg-mesh-vector {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Secondary Metrics Stack Column */
+.analytics-secondary-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.analytics-stats-glow-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    flex: 1;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.stats-label-index {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stats-digits-row h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.1;
+}
+
+.stats-digits-row .unit-lbl {
+    font-size: 1.1rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.stats-telemetry-meta {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Hover Matrices Interactions Hooks and variables maps */
+.analytics-stats-glow-card:hover {
+    border-color: #facc15;
+    transform: translateY(-3px);
+}
+
+.analytics-stats-glow-card:hover .card-radar-glow-mask { opacity: 1; }
+
+/* --- Lower 3-Column Granular Bento Matrix list --- */
+.analytics-lower-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.bento-analytics-diagnostic-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.diagnostic-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.diagnostic-node-index {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #eab308; /* Brand yellow coordinate indicator */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.btn-node-inspect-trigger {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #64748b;
+    text-decoration: none;
+    line-height: 1;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.bento-analytics-diagnostic-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0c0a09;
+    margin: 0;
+}
+
+.bento-analytics-diagnostic-card p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #64748b;
+    margin: 0;
+}
+
+.diagnostic-efficiency-badge-strip {
+    margin-top: auto; /* Pin badge row down precisely to bento box floors tracks */
+    width: 100%;
+}
+
+.efficiency-metric-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #0c0a09;
+    padding: 0.35rem 0.65rem;
+    border-radius: 0.375rem;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    transition: all 0.3s ease;
+}
+
+/* Bento Cells Hover Controls overrides lines maps */
+.bento-analytics-diagnostic-card:hover {
+    border-color: #facc15;
+    background-color: #0c0a09; /* Transforms block background cleanly into dark theme on hover */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+}
+
+.bento-analytics-diagnostic-card:hover h3 { color: #ffffff; }
+.bento-analytics-diagnostic-card:hover p { color: #a8a29e; }
+.bento-analytics-diagnostic-card:hover .btn-node-inspect-trigger { color: #facc15; transform: translateX(2px); }
+.bento-analytics-diagnostic-card:hover .efficiency-metric-badge { background-color: rgba(250, 204, 21, 0.1); border-color: #eab308; color: #facc15; }
+
+/* --- Fully Fluid Responsive Breakpoints System Layout Overrides --- */
+@media (max-width: 1200px) {
+    .analytics-upper-matrix-row {
+        grid-template-columns: 1fr; /* Stack graph panels and side stats cards vertically inside rows arrays */
+        gap: 1.25rem;
+    }
+    .analytics-lower-bento-grid {
+        grid-template-columns: 1fr; /* Completely collapse granular diagnostics rows straight down on tablet display ports */
+        gap: 1.25rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .analytics-control-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+    .btn-analytics-export {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+</style>
+
+<script>
+    // Initialize mouse coordinate tracking matrix loops for active analytics statistics cards
+const analyticsStatsCardsList = document.querySelectorAll('.analytics-stats-glow-card');
+
+analyticsStatsCardsList.forEach(card => {
+    card.addEventListener('mousemove', (event) => {
+        const boundingBoxRect = card.getBoundingClientRect();
+        const axisX = event.clientX - boundingBoxRect.left;
+        const axisY = event.clientY - boundingBoxRect.top;
+
+        card.style.setProperty('--mx', `${axisX}px`);
+        card.style.setProperty('--my', `${axisY}px`);
+    });
+});
+
+</script>
+
+            <!-- Structural Section Title Node 03: Hardware (Hidden by default) -->
+         <section id="partner-hardware-section" class="workspace-tab-panel-route">
+    <div class="hardware-grid-workspace">
+        
+        <!-- Live Hardware Management Header Row -->
+        <div class="hardware-control-header-row">
+            <div class="hardware-header-titles">
+                <h4>Ecosystem Hardware Management</h4>
+                <p>Monitor physical array health metrics, connection protocols, and temperature parameters keys.</p>
+            </div>
+            <!-- Link deep-linked to test target matrix -->
+            <a href="404.html" class="btn-hardware-registry">
+                <span class="btn-vector-icon">⚙️</span>
+                <span>Node Hardware Registry</span>
+            </a>
+        </div>
+
+        <!-- Three-Column Responsive Premium Equipment Grid Layout Matrix -->
+        <div class="hardware-cards-matrix">
+            
+            <!-- Hardware Block 01 -->
+            <div class="hardware-interactive-profile-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="hardware-profile-thumbnail">
+                    <!-- High-fidelity code placeholder styling replacing broken paths graphics asset -->
+                    <div class="hardware-vector-backdrop-mesh">☀️</div>
+                    <span class="hardware-class-badge-chip">Array Code: PV-A</span>
+                </div>
+                <div class="hardware-profile-body">
+                    <h3>Photovoltaic Micro-Array Axis</h3>
+                    <p>Monocrystalline silicon panel assemblies equipped with smart multi-axis solar tracking metrics tracking path systems.</p>
+                    
+                    <!-- Hardware Telemetry Metric Parameters Strings Row -->
+                    <div class="hardware-specs-metric-row">
+                        <div class="spec-node-cell">
+                            <span class="spec-label">Node Temp</span>
+                            <strong class="font-tabular-nums">34.2 °C</strong>
+                        </div>
+                        <div class="spec-node-cell">
+                            <span class="spec-label">Inverter Sync</span>
+                            <strong class="text-green">99.8%</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="hardware-profile-footer-actions">
+                    <span class="hardware-health-beacon text-green">
+                        <span class="pulse-beacon-dot"></span> Operational Stable
+                    </span>
+                    <a href="404.html" class="btn-hardware-inspect-deep">Test Node</a>
+                </div>
+            </div>
+
+            <!-- Hardware Block 02 -->
+            <div class="hardware-interactive-profile-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="hardware-profile-thumbnail">
+                    <div class="hardware-vector-backdrop-mesh">🔋</div>
+                    <span class="hardware-class-badge-chip">Array Code: SS-B</span>
+                </div>
+                <div class="hardware-profile-body">
+                    <h3>Solid-State Reserve Matrices</h3>
+                    <p>High-capacity lithium iron phosphate capacitor banks engineered for immediate local peak load payload balancing cycles.</p>
+                    
+                    <div class="hardware-specs-metric-row">
+                        <div class="spec-node-cell">
+                            <span class="spec-label">Cell Charge</span>
+                            <strong class="font-tabular-nums text-yellow">82.3%</strong>
+                        </div>
+                        <div class="spec-node-cell">
+                            <span class="spec-label">Cycle Count</span>
+                            <strong class="font-tabular-nums">1,420</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="hardware-profile-footer-actions">
+                    <span class="hardware-health-beacon text-green">
+                        <span class="pulse-beacon-dot"></span> Operational Stable
+                    </span>
+                    <a href="404.html" class="btn-hardware-inspect-deep">Test Node</a>
+                </div>
+            </div>
+
+            <!-- Hardware Block 03 -->
+            <div class="hardware-interactive-profile-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="hardware-profile-thumbnail">
+                    <div class="hardware-vector-backdrop-mesh">⚙️</div>
+                    <span class="hardware-class-badge-chip">Array Code: WT-G</span>
+                </div>
+                <div class="hardware-profile-body">
+                    <h3>Mag-Lev Micro-Wind Array</h3>
+                    <p>Vertical-axis kinetic harvesting turbine units optimized for high-density municipal boundaries zone wind flows parameters.</p>
+                    
+                    <div class="hardware-specs-metric-row">
+                        <div class="spec-node-cell">
+                            <span class="spec-label">Velocity Axis</span>
+                            <strong class="font-tabular-nums">4.8 m/s</strong>
+                        </div>
+                        <div class="spec-node-cell">
+                            <span class="spec-label">Phase Sync</span>
+                            <strong class="text-yellow">Balancing</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="hardware-profile-footer-actions">
+                    <span class="hardware-health-beacon text-yellow">
+                        <span class="pulse-beacon-dot bg-yellow"></span> Phase Syncing
+                    </span>
+                    <a href="404.html" class="btn-hardware-inspect-deep">Test Node</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- Enhanced Generation Hardware Workspace --- */
+.hardware-grid-workspace {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    width: 100%;
+}
+
+/* Control Header Row Block */
+.hardware-control-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.btn-hardware-registry {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: #0c0a09; /* Minimalist strict dark chassis look */
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-hardware-registry:hover {
+    background-color: #facc15; /* Shift into brand core signature yellow fill profile on hover */
+    color: #000000;
+    box-shadow: 0 10px 20px rgba(250, 204, 21, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Three-Column Asymmetric Hardware Matrix Layout */
+.hardware-cards-matrix {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+/* Interactive Hardware Profile Cards Architecture */
+.hardware-interactive-profile-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Hardware Card Thumbnail Canvas Layout Frame */
+.hardware-profile-thumbnail {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    background-color: #0c0a09; /* Deep dark terminal shell looks from image guidelines layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hardware-vector-backdrop-mesh {
+    font-size: 2.75rem;
+    filter: drop-shadow(0 0 15px rgba(250, 204, 21, 0.25));
+    transition: transform 0.4s ease;
+}
+
+.hardware-class-badge-chip {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #facc15; /* Signature brand core yellow badge indicators text */
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+/* Card Body Content Layout Blocks */
+.hardware-profile-body {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.hardware-interactive-profile-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0c0a09;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.hardware-profile-body p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #64748b;
+    margin: 0;
+}
+
+/* Granular Spec Metadata Metric Rows */
+.hardware-specs-metric-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    background-color: #f8fafc;
+    padding: 0.85rem;
+    border-radius: 0.5rem;
+    margin-top: auto; /* Pin metric rows to base layout fields bounds */
+}
+
+.spec-node-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.spec-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.spec-node-cell strong {
+    font-size: 0.95rem;
+    color: #0f172a;
+}
+
+/* Hardware Card Action Footer Strips */
+.hardware-profile-footer-actions {
+    border-top: 1px solid #f1f5f9;
+    padding: 1rem 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.hardware-health-beacon {
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.hardware-health-beacon.text-green { color: #10b981; }
+.hardware-health-beacon.text-yellow { color: #d97706; }
+
+.pulse-beacon-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #10b981;
+    border-radius: 50%;
+    animation: flashBeacon 1.5s infinite alternate;
+}
+
+.pulse-beacon-dot.bg-yellow {
+    background-color: #d97706;
+    animation: flashYellowBeacon 1.5s infinite alternate;
+}
+
+@keyframes flashYellowBeacon { to { transform: scale(1.3); opacity: 0.6; box-shadow: 0 0 6px #d97706; } }
+
+.btn-hardware-inspect-deep {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+
+.btn-hardware-inspect-deep:hover {
+    color: #eab308; /* Brand core yellow text hover states links focus */
+}
+
+/* Mouse Radar Hover Coordinates Engine Glow Mask */
+.card-radar-glow-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25rem;
+    z-index: -1;
+    background: radial-gradient(300px circle at var(--mx, 50%) var(--my, 50%), rgba(250, 204, 21, 0.08), transparent 45%);
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* Interactive Card Hover Overrides */
+.hardware-interactive-profile-card:hover {
+    border-color: #facc15;
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(250, 204, 21, 0.03);
+}
+
+.hardware-interactive-profile-card:hover .card-radar-glow-mask { opacity: 1; }
+.hardware-interactive-profile-card:hover h3 { color: #eab308; }
+.hardware-interactive-profile-card:hover .hardware-vector-backdrop-mesh { transform: scale(1.1) rotate(-5deg); }
+
+/* --- Fully Fluid Responsive Breakpoints System Layout Overrides --- */
+@media (max-width: 1100px) {
+    .hardware-cards-matrix {
+        grid-template-columns: repeat(2, 1fr); /* Collapse down track columns template into rows pair on tablets */
+        gap: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hardware-cards-matrix {
+        grid-template-columns: 1fr; /* Completely collapse cards straight down on small mobile screens windows */
+    }
+    .hardware-control-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+    .btn-hardware-registry {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+</style>
+<script>
+    // Initialize mouse coordinate tracking matrix loops for active generation hardware cards
+const hardwareCardsList = document.querySelectorAll('.hardware-interactive-profile-card');
+
+hardwareCardsList.forEach(card => {
+    card.addEventListener('mousemove', (event) => {
+        const boundsBoxRect = card.getBoundingClientRect();
+        const axisX = event.clientX - boundsBoxRect.left;
+        const axisY = event.clientY - boundsBoxRect.top;
+
+        card.style.setProperty('--mx', `${axisX}px`);
+        card.style.setProperty('--my', `${axisY}px`);
+    });
+});
+
+</script>
+
+            <!-- Structural Section Title Node 04: Ledgers (Hidden by default) -->
+         <section id="partner-ledgers-section" class="workspace-tab-panel-route">
+    <div class="ledger-grid-workspace">
+        
+        <!-- Cryptographic Ledger Header Control Row -->
+        <div class="ledger-control-header-row">
+            <div class="ledger-header-titles">
+                <h4>Cryptographic Node Transaction Ledger</h4>
+                <p>Immutable blockchain tracing log mapping power generation payouts, grid storage loops, and block sync hashes.</p>
+            </div>
+            <!-- Sync Status Button deep-linked to mock network test -->
+            <a href="404.html" class="btn-ledger-sync-status">
+                <span class="pulse-beacon-dot-green"></span>
+                <span>Ledger Status: 100% Synchronized</span>
+            </a>
+        </div>
+
+        <!-- Upper Block Ribbon: Cryptographic Node Summary Cards (3-Column Ribbon Layout) -->
+        <div class="ledger-ribbon-grid">
+            
+            <!-- Block Card 01 -->
+            <div class="ledger-telemetry-glow-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="ledger-card-header">
+                    <span class="ledger-node-index">[ Current Block Height ]</span>
+                    <span class="vector-icon">#️⃣</span>
+                </div>
+                <div class="ledger-card-body">
+                    <h4 class="font-tabular-nums">#482,915</h4>
+                    <p class="ledger-telemetry-status text-green">Latest block appended 45s ago</p>
+                </div>
+            </div>
+
+            <!-- Block Card 02 -->
+            <div class="ledger-telemetry-glow-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="ledger-card-header">
+                    <span class="ledger-node-index">[ Active Validator Cells ]</span>
+                    <span class="vector-icon">🛡️</span>
+                </div>
+                <div class="ledger-card-body">
+                    <h4 class="font-tabular-nums">12 / 12</h4>
+                    <p class="ledger-telemetry-status text-green">Absolute consensus reached</p>
+                </div>
+            </div>
+
+            <!-- Block Card 03 -->
+            <div class="ledger-telemetry-glow-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="ledger-card-header">
+                    <span class="ledger-node-index">[ Cryptographic Audit ]</span>
+                    <span class="vector-icon">🔒</span>
+                </div>
+                <div class="ledger-card-body">
+                    <h4>Verified</h4>
+                    <p class="ledger-telemetry-status text-yellow">Zero telemetry anomalies traced</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Main Lower Grid Split: Active Ledger Stream & Block Verifier Panel -->
+        <div class="ledger-split-matrix-row">
+            
+            <!-- Left Side Flank: Transaction Stream (Wide Panel) -->
+            <div class="ledger-panel-container panel-wide-span">
+                <div class="panel-card-header-row">
+                    <div class="panel-header-titles">
+                        <h5>Live Cryptographic Energy Transactions Stream</h5>
+                        <p>Immutable audit logs verifying power distribution payloads straight to the blockchain network layer.</p>
+                    </div>
+                    <a href="404.html" class="btn-panel-action-link">
+                        <span>Download Audit Log</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Responsive Transaction Table Scroll Mask Box -->
+                <div class="responsive-table-scroll-mask">
+                    <table class="ledger-data-matrix-table">
+                        <thead>
+                            <tr>
+                                <th>Transaction Block Hash</th>
+                                <th>Grid Origin Axis</th>
+                                <th>Payload Transferred</th>
+                                <th>Ledger Check</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-monospace-hash"><a href="404.html">0x7f3b8a...1c4d</a></td>
+                                <td>Node #ST-N01-SLM</td>
+                                <td class="font-tabular-nums">+42.5 kWh</td>
+                                <td><span class="status-badge-chip success-chip">Confirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-monospace-hash"><a href="404.html">0x9a2e6f...8b3c</a></td>
+                                <td>Node #ST-N02-SLM</td>
+                                <td class="font-tabular-nums">-15.0 kWh</td>
+                                <td><span class="status-badge-chip success-chip">Confirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-monospace-hash"><a href="404.html">0x4c1d7e...9a0f</a></td>
+                                <td>Node #ST-N03-SLM</td>
+                                <td class="font-tabular-nums">+31.2 kWh</td>
+                                <td><span class="status-badge-chip success-chip">Confirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-monospace-hash"><a href="404.html">0x2d8a5c...3e1f</a></td>
+                                <td>Node #ST-N01-SLM</td>
+                                <td class="font-tabular-nums">+12.4 kWh</td>
+                                <td><span class="status-badge-chip processing-chip">Syncing</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Right Side Flank: Block Telemetry Verifier Panel (Dark Chassis) -->
+            <div class="ledger-panel-container panel-narrow-span background-dark-theme">
+                <div class="panel-card-header-row">
+                    <div class="panel-header-titles">
+                        <h5 class="text-white">Block Telemetry Verifier</h5>
+                        <p class="text-stone-muted">Manually verify inter-node cryptographic handshake packages parameters links.</p>
+                    </div>
+                </div>
+
+                <div class="ledger-verifier-stack">
+                    <p class="ledger-verifier-paragraph">
+                        Input a target block height or individual node validation hash sequence string token to programmatically audit historical load allocation consistency.
+                    </p>
+                    
+                    <!-- Simulated Diagnostic Terminal Input Group Interface -->
+                    <div class="verifier-input-wrapper">
+                        <input type="text" placeholder="Enter Transaction Block Hash string..." class="verifier-terminal-input" readonly>
+                        <a href="404.html" class="btn-verifier-submit-prime">Query Immutable Ledger</a>
+                    </div>
+                    
+                    <a href="404.html" class="btn-verifier-link-ghost">Download Ledger Protocol Whitepaper</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- Enhanced Immutable Ledgers Workspace --- */
+.ledger-grid-workspace {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    width: 100%;
+}
+
+/* Control Header Row Block */
+.ledger-control-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.btn-ledger-sync-status {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: #f0fdf4; /* Soft environmental green backfill */
+    color: #16a34a;
+    border: 1px solid #bbf7d0;
+    padding: 0.65rem 1.25rem;
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.05);
+}
+
+.pulse-beacon-dot-green {
+    width: 6px;
+    height: 6px;
+    background-color: #16a34a;
+    border-radius: 50%;
+    animation: flashGreenBeacon 1.5s infinite alternate;
+}
+
+@keyframes flashGreenBeacon { to { transform: scale(1.35); opacity: 0.5; box-shadow: 0 0 6px #16a34a; } }
+
+/* Upper Block Ribbon Matrix Layout */
+.ledger-ribbon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.ledger-telemetry-glow-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.ledger-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.ledger-node-index {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.ledger-telemetry-glow-card .vector-icon {
+    font-size: 1.15rem;
+    opacity: 0.7;
+    transition: transform 0.3s ease;
+}
+
+.ledger-telemetry-glow-card .ledger-card-body h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+}
+
+.ledger-telemetry-status {
+    font-size: 0.825rem;
+    font-weight: 600;
+}
+
+.ledger-telemetry-status.text-green { color: #10b981; }
+.ledger-telemetry-status.text-yellow { color: #d97706; }
+
+/* Mouse Radar Hover Coordinates Engine Glow Mask */
+.card-radar-glow-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    z-index: -1;
+    background: radial-gradient(300px circle at var(--mx, 50%) var(--my, 50%), rgba(250, 204, 21, 0.08), transparent 45%);
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* Hover Adjustments */
+.ledger-telemetry-glow-card:hover {
+    border-color: #facc15;
+    transform: translateY(-3px);
+}
+
+.ledger-telemetry-glow-card:hover .card-radar-glow-mask { opacity: 1; }
+.ledger-telemetry-glow-card:hover .vector-icon { transform: scale(1.1) rotate(-6deg); }
+
+/* --- Lower Split Workspace Sections Rows Matrix --- */
+.ledger-split-matrix-row {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: stretch;
+}
+
+.ledger-panel-container {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 2.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.ledger-panel-container.background-dark-theme {
+    background-color: #0c0a09; /* Deep dark chassis terminal look matching brand logos templates */
+    border-color: #1c1917;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.panel-card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.panel-header-titles h5 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0c0a09;
+    margin-bottom: 0.25rem;
+}
+
+.panel-header-titles p {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+.text-white { color: #ffffff !important; }
+.text-stone-muted { color: #a8a29e !important; }
+
+/* 404 Action Button Links Configs */
+.btn-panel-action-link {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.25s ease;
+    flex-shrink: 0;
+}
+
+.btn-panel-action-link svg {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-panel-action-link:hover { color: #eab308; }
+.btn-panel-action-link:hover svg { transform: translateX(3px); }
+
+/* --- Table Registry System Layout Sheets Config --- */
+.responsive-table-scroll-mask {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.ledger-data-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.ledger-data-matrix-table th {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    padding: 0.85rem 1rem;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.ledger-data-matrix-table td {
+    padding: 1.1rem 1rem;
+    font-size: 0.925rem;
+    color: #0f172a;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.font-monospace-hash a {
+    font-family: sfmono-regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2563eb; /* Link style matching data stream registries */
+    text-decoration: none;
+}
+
+.font-monospace-hash a:hover { text-decoration: underline; color: #1d4ed8; }
+.font-tabular-nums { font-variant-numeric: tabular-nums; font-weight: 500; }
+
+.ledger-data-matrix-table tr:last-child td { border-bottom: none; }
+
+.status-badge-chip {
+    font-size: 0.725rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 99px;
+    text-transform: uppercase;
+}
+
+.status-badge-chip.success-chip { background-color: #f0fdf4; color: #16a34a; }
+.status-badge-chip.processing-chip { background-color: #fef9c3; color: #a16207; }
+
+/* Right Column Verifier Section Configuration */
+.ledger-verifier-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    height: 100%;
+}
+
+.ledger-verifier-paragraph {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #a8a29e;
+}
+
+.verifier-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    margin-bottom: auto; /* Pin bottom ghost link to base card thresholds */
+}
+
+.verifier-terminal-input {
+    width: 100%;
+    background-color: #1c1917; /* Dark terminal input fill */
+    border: 1px solid #2e2a24;
+    padding: 0.85rem 1.15rem;
+    border-radius: 0.5rem;
+    font-family: sfmono-regular, Consolas, monospace;
+    font-size: 0.85rem;
+    color: #facc15;
+    outline: none;
+}
+
+.btn-verifier-submit-prime,
+.btn-verifier-link-ghost {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-verifier-submit-prime { background-color: #facc15; color: #000000; }
+.btn-verifier-submit-prime:hover { background-color: #ffffff; transform: translateY(-1px); }
+
+.btn-verifier-link-ghost { border: 1px solid rgba(255,255,255,0.15); color: #ffffff; }
+.btn-verifier-link-ghost:hover { background-color: rgba(255,255,255,0.04); border-color: #ffffff; }
+
+/* --- Fully Fluid Responsive Breakpoints System Layout Overrides --- */
+@media (max-width: 1200px) {
+    .ledger-ribbon-grid {
+        grid-template-columns: 1fr; /* Stack telemetry overview summary blocks vertically */
+        gap: 1.25rem;
+    }
+    .ledger-split-matrix-row {
+        grid-template-columns: 1fr; /* Force transaction logs and terminal blocks straight down inside rows arrays */
+        gap: 1.25rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .ledger-control-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+    .btn-ledger-sync-status {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+</style>
+
+<script>
+    // Initialize mouse coordinate tracking matrix loops for active ledger registry cards
+const ledgerStatsCardsList = document.querySelectorAll('.ledger-telemetry-glow-card');
+
+ledgerStatsCardsList.forEach(card => {
+    card.addEventListener('mousemove', (event) => {
+        const boundingBoxRect = card.getBoundingClientRect();
+        const axisX = event.clientX - boundingBoxRect.left;
+        const axisY = event.clientY - boundingBoxRect.top;
+
+        card.style.setProperty('--mx', `${axisX}px`);
+        card.style.setProperty('--my', `${axisY}px`);
+    });
+});
+
+</script>
+
+        </main>
+
+    </div>
+
+
+    <style>
+        /* Unique Typography Imports for Strict Brand Alignment */
+@import url('https://googleapis.com');
+
+/* Master Reset Configuration Framework Sheets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-root-body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fafafa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.body-scroll-lock {
+    overflow: hidden !important;
+}
+
+/* --- Upper Global Header Control Bar Configuration --- */
+.dashboard-global-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #0c0a09; /* Deep charcoal black shell base */
+    border-bottom: 1px solid #1c1917;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.header-left-brand-block {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+/* Hamburger responsive viewer toggle trigger elements */
+.btn-hamburger-menu-trigger {
+    display: none; /* Hidden by default on standard desktop layout sizes */
+    background: none;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-hamburger-menu-trigger svg {
+    width: 22px;
+    height: 22px;
+}
+
+.header-brand-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-brand-img {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.25s ease;
+}
+
+.header-brand-logo-link:hover .header-brand-img {
+    transform: scale(1.02);
+}
+
+.header-right-telemetry-block {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+.header-telemetry-bell-btn {
+    background: none;
+    border: none;
+    outline: none;
+    color: #a8a29e;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: color 0.25s ease;
+}
+
+.header-telemetry-bell-btn svg {
+    width: 22px;
+    height: 22px;
+}
+
+.header-telemetry-bell-btn:hover {
+    color: #facc15; /* Signature brand core yellow accent */
+}
+
+.active-alert-beacon-dot {
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    width: 7px;
+    height: 7px;
+    background-color: #facc15;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #facc15;
+}
+
+/* User identity profiling details card */
+.header-user-profile-plate {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-left: 1px solid #1c1917;
+    padding-left: 1.5rem;
+}
+
+.profile-avatar-circle {
+    width: 36px;
+    height: 36px;
+    background-color: #1c1917;
+    border: 1px solid #2e2a24;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.profile-identity-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-greeting-text {
+    font-size: 0.75rem;
+    color: #78716c;
+    font-weight: 500;
+}
+
+.profile-parsed-name-node {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #ffffff;
+    max-width: 140px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Truncate long client names strings keys cleanly */
+}
+
+/* --- Master Lower Workspace Canvas Layout Area Container --- */
+.dashboard-core-canvas-layout {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 70px);
+    margin-top: 70px;
+    display: flex;
+}
+
+/* Left Column Flank Side Drawer Control Matrix Base Configuration */
+.dashboard-sidebar-drawer {
+    width: 260px; /* Rigid desktop sidebar footprint width */
+    background-color: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    padding: 2rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    z-index: 50;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.sidebar-navigation-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 100%;
+}
+
+/* Navigation Interactive Tabs Command Triggers */
+.sidebar-tab-nav-link,
+.sidebar-logout-action-btn {
+    width: 100%;
+    background: none;
+    border: 1px solid transparent;
+    outline: none;
+    padding: 0.85rem 1rem;
+    border-radius: 0.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.sidebar-vector-icon {
+    display: flex;
+    align-items: center;
+    color: #64748b;
+    transition: color 0.25s ease;
+}
+
+.sidebar-vector-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Tab active state colors */
+.sidebar-tab-nav-link:hover,
+.sidebar-tab-nav-link.link-state-active {
+    background-color: #fef08a; /* Signature Brand Soft Yellow Highlight fill */
+    color: #000000;
+}
+
+.sidebar-tab-nav-link:hover .sidebar-vector-icon,
+.sidebar-tab-nav-link.link-state-active .sidebar-vector-icon {
+    color: #000000;
+}
+
+/* Logout Navigation Anchor button pinned safely to bottom of lists matrix arrays */
+.sidebar-logout-action-btn {
+    margin-top: auto; /* Secure placement cleanly pinned to boundaries floors */
+    border-color: #fee2e2;
+    background-color: #fef2f2;
+    color: #ef4444; /* Clean contrast warning logout alert state look */
+}
+
+.sidebar-logout-action-btn .sidebar-vector-icon {
+    color: #fca5a5;
+}
+
+.sidebar-logout-action-btn:hover {
+    background-color: #ef4444;
+    color: #ffffff;
+    border-color: #ef4444;
+}
+
+.sidebar-logout-action-btn:hover .sidebar-vector-icon {
+    color: #ffffff;
+}
+
+/* --- Right Column Flank Workspace Display Frame Windows Modules --- */
+.dashboard-main-content-display {
+    flex: 1;
+    height: 100%;
+    overflow-y: auto;
+    padding: 2.5rem;
+    background-color: #f8fafc;
+}
+
+/* Standalone Discrete Content Section Route Tabs Configurations Base */
+.workspace-tab-panel-route {
+    display: none; /* Hide all sheets by default matching rules targets */
+    width: 100%;
+    height: 100%;
+}
+
+.workspace-tab-panel-route.section-display-active {
+    display: block; /* Reveal active state tab panel segment cleanly */
+}
+
+/* Premium Dashboard Component Wireframe Wire Placeholder Plates Look matching images templates layout */
+.wireframe-placeholder-container {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    background-color: #ffffff;
+    border: 1px dashed #cbd5e1;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    text-align: center;
+}
+
+.wireframe-header-text h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0c0a09;
+    margin-bottom: 0.5rem;
+}
+
+.wireframe-header-text p {
+    font-size: 0.95rem;
+    color: #64748b;
+    max-width: 440px;
+    line-height: 1.5;
+}
+
+/* Backdrop Shroud Sheet Cover Layer for Responsive Sidebar Drawers Matrix */
+.sidebar-drawer-tint-backdrop {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 40;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* --- Fully Fluid Responsive Breakpoints System Layout Overrides --- */
+@media (max-width: 1024px) {
+    .btn-hamburger-menu-trigger {
+        display: flex; /* Fire active responsive navigation hamburger triggers */
+    }
+    
+    .dashboard-sidebar-drawer {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        height: calc(100vh - 70px);
+        width: 280px;
+        transform: translateX(-100%); /* Slide sidebar completely off-screen boundaries initial maps array */
+    }
+    
+    /* Open State overrides hooks for smaller viewport tracking drawers matrix */
+    .dashboard-sidebar-drawer.drawer-view-open {
+        transform: translateX(0);
+        box-shadow: 25px 0 50px rgba(0,0,0,0.1);
+    }
+    
+    .dashboard-sidebar-drawer.drawer-view-open ~ .sidebar-drawer-tint-backdrop {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .dashboard-main-content-display {
+        padding: 1.5rem; /* Compress internal viewport spacing gaps */
+    }
+}
+
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Dynamic Identity Email First-Name Token Parser Engine Hook
+    const profileGreetingNameNode = document.getElementById('headerProfileGreetingName');
+    
+    function parseSavedSubscriberEmailIdentity() {
+        // Fetch target cached key matching credentials from internal browser data store caches
+        const storedUserEmailString = localStorage.getItem('cachedSubscriberNodeEmail');
+
+        if (storedUserEmailString && profileGreetingNameNode) {
+            // Extraction Formula: split address string array, extract the user matrix portion before the domain anchor
+            const addressPartsArray = storedUserEmailString.split('@');
+            let extractedFirstName = addressPartsArray[0];
+
+            if (extractedFirstName) {
+                // Formatting: Capitalize initial string letter trace for a polished corporate feel
+                extractedFirstName = extractedFirstName.charAt(0).toUpperCase() + extractedFirstName.slice(1);
+                profileGreetingNameNode.textContent = extractedFirstName;
+            }
+        }
+    }
+    
+    parseSavedSubscriberEmailIdentity();
+
+    // 2. Programmatic Header Brand Refresh Reload Interceptor Action
+    const brandRefreshAnchorLink = document.getElementById('dashboardBrandRefresh');
+
+    if (brandRefreshAnchorLink) {
+        brandRefreshAnchorLink.addEventListener('click', (event) => {
+            event.preventDefault(); // Stop raw tracking tag browser coordinates jumping traces paths
+            
+            // Re-trigger total page document structural trace reload pipeline
+            window.location.reload();
+        });
+    }
+
+    // 3. Sectionwise Layout Tab Switching Multi-Panel Router System Tracker
+    const navTabTriggersList = document.querySelectorAll('.sidebar-tab-nav-link');
+    const contentWorkspacePanels = document.querySelectorAll('.workspace-tab-panel-route');
+
+    navTabTriggersList.forEach(triggerBtn => {
+        triggerBtn.addEventListener('click', () => {
+            const chosenSectionTargetId = triggerBtn.getAttribute('data-section-target');
+
+            // Tab Trigger Active State Class Loop Toggler
+            navTabTriggersList.forEach(btn => btn.classList.remove('link-state-active'));
+            triggerBtn.classList.add('link-state-active');
+
+            // Content Panel View visibility class loop updater traces paths strings
+            contentWorkspacePanels.forEach(panel => {
+                if (panel.id === chosenSectionTargetId) {
+                    panel.classList.add('section-display-active');
+                } else {
+                    panel.classList.remove('section-display-active');
+                }
+            });
+
+            // Clean-up loop: Automatically slide sidebar shut when tab click triggers on mobile display screens widths
+            if (window.innerWidth <= 1024) {
+                closeResponsiveNavigationConsoleDrawer();
+            }
+        });
+    });
+
+    // 4. Fully Fluid Responsive Hamburger Menu Navigation Console Drawer Engine Controllers
+    const menuToggleBtn = document.getElementById('sidebarMenuDrawerToggle');
+    const sidebarConsoleDrawer = document.getElementById('dashboardSidebarConsole');
+    const drawerBackdropTint = document.getElementById('drawerTintOverlay');
+    const rootBodyDocumentNode = document.body;
+
+    function openResponsiveNavigationConsoleDrawer() {
+        sidebarConsoleDrawer?.classList.add('drawer-view-open');
+        rootBodyDocumentNode.classList.add('body-scroll-lock'); /* Strict rule passed: Background viewport won't scroll */
+    }
+
+    function closeResponsiveNavigationConsoleDrawer() {
+        sidebarConsoleDrawer?.classList.remove('drawer-view-open');
+        rootBodyDocumentNode.classList.remove('body-scroll-lock'); /* Restores normal independent scroll parameters tracks */
+    }
+
+    if (menuToggleBtn && sidebarConsoleDrawer && drawerBackdropTint) {
+        menuToggleBtn.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const isCurrentlyOpened = sidebarConsoleDrawer.classList.contains('drawer-view-open');
+            
+            if (isCurrentlyOpened) {
+                closeResponsiveNavigationConsoleDrawer();
+            } else {
+                openResponsiveNavigationConsoleDrawer();
+            }
+        });
+
+        // Click mask background shroud layer to lock closure events loops cleanly
+        drawerBackdropTint.addEventListener('click', closeResponsiveNavigationConsoleDrawer);
+    }
+
+    // 5. Programmatic Session Disconnect Logout Return Interceptor Action
+    const logoutTriggerBtn = document.getElementById('portalLogoutTriggerAction');
+
+    if (logoutTriggerBtn) {
+        logoutTriggerBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            
+            // Flush tracking storage parameters to protect user telemetry values profiles locks fields
+            localStorage.removeItem('activeAuthorizationRoleToken');
+            
+            // Break scroll locks on body paths bounds before escaping routing layers structures maps
+            rootBodyDocumentNode.classList.remove('body-scroll-lock');
+            
+            // Route session link back instantly to authentication identity card console page
+            window.location.href = 'login.html';
+        });
+    }
+});
+
+    </script>
+</body>
+</html>

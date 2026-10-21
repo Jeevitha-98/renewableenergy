@@ -1,0 +1,2593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Infrastructure - Client Consumption Console</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-root-body">
+
+    <!-- Header Operations Command Control Bar Panel -->
+    <header class="dashboard-global-header">
+        <div class="header-left-brand-block">
+            <!-- Hamburger Toggle Trigger Icon for Responsive Viewports View -->
+            <button class="btn-hamburger-menu-trigger" id="sidebarMenuDrawerToggle" aria-label="Toggle Navigation Console Drawer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+            
+            <!-- Clicking the Brand Link triggers a programmatic dashboard state refresh execution loop -->
+            <a href="#" id="dashboardBrandRefresh" class="header-brand-logo-link" aria-label="Refresh Dashboard Matrix State">
+                <img src="logo-yellow.svg" alt="Stackly Renewable Energy Industrial Control Grid Logo" class="header-brand-img">
+            </a>
+        </div>
+
+        <div class="header-right-telemetry-block">
+            <!-- Telemetry Notification Alert Bell Vector Icon Group -->
+            <button class="header-telemetry-bell-btn" aria-label="Open Telemetry Notifications Feed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                <span class="active-alert-beacon-dot"></span>
+            </button>
+
+            
+            <div class="header-user-profile-plate">
+                <div class="profile-avatar-circle">👤</div>
+                
+                    <span class="profile-greeting-text">Welcome,</span>
+                    <!-- Fallback default string initialized before app.js script binder loads -->
+                    <span class="profile-parsed-name-node" id="headerProfileGreetingName">Consumer Client</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Master Workspace Layout Framework Row -->
+    <div class="dashboard-core-canvas-layout">
+        
+        <!-- Backdrop Tint Sheet Cover Overlay Track for Sidebar Drawers -->
+        <div class="sidebar-drawer-tint-backdrop" id="drawerTintOverlay"></div>
+
+        <!-- Left Column Flank: Side Navigation Control Console Drawer Grid -->
+        <aside class="dashboard-sidebar-drawer" id="dashboardSidebarConsole">
+            <nav class="sidebar-navigation-menu-links">
+                <!-- Navigation Tab Trigger 01 -->
+                <button class="sidebar-tab-nav-link link-state-active" data-section-target="client-usage-section">
+                    <span class="sidebar-vector-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                    </span>
+                    <span>Energy Usage Log</span>
+                </button>
+
+                <!-- Navigation Tab Trigger 02 -->
+                <button class="sidebar-tab-nav-link" data-section-target="client-billing-section">
+                    <span class="sidebar-vector-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </span>
+                    <span>Billing & Ledgers</span>
+                </button>
+
+                <!-- Navigation Tab Trigger 03 -->
+                <button class="sidebar-tab-nav-link" data-section-target="client-nodes-section">
+                    <span class="sidebar-vector-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 4.477 2 12s4.477 10 10 10z"></path><path d="M12 6v6l4 2"></path></svg>
+                    </span>
+                    <span>Connected Cells</span>
+                </button>
+
+                <!-- Navigation Tab Trigger 04 -->
+                <button class="sidebar-tab-nav-link" data-section-target="client-support-section">
+                    <span class="sidebar-vector-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    </span>
+                    <span>Support Ticket Desk</span>
+                </button>
+
+                <!-- Programmatic Logout Return Core Action Button Pin -->
+                <button class="sidebar-logout-action-btn" id="portalLogoutTriggerAction">
+                    <span class="sidebar-vector-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    </span>
+                    <span>Disconnect Session</span>
+                </button>
+            </nav>
+        </aside>
+
+        <!-- Right Column Flank Principal Section Workspace Container Display Frame -->
+        <main class="dashboard-main-content-display" id="dashboardMainDisplayViewport">
+            
+            <!-- Section 01: Energy Usage Log (Visible by default) -->
+           <section id="client-usage-section" class="workspace-tab-panel-route section-display-active">
+    <div class="client-log-workspace">
+        
+        <!-- Interactive Usage Control Header Ribbon -->
+        <div class="client-control-header-row">
+            <div class="client-header-titles">
+                <h4>Real-Time Consumption Analytics</h4>
+                <p>Track your localized structural power grid allocations, microgrid solar harvesting feedback, and carbon offsets.</p>
+            </div>
+            <!-- Interactive billing shortcut deep-linked to test target matrix -->
+            <a href="404.html" class="btn-client-download-statement">
+                <span class="btn-vector-icon">📊</span>
+                <span>Download Usage Report</span>
+            </a>
+        </div>
+
+        <!-- Upper Row: Metric Counter Grid (3-Column Responsive Ribbon Layout) -->
+        <div class="client-metrics-ribbon">
+            
+            <!-- Metric Block 01: Current Power Demand -->
+            <div class="client-telemetry-glow-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="client-card-header">
+                    <span class="client-node-index">[ Current Draw ]</span>
+                    <span class="vector-icon">⚡</span>
+                </div>
+                <div class="client-card-body">
+                    <h4 class="font-tabular-nums">4.82 <span class="unit-lbl">kW</span></h4>
+                    <p class="client-telemetry-status text-green">
+                        <span class="pulse-beacon-dot-green"></span> Grid Status: Balanced
+                    </p>
+                </div>
+            </div>
+
+            <!-- Metric Block 02: Total Billing Cycles Consumption -->
+            <div class="client-telemetry-glow-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="client-card-header">
+                    <span class="client-node-index">[ Monthly Volume ]</span>
+                    <span class="vector-icon">📉</span>
+                </div>
+                <div class="client-card-body">
+                    <h4 class="font-tabular-nums">342.5 <span class="unit-lbl">kWh</span></h4>
+                    <p class="client-telemetry-status text-yellow">On track for baseline target</p>
+                </div>
+            </div>
+
+            <!-- Metric Block 03: Green Solar Footprint Offset -->
+            <div class="client-telemetry-glow-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="client-card-header">
+                    <span class="client-node-index">[ Renewable Share ]</span>
+                    <span class="vector-icon">🌿</span>
+                </div>
+                <div class="client-card-body">
+                    <h4 class="font-tabular-nums">96.4 <span class="unit-lbl">%</span></h4>
+                    <p class="client-telemetry-status text-green">Premium Solar Array Output</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Main Lower Grid Split: Active Logs Registry & Optimization Console -->
+        <div class="client-split-matrix-row">
+            
+            <!-- Left Side Flank: Segment Logging Data Table (Wide Panel) -->
+            <div class="client-panel-container panel-wide-span">
+                <div class="panel-card-header-row">
+                    <div class="panel-header-titles">
+                        <h5>Hourly Power Allocation Ledger Logs</h5>
+                        <p>Granular transmission logs monitoring node-to-consumer payload distributions cleanly.</p>
+                    </div>
+                    <a href="404.html" class="btn-panel-action-link">
+                        <span>View Archive</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Responsive Table Wrapper Layer -->
+                <div class="responsive-table-scroll-mask">
+                    <table class="client-data-matrix-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp Tracker</th>
+                                <th>Source Matrix Node</th>
+                                <th>Payload Transferred</th>
+                                <th>System Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-tabular-nums">Today, 01:15 PM</td>
+                                <td>Node #ST-N01-SLM (Solar)</td>
+                                <td class="font-tabular-nums">1.22 kWh</td>
+                                <td><span class="status-badge-chip success-chip">Optimized</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-tabular-nums">Today, 12:15 PM</td>
+                                <td>Node #ST-N01-SLM (Solar)</td>
+                                <td class="font-tabular-nums">1.45 kWh</td>
+                                <td><span class="status-badge-chip success-chip">Optimized</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-tabular-nums">Today, 11:15 AM</td>
+                                <td>Node #ST-N02-SLM (Battery)</td>
+                                <td class="font-tabular-nums">0.98 kWh</td>
+                                <td><span class="status-badge-chip success-chip">Optimized</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-tabular-nums">Today, 10:15 AM</td>
+                                <td>Node #ST-N03-SLM (Wind)</td>
+                                <td class="font-tabular-nums">2.14 kWh</td>
+                                <td><span class="status-badge-chip load-chip">Peak Demand</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Right Side Flank: Automation Command Control Panel (Dark Chassis) -->
+            <div class="client-panel-container panel-narrow-span background-dark-theme">
+                <div class="panel-card-header-row">
+                    <div class="panel-header-titles">
+                        <h5 class="text-white">Demand Optimization</h5>
+                        <p class="text-stone-muted">Tune system load parameters to minimize consumer line-loss variables.</p>
+                    </div>
+                </div>
+
+                <div class="client-automation-stack">
+                    <p class="client-automation-paragraph">
+                        Enable algorithmic load-shedding models during peak municipal rate hours to automatically bridge appliance tasks directly over solid-state storage battery cells.
+                    </p>
+                    
+                    <!-- Feature Status Ribbon Node Metrics Box -->
+                    <div class="automation-status-chassis">
+                        <span class="status-label">Algorithmic Eco Mode</span>
+                        <strong class="text-yellow">ENABLED</strong>
+                    </div>
+                    
+                    <a href="404.html" class="btn-automation-action-prime">Configure Smart Balancing Metrics</a>
+                    <a href="404.html" class="btn-automation-link-ghost">View Environmental Certifications</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- Enhanced Client Energy Usage Log Workspace --- */
+.client-log-workspace {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    width: 100%;
+}
+
+/* Control Header Row Block Layout */
+.client-control-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.btn-client-download-statement {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: #0c0a09; /* Minimalist strict dark chassis look */
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-client-download-statement:hover {
+    background-color: #facc15; /* Shift into brand core signature yellow fill profile on hover */
+    color: #000000;
+    box-shadow: 0 10px 20px rgba(250, 204, 21, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Upper Metrics Counter Grid Ribbon Layout */
+.client-metrics-ribbon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.client-telemetry-glow-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.client-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.client-node-index {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.client-telemetry-glow-card .vector-icon {
+    font-size: 1.15rem;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+}
+
+.client-telemetry-glow-card .client-card-body h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+}
+
+.client-card-body h4 .unit-lbl {
+    font-size: 1.1rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.client-telemetry-status {
+    font-size: 0.825rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.client-telemetry-status.text-green { color: #10b981; }
+.client-telemetry-status.text-yellow { color: #d97706; }
+
+.pulse-beacon-dot-green {
+    width: 6px;
+    height: 6px;
+    background-color: #10b981;
+    border-radius: 50%;
+    animation: flashBeacon 1.5s infinite alternate;
+}
+
+@keyframes flashBeacon { to { transform: scale(1.3); opacity: 0.5; box-shadow: 0 0 6px #10b981; } }
+
+/* Mouse Radar Hover Coordinates Engine Glow Mask variables */
+.card-radar-glow-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    z-index: -1;
+    background: radial-gradient(300px circle at var(--mx, 50%) var(--my, 50%), rgba(250, 204, 21, 0.08), transparent 45%);
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* Hover Adjustments */
+.client-telemetry-glow-card:hover {
+    border-color: #facc15;
+    transform: translateY(-3px);
+}
+
+.client-telemetry-glow-card:hover .card-radar-glow-mask { opacity: 1; }
+.client-telemetry-glow-card:hover .vector-icon { transform: scale(1.1) rotate(-6deg); }
+
+/* --- Lower Split Workspace Sections Rows Matrix Layout --- */
+.client-split-matrix-row {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: stretch;
+}
+
+.client-panel-container {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 2.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.client-panel-container.background-dark-theme {
+    background-color: #0c0a09; /* Deep dark dashboard housing chassis look */
+    border-color: #1c1917;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.panel-card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.panel-header-titles h5 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0c0a09;
+    margin-bottom: 0.25rem;
+}
+
+.panel-header-titles p {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+.text-white { color: #ffffff !important; }
+.text-stone-muted { color: #a8a29e !important; }
+
+/* 404 Action Button Links Configs */
+.btn-panel-action-link {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.25s ease;
+    flex-shrink: 0;
+}
+
+.btn-panel-action-link svg {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-panel-action-link:hover { color: #eab308; }
+.btn-panel-action-link:hover svg { transform: translateX(3px); }
+
+/* --- Table Logging Layout Sheets Config --- */
+.responsive-table-scroll-mask {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.client-data-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.client-data-matrix-table th {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    padding: 0.85rem 1rem;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.client-data-matrix-table td {
+    padding: 1.1rem 1rem;
+    font-size: 0.925rem;
+    color: #0f172a;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.font-tabular-nums { font-variant-numeric: tabular-nums; font-weight: 500; }
+
+.client-data-matrix-table tr:last-child td { border-bottom: none; }
+
+.status-badge-chip {
+    font-size: 0.725rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 99px;
+    text-transform: uppercase;
+}
+
+.status-badge-chip.success-chip { background-color: #f0fdf4; color: #16a34a; }
+.status-badge-chip.load-chip { background-color: #fef2f2; color: #ef4444; }
+
+/* Right Column Automation Stack Control Layout */
+.client-automation-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    height: 100%;
+}
+
+.client-automation-paragraph {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #a8a29e;
+}
+
+.automation-status-chassis {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c1917;
+    border: 1px solid #2e2a24;
+    padding: 0.85rem 1.15rem;
+    border-radius: 0.5rem;
+    margin-bottom: auto; /* Push buttons cleanly down to panel footer boundaries track */
+}
+
+.automation-status-chassis .status-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #a8a29e;
+    text-transform: uppercase;
+}
+
+.btn-automation-action-prime,
+.btn-automation-link-ghost {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-automation-action-prime { background-color: #facc15; color: #000000; }
+.btn-automation-action-prime:hover { background-color: #ffffff; transform: translateY(-1px); }
+
+.btn-automation-link-ghost { border: 1px solid rgba(255,255,255,0.15); color: #ffffff; }
+.btn-automation-link-ghost:hover { background-color: rgba(255,255,255,0.04); border-color: #ffffff; }
+
+/* --- Fully Fluid Responsive Breakpoints System Layout Overrides --- */
+@media (max-width: 1200px) {
+    .client-metrics-ribbon {
+        grid-template-columns: 1fr; /* Stack log ribbons metrics grids vertically */
+        gap: 1.25rem;
+    }
+    .client-split-matrix-row {
+        grid-template-columns: 1fr; /* Stack layout columns into standard row items flow */
+        gap: 1.25rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .client-control-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+    .btn-client-download-statement {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+</style>
+
+<script>
+    // Initialize mouse coordinate tracking matrices loops for client telemetry cards
+const clientMetricsCardsList = document.querySelectorAll('.client-telemetry-glow-card');
+
+clientMetricsCardsList.forEach(card => {
+    card.addEventListener('mousemove', (event) => {
+        const boundingBoxRect = card.getBoundingClientRect();
+        const coordinateX = event.clientX - boundingBoxRect.left;
+        const coordinateY = event.clientY - boundingBoxRect.top;
+
+        card.style.setProperty('--mx', `${coordinateX}px`);
+        card.style.setProperty('--my', `${coordinateY}px`);
+    });
+});
+
+</script>
+
+            <!-- Section 02: Billing & Ledgers (Hidden by default) -->
+           <section id="client-billing-section" class="workspace-tab-panel-route">
+    <div class="billing-grid-workspace">
+        
+        <!-- Billing Operations Control Header Ribbon -->
+        <div class="billing-control-header-row">
+            <div class="billing-header-titles">
+                <h4>Billing Statements & Utility Ledgers</h4>
+                <p>Review active microgrid ledger balances, tariff parameters, and historically verified digital invoices.</p>
+            </div>
+            <!-- Export system deep-linked to test target metrics -->
+            <a href="404.html" class="btn-billing-statement-export">
+                <span class="btn-vector-icon">📄</span>
+                <span>Export Tax Statement</span>
+            </a>
+        </div>
+
+        <!-- Upper Row: Financial Overview Counters (3-Column Responsive Ribbon Layout) -->
+        <div class="billing-metrics-ribbon">
+            
+            <!-- Financial Block 01: Outstanding Balance due -->
+            <div class="billing-telemetry-glow-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="billing-card-header">
+                    <span class="billing-node-index">[ Outstanding Due ]</span>
+                    <span class="vector-icon">💳</span>
+                </div>
+                <div class="billing-card-body">
+                    <h4 class="font-tabular-nums">₹1,420.50</h4>
+                    <p class="billing-telemetry-status text-yellow">
+                        Due Date: Oct 28, 2026
+                    </p>
+                </div>
+            </div>
+
+            <!-- Financial Block 02: Average Tariff Parameter Cost -->
+            <div class="billing-telemetry-glow-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="billing-card-header">
+                    <span class="billing-node-index">[ Active Tariff Code ]</span>
+                    <span class="vector-icon">📉</span>
+                </div>
+                <div class="billing-card-body">
+                    <h4 class="font-tabular-nums">₹4.15 <span class="unit-lbl">/ kWh</span></h4>
+                    <p class="billing-telemetry-status text-green">Off-Peak Microgrid Rate</p>
+                </div>
+            </div>
+
+            <!-- Financial Block 03: Cumulative Environmental Carbon Credits Yield -->
+            <div class="billing-telemetry-glow-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="billing-card-header">
+                    <span class="billing-node-index">[ Carbon Credit Dividends ]</span>
+                    <span class="vector-icon">🍃</span>
+                </div>
+                <div class="billing-card-body">
+                    <h4 class="font-tabular-nums">₹320.00</h4>
+                    <p class="billing-telemetry-status text-green">Solar Harvesting Payouts</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Main Lower Grid Split: Active Invoices Stream & Gateway Console -->
+        <div class="billing-split-matrix-row">
+            
+            <!-- Left Side Flank: Historical Statements Listing (Wide Panel) -->
+            <div class="billing-panel-container panel-wide-span">
+                <div class="panel-card-header-row">
+                    <div class="panel-header-titles">
+                        <h5>Historical Utility Invoices Statement Logs</h5>
+                        <p>Immutable node-verified grid usage accounting ledgers archived directly onto client local profiles.</p>
+                    </div>
+                </div>
+
+                <!-- Responsive Billing Table Scroll Mask Box -->
+                <div class="responsive-table-scroll-mask">
+                    <table class="billing-data-matrix-table">
+                        <thead>
+                            <tr>
+                                <th>Invoice Cycle</th>
+                                <th>Net Volume</th>
+                                <th>Statement Charge</th>
+                                <th>Ledger Check</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-tabular-nums"><a href="404.html">#INV-2026-09</a></td>
+                                <td class="font-tabular-nums">312.4 kWh</td>
+                                <td class="font-tabular-nums">₹1,296.46</td>
+                                <td><span class="status-badge-chip success-chip">Settled</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-tabular-nums"><a href="404.html">#INV-2026-08</a></td>
+                                <td class="font-tabular-nums">294.1 kWh</td>
+                                <td class="font-tabular-nums">₹1,220.51</td>
+                                <td><span class="status-badge-chip success-chip">Settled</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-tabular-nums"><a href="404.html">#INV-2026-07</a></td>
+                                <td class="font-tabular-nums">340.2 kWh</td>
+                                <td class="font-tabular-nums">₹1,411.83</td>
+                                <td><span class="status-badge-chip success-chip">Settled</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-tabular-nums"><a href="404.html">#INV-2026-06</a></td>
+                                <td class="font-tabular-nums">214.5 kWh</td>
+                                <td class="font-tabular-nums">₹890.17</td>
+                                <td><span class="status-badge-chip failure-chip">Overdue</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Right Side Flank: Payment Settlement Gateway Enclosure (Dark Chassis) -->
+            <div class="billing-panel-container panel-narrow-span background-dark-theme">
+                <div class="panel-card-header-row">
+                    <div class="panel-header-titles">
+                        <h5 class="text-white">Payment Settlement</h5>
+                        <p class="text-stone-muted">Clear active distribution dues using secure digital gateway parameters.</p>
+                    </div>
+                </div>
+
+                <div class="billing-gateway-stack">
+                    <p class="billing-gateway-paragraph">
+                        Settle your grid balancing payments directly. Enable auto-debit loops from verified wallets to preserve high node connectivity thresholds natively.
+                    </p>
+                    
+                    <!-- Simulated Invoice Total Metrics Interface -->
+                    <div class="gateway-total-chassis">
+                        <span class="status-label">Total Payable Balance</span>
+                        <strong class="text-yellow font-tabular-nums">₹1,420.50</strong>
+                    </div>
+                    
+                    <a href="404.html" class="btn-gateway-action-prime">Pay Outstanding Dues Now</a>
+                    <a href="404.html" class="btn-gateway-link-ghost">Manage Payment Methods</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- Enhanced Client Billing & Ledgers Workspace --- */
+.billing-grid-workspace {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    width: 100%;
+}
+
+/* Control Header Row Block Layout */
+.billing-control-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.btn-billing-statement-export {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: #0c0a09; /* Minimalist strict dark chassis look */
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-billing-statement-export:hover {
+    background-color: #facc15; /* Shift into brand core signature yellow fill profile on hover */
+    color: #000000;
+    box-shadow: 0 10px 20px rgba(250, 204, 21, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Upper Metrics Counter Grid Ribbon Layout */
+.billing-metrics-ribbon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.billing-telemetry-glow-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.billing-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.billing-node-index {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.billing-telemetry-glow-card .vector-icon {
+    font-size: 1.15rem;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+}
+
+.billing-telemetry-glow-card .billing-card-body h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+}
+
+.billing-card-body h4 .unit-lbl {
+    font-size: 1.1rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.billing-telemetry-status {
+    font-size: 0.825rem;
+    font-weight: 600;
+}
+
+.billing-telemetry-status.text-green { color: #10b981; }
+.billing-telemetry-status.text-yellow { color: #d97706; }
+
+/* Mouse Radar Hover Coordinates Engine Glow Mask variables */
+.card-radar-glow-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    z-index: -1;
+    background: radial-gradient(300px circle at var(--mx, 50%) var(--my, 50%), rgba(250, 204, 21, 0.08), transparent 45%);
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* Hover Adjustments */
+.billing-telemetry-glow-card:hover {
+    border-color: #facc15;
+    transform: translateY(-3px);
+}
+
+.billing-telemetry-glow-card:hover .card-radar-glow-mask { opacity: 1; }
+.billing-telemetry-glow-card:hover .vector-icon { transform: scale(1.1) rotate(-6deg); }
+
+/* --- Lower Split Workspace Sections Rows Matrix Layout --- */
+.billing-split-matrix-row {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: stretch;
+}
+
+.billing-panel-container {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 2.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.billing-panel-container.background-dark-theme {
+    background-color: #0c0a09; /* Deep dark dashboard housing chassis look */
+    border-color: #1c1917;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.panel-card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.panel-header-titles h5 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0c0a09;
+    margin-bottom: 0.25rem;
+}
+
+.panel-header-titles p {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+.text-white { color: #ffffff !important; }
+.text-stone-muted { color: #a8a29e !important; }
+
+/* --- Table Logging Layout Sheets Config --- */
+.responsive-table-scroll-mask {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.billing-data-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.billing-data-matrix-table th {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    padding: 0.85rem 1rem;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.billing-data-matrix-table td {
+    padding: 1.1rem 1rem;
+    font-size: 0.925rem;
+    color: #0f172a;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.font-tabular-nums { font-variant-numeric: tabular-nums; font-weight: 500; }
+
+.font-tabular-nums a {
+    font-family: sfmono-regular, Consolas, monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.font-tabular-nums a:hover { text-decoration: underline; }
+
+.billing-data-matrix-table tr:last-child td { border-bottom: none; }
+
+.status-badge-chip {
+    font-size: 0.725rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 99px;
+    text-transform: uppercase;
+}
+
+.status-badge-chip.success-chip { background-color: #f0fdf4; color: #16a34a; }
+.status-badge-chip.failure-chip { background-color: #fef2f2; color: #ef4444; }
+
+/* Right Column Gateway Stack Control Layout */
+.billing-gateway-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    height: 100%;
+}
+
+.billing-gateway-paragraph {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #a8a29e;
+}
+
+.gateway-total-chassis {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c1917;
+    border: 1px solid #2e2a24;
+    padding: 0.85rem 1.15rem;
+    border-radius: 0.5rem;
+    margin-bottom: auto; /* Push buttons cleanly down to panel footer boundaries track */
+}
+
+.gateway-total-chassis .status-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #a8a29e;
+    text-transform: uppercase;
+}
+
+.btn-gateway-action-prime,
+.btn-gateway-link-ghost {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-gateway-action-prime { background-color: #facc15; color: #000000; }
+.btn-gateway-action-prime:hover { background-color: #ffffff; transform: translateY(-1px); }
+
+.btn-gateway-link-ghost { border: 1px solid rgba(255,255,255,0.15); color: #ffffff; }
+.btn-gateway-link-ghost:hover { background-color: rgba(255,255,255,0.04); border-color: #ffffff; }
+
+/* --- Fully Fluid Responsive Breakpoints System Layout Overrides --- */
+@media (max-width: 1200px) {
+    .billing-metrics-ribbon {
+        grid-template-columns: 1fr; /* Stack ribbons metrics grids vertically */
+        gap: 1.25rem;
+    }
+    .billing-split-matrix-row {
+        grid-template-columns: 1fr; /* Stack layout columns into standard row items flow */
+        gap: 1.25rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .billing-control-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+    .btn-billing-statement-export {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+</style>
+
+<script>
+    // Initialize mouse coordinate tracking matrices loops for client billing cards
+const billingMetricsCardsList = document.querySelectorAll('.billing-telemetry-glow-card');
+
+billingMetricsCardsList.forEach(card => {
+    card.addEventListener('mousemove', (event) => {
+        const boundingBoxRect = card.getBoundingClientRect();
+        const coordinateX = event.clientX - boundingBoxRect.left;
+        const coordinateY = event.clientY - boundingBoxRect.top;
+
+        card.style.setProperty('--mx', `${coordinateX}px`);
+        card.style.setProperty('--my', `${coordinateY}px`);
+    });
+});
+
+</script>
+
+            <!-- Section 03: Connected Cells (Hidden by default) -->
+         <section id="client-nodes-section" class="workspace-tab-panel-route">
+    <div class="cells-grid-workspace">
+        
+        <!-- Connected Cells Control Header Ribbon -->
+        <div class="cells-control-header-row">
+            <div class="cells-header-titles">
+                <h4>Decentralized Connected Cells Matrix</h4>
+                <p>Monitor your verified regional solar arrays, generation health indexes, and cell capacity thresholds.</p>
+            </div>
+            <!-- Interactive action link deep-linked to test target metrics -->
+            <a href="404.html" class="btn-cells-registry-link">
+                <span class="btn-vector-icon">🗺️</span>
+                <span>Request New Node Link</span>
+            </a>
+        </div>
+
+        <!-- Upper Row: Node Equipment Performance Ribbon (3-Column Responsive Layout) -->
+        <div class="cells-metrics-ribbon">
+            
+            <!-- Performance Block 01: Total Active Cells Connected -->
+            <div class="cells-telemetry-glow-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="cells-card-header">
+                    <span class="cells-node-index">[ Connected Nodes ]</span>
+                    <span class="vector-icon">🟢</span>
+                </div>
+                <div class="cells-card-body">
+                    <h4 class="font-tabular-nums">03 <span class="unit-lbl">/ 04</span></h4>
+                    <p class="cells-telemetry-status text-green">All array channels active</p>
+                </div>
+            </div>
+
+            <!-- Performance Block 02: Average Temperature Axis -->
+            <div class="cells-telemetry-glow-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="cells-card-header">
+                    <span class="cells-node-index">[ Core Temperature ]</span>
+                    <span class="vector-icon">🌡️</span>
+                </div>
+                <div class="cells-card-body">
+                    <h4 class="font-tabular-nums">32.6 <span class="unit-lbl">°C</span></h4>
+                    <p class="cells-telemetry-status text-green">Optimal thermal threshold</p>
+                </div>
+            </div>
+
+            <!-- Performance Block 03: Combined Active Capacity Delivery -->
+            <div class="cells-telemetry-glow-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="cells-card-header">
+                    <span class="cells-node-index">[ Total Live Output ]</span>
+                    <span class="vector-icon">⚡</span>
+                </div>
+                <div class="cells-card-body">
+                    <h4 class="font-tabular-nums">14.2 <span class="unit-lbl">kW</span></h4>
+                    <p class="cells-telemetry-status text-green">Steady power line balance</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Main Lower Grid Split: Active Cells Registry & Node Parameters Control Panel -->
+        <div class="cells-split-matrix-row">
+            
+            <!-- Left Side Flank: Active Cells Table Matrix (Wide Panel) -->
+            <div class="cells-panel-container panel-wide-span">
+                <div class="panel-card-header-row">
+                    <div class="panel-header-titles">
+                        <h5>Linked Infrastructure Hardware Profiles</h5>
+                        <p>Real-time physical asset health records synchronized directly onto customer distribution channels.</p>
+                    </div>
+                </div>
+
+                <!-- Responsive Hardware Table Scroll Mask Box -->
+                <div class="responsive-table-scroll-mask">
+                    <table class="cells-data-matrix-table">
+                        <thead>
+                            <tr>
+                                <th>Hardware Serial ID</th>
+                                <th>Technology Class</th>
+                                <th>Live Generation</th>
+                                <th>Cell State</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-tabular-nums"><a href="404.html">#PV-A01-SLM</a></td>
+                                <td>Photovoltaic Axis Panel Array</td>
+                                <td class="font-tabular-nums">5.42 kW</td>
+                                <td><span class="status-badge-chip success-chip">Stable</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-tabular-nums"><a href="404.html">#PV-A02-SLM</a></td>
+                                <td>Photovoltaic Axis Panel Array</td>
+                                <td class="font-tabular-nums">4.88 kW</td>
+                                <td><span class="status-badge-chip success-chip">Stable</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-tabular-nums"><a href="404.html">#SS-B01-SLM</a></td>
+                                <td>Solid-State Storage Capacitor Node</td>
+                                <td class="font-tabular-nums">3.90 kW</td>
+                                <td><span class="status-badge-chip standard-chip">Syncing</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Right Side Flank: Node Diagnostic Command Hub (Dark Chassis) -->
+            <div class="cells-panel-container panel-narrow-span background-dark-theme">
+                <div class="panel-card-header-row">
+                    <div class="panel-header-titles">
+                        <h5 class="text-white">Node Diagnostics</h5>
+                        <p class="text-stone-muted">Run programmatic check routines over cryptographic sensor paths layers.</p>
+                    </div>
+                </div>
+
+                <div class="cells-diagnostic-stack">
+                    <p class="cells-diagnostic-paragraph">
+                        Isolate transmission fluctuations and verify local load balancing phase boundaries natively before executing standard utility logs synchronization loops.
+                    </p>
+                    
+                    <!-- Simulated Diagnostic Terminal Status Box -->
+                    <div class="diagnostic-status-chassis">
+                        <span class="status-label">Sensor Registry Health</span>
+                        <strong class="text-yellow">99.98% PASS</strong>
+                    </div>
+                    
+                    <a href="404.html" class="btn-diagnostic-action-prime">Run Comprehensive Node Check</a>
+                    <a href="404.html" class="btn-diagnostic-link-ghost">View Microgrid Topologies</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- Enhanced Client Connected Cells Workspace --- */
+.cells-grid-workspace {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    width: 100%;
+}
+
+/* Control Header Row Block Layout */
+.cells-control-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.btn-cells-registry-link {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: #0c0a09; /* Minimalist strict dark chassis look */
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-cells-registry-link:hover {
+    background-color: #facc15; /* Shift into brand core signature yellow fill profile on hover */
+    color: #000000;
+    box-shadow: 0 10px 20px rgba(250, 204, 21, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Upper Metrics Counter Grid Ribbon Layout */
+.cells-metrics-ribbon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.cells-telemetry-glow-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.cells-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.cells-node-index {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.cells-telemetry-glow-card .vector-icon {
+    font-size: 1.15rem;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+}
+
+.cells-telemetry-glow-card .cells-card-body h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+}
+
+.cells-card-body h4 .unit-lbl {
+    font-size: 1.1rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.cells-telemetry-status {
+    font-size: 0.825rem;
+    font-weight: 600;
+}
+
+.cells-telemetry-status.text-green { color: #10b981; }
+
+/* Mouse Radar Hover Coordinates Engine Glow Mask variables */
+.card-radar-glow-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    z-index: -1;
+    background: radial-gradient(300px circle at var(--mx, 50%) var(--my, 50%), rgba(250, 204, 21, 0.08), transparent 45%);
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* Hover Adjustments */
+.cells-telemetry-glow-card:hover {
+    border-color: #facc15;
+    transform: translateY(-3px);
+}
+
+.cells-telemetry-glow-card:hover .card-radar-glow-mask { opacity: 1; }
+.cells-telemetry-glow-card:hover .vector-icon { transform: scale(1.1) rotate(-6deg); }
+
+/* --- Lower Split Workspace Sections Rows Matrix Layout --- */
+.cells-split-matrix-row {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: stretch;
+}
+
+.cells-panel-container {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 2.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.cells-panel-container.background-dark-theme {
+    background-color: #0c0a09; /* Deep dark dashboard housing chassis look */
+    border-color: #1c1917;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.panel-card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.panel-header-titles h5 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0c0a09;
+    margin-bottom: 0.25rem;
+}
+
+.panel-header-titles p {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+.text-white { color: #ffffff !important; }
+.text-stone-muted { color: #a8a29e !important; }
+
+/* --- Table Logging Layout Sheets Config --- */
+.responsive-table-scroll-mask {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.cells-data-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.cells-data-matrix-table th {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    padding: 0.85rem 1rem;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.cells-data-matrix-table td {
+    padding: 1.1rem 1rem;
+    font-size: 0.925rem;
+    color: #0f172a;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.font-tabular-nums { font-variant-numeric: tabular-nums; font-weight: 500; }
+
+.font-tabular-nums a {
+    font-family: sfmono-regular, Consolas, monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.font-tabular-nums a:hover { text-decoration: underline; }
+
+.cells-data-matrix-table tr:last-child td { border-bottom: none; }
+
+.status-badge-chip {
+    font-size: 0.725rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 99px;
+    text-transform: uppercase;
+}
+
+.status-badge-chip.success-chip { background-color: #f0fdf4; color: #16a34a; }
+.status-badge-chip.standard-chip { background-color: #fff7ed; color: #d97706; }
+
+/* Right Column Diagnostic Stack Control Layout */
+.cells-diagnostic-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    height: 100%;
+}
+
+.cells-diagnostic-paragraph {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #a8a29e;
+}
+
+.diagnostic-status-chassis {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c1917;
+    border: 1px solid #2e2a24;
+    padding: 0.85rem 1.15rem;
+    border-radius: 0.5rem;
+    margin-bottom: auto; /* Push buttons cleanly down to panel footer boundaries track */
+}
+
+.diagnostic-status-chassis .status-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #a8a29e;
+    text-transform: uppercase;
+}
+
+.btn-diagnostic-action-prime,
+.btn-diagnostic-link-ghost {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-diagnostic-action-prime { background-color: #facc15; color: #000000; }
+.btn-diagnostic-action-prime:hover { background-color: #ffffff; transform: translateY(-1px); }
+
+.btn-diagnostic-link-ghost { border: 1px solid rgba(255,255,255,0.15); color: #ffffff; }
+.btn-diagnostic-link-ghost:hover { background-color: rgba(255,255,255,0.04); border-color: #ffffff; }
+
+/* --- Fully Fluid Responsive Breakpoints System Layout Overrides --- */
+@media (max-width: 1200px) {
+    .cells-metrics-ribbon {
+        grid-template-columns: 1fr; /* Stack ribbons metrics grids vertically */
+        gap: 1.25rem;
+    }
+    .cells-split-matrix-row {
+        grid-template-columns: 1fr; /* Stack layout columns into standard row items flow */
+        gap: 1.25rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .cells-control-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+    .btn-cells-registry-link {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+</style>
+
+<script>
+    // Initialize mouse coordinate tracking matrices loops for client cells cards
+const cellsMetricsCardsList = document.querySelectorAll('.cells-telemetry-glow-card');
+
+cellsMetricsCardsList.forEach(card => {
+    card.addEventListener('mousemove', (event) => {
+        const boundingBoxRect = card.getBoundingClientRect();
+        const coordinateX = event.clientX - boundingBoxRect.left;
+        const coordinateY = event.clientY - boundingBoxRect.top;
+
+        card.style.setProperty('--mx', `${coordinateX}px`);
+        card.style.setProperty('--my', `${coordinateY}px`);
+    });
+});
+
+</script>
+
+            <!-- Section 04: Support Ticket Desk (Hidden by default) -->
+          <section id="client-support-section" class="workspace-tab-panel-route">
+    <div class="support-grid-workspace">
+        
+        <!-- Support Desk Control Header Ribbon -->
+        <div class="support-control-header-row">
+            <div class="support-header-titles">
+                <h4>Grid Infrastructure Support Desk</h4>
+                <p>Submit engineering help request tickets, track node diagnostic inquiries, or contact emergency load balancing specialists.</p>
+            </div>
+            <!-- Interactive action link deep-linked to test target matrix -->
+            <a href="404.html" class="btn-support-kb-link">
+                <span class="btn-vector-icon">📖</span>
+                <span>Browse Technical Knowledge Base</span>
+            </a>
+        </div>
+
+        <!-- Upper Row: Support Operations Counter Ribbon (3-Column Responsive Layout) -->
+        <div class="support-metrics-ribbon">
+            
+            <!-- Support Block 01: Open Active Tickets -->
+            <div class="support-telemetry-glow-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="support-card-header">
+                    <span class="support-node-index">[ Active Requests ]</span>
+                    <span class="vector-icon">🎫</span>
+                </div>
+                <div class="support-card-body">
+                    <h4 class="font-tabular-nums">01</h4>
+                    <p class="support-telemetry-status text-yellow">Ticket ID #ST-SUP-912</p>
+                </div>
+            </div>
+
+            <!-- Support Block 02: Average Latency Resolution Time -->
+            <div class="support-telemetry-glow-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="support-card-header">
+                    <span class="support-node-index">[ Latency Window ]</span>
+                    <span class="vector-icon">🕒</span>
+                </div>
+                <div class="support-card-body">
+                    <h4 class="font-tabular-nums">1.4 <span class="unit-lbl">Hours</span></h4>
+                    <p class="support-telemetry-status text-green">Optimal response threshold</p>
+                </div>
+            </div>
+
+            <!-- Support Block 03: Combined System Health Standing -->
+            <div class="support-telemetry-glow-card">
+                <div class="card-radar-glow-mask"></div>
+                <div class="support-card-header">
+                    <span class="support-node-index">[ Channel Health ]</span>
+                    <span class="vector-icon">🛡️</span>
+                </div>
+                <div class="support-card-body">
+                    <h4>Excellent</h4>
+                    <p class="support-telemetry-status text-green">All support relays operational</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Main Lower Grid Split: Active Support Form & Architect Directory Panel -->
+        <div class="support-split-matrix-row">
+            
+            <!-- Left Side Flank: Active Request Ticket Submission Panel (Wide Card) -->
+            <div class="support-panel-container panel-wide-span">
+                <div class="panel-card-header-row">
+                    <div class="panel-header-titles">
+                        <h5>Open a Secure Grid Engineering Ticket</h5>
+                        <p>Fill out your node malfunction attributes coordinates below. Our engineering network responds within a 2-hour latency window.</p>
+                    </div>
+                </div>
+
+                <form id="clientSupportTicketForm" class="grid-support-form" novalidate>
+                    <!-- Form Dual Inputs Row -->
+                    <div class="form-dual-fields-row">
+                        <div class="input-element-group">
+                            <label for="supportTicketSubject">Inquiry Priority Subject</label>
+                            <div class="input-wrapper-node">
+                                <select id="supportTicketSubject" required>
+                                    <option value="" disabled selected hidden>Select priority level...</option>
+                                    <option value="critical">Critical (Load Balancing Anomaly)</option>
+                                    <option value="standard">Standard (Node Linking Request)</option>
+                                    <option value="billing">Billing (Ledger Verification)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-element-group">
+                            <label for="associatedNodeId">Associated Hardware Serial ID</label>
+                            <div class="input-wrapper-node">
+                                <input type="text" id="associatedNodeId" placeholder="e.g. #PV-A01-SLM" required autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Textarea Message Block -->
+                    <div class="input-element-group">
+                        <label for="supportTicketMessage">Detailed Telemetry Malfunction Description</label>
+                        <div class="input-wrapper-node">
+                            <textarea id="supportTicketMessage" placeholder="Describe any tracking macro thresholds, battery array parameters, micro-wind turbine constraints, or custom grid sync package requirements..." required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Alert System Feedback Notification Bar -->
+                    <div class="support-validation-prompt" id="supportFormAlertLog"></div>
+
+                    <!-- Action Trigger Submission Button -->
+                    <button type="submit" class="btn-support-submit-trigger">
+                        <span>Transmit Engineering Ticket</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right Side Flank: Emergency Contacts Console Hub (Dark Chassis) -->
+            <div class="support-panel-container panel-narrow-span background-dark-theme">
+                <div class="panel-card-header-row">
+                    <div class="panel-header-titles">
+                        <h5 class="text-white">Emergency Uplink</h5>
+                        <p class="text-stone-muted">Connect directly with our corporate energy wellness staff to fast-track specialized microgrid repairs.</p>
+                    </div>
+                </div>
+
+                <div class="support-hotline-stack">
+                    <div class="hotline-slot-card">
+                        <span class="hotline-icon">📍</span>
+                        <div class="hotline-meta-block">
+                            <h6>Salem HQ Studio</h6>
+                            <p>MMR Complex, Salem, TN</p>
+                        </div>
+                    </div>
+
+                    <div class="hotline-slot-card">
+                        <span class="hotline-icon">📞</span>
+                        <div class="hotline-meta-block">
+                            <h6>Direct Hotline</h6>
+                            <a href="tel:+917010792745" class="hotline-telephony-link">+91 7010792745</a>
+                        </div>
+                    </div>
+
+                    <div class="hotline-slot-card">
+                        <span class="hotline-icon">✉</span>
+                        <div class="hotline-meta-block">
+                            <h6>Electronic Mail</h6>
+                            <a href="mailto:design@://stacklystudio.com" class="hotline-mail-link">design@stacklystudio.com</a>
+                        </div>
+                    </div>
+
+                    <!-- Redirect link to target fallback layout sheet -->
+                    <a href="404.html" class="btn-support-link-ghost">Launch Live Terminal Chat</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- Enhanced Client Support Ticket Desk Workspace --- */
+.support-grid-workspace {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    width: 100%;
+}
+
+/* Control Header Row Block Layout */
+.support-control-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.btn-support-kb-link {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: #0c0a09; /* Minimalist strict dark chassis look */
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-support-kb-link:hover {
+    background-color: #facc15; /* Shift into brand core signature yellow fill profile on hover */
+    color: #000000;
+    box-shadow: 0 10px 20px rgba(250, 204, 21, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Upper Metrics Counter Grid Ribbon Layout */
+.support-metrics-ribbon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.support-telemetry-glow-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.support-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.support-node-index {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.support-telemetry-glow-card .vector-icon {
+    font-size: 1.15rem;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+}
+
+.support-telemetry-glow-card .support-card-body h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+}
+
+.support-card-body h4 .unit-lbl {
+    font-size: 1.1rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.support-telemetry-status {
+    font-size: 0.825rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.support-telemetry-status.text-green { color: #10b981; }
+.support-telemetry-status.text-yellow { color: #d97706; }
+
+/* Mouse Radar Hover Coordinates Engine Glow Mask variables */
+.card-radar-glow-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    z-index: -1;
+    background: radial-gradient(300px circle at var(--mx, 50%) var(--my, 50%), rgba(250, 204, 21, 0.08), transparent 45%);
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* Hover Adjustments */
+.support-telemetry-glow-card:hover {
+    border-color: #facc15;
+    transform: translateY(-3px);
+}
+
+.support-telemetry-glow-card:hover .card-radar-glow-mask { opacity: 1; }
+.support-telemetry-glow-card:hover .vector-icon { transform: scale(1.1) rotate(-6deg); }
+
+/* --- Lower Split Workspace Sections Rows Matrix Layout --- */
+.support-split-matrix-row {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: stretch;
+}
+
+.support-panel-container {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 2.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.support-panel-container.background-dark-theme {
+    background-color: #0c0a09; /* Deep dark dashboard housing chassis look */
+    border-color: #1c1917;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.panel-card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.panel-header-titles h5 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0c0a09;
+    margin-bottom: 0.25rem;
+}
+
+.panel-header-titles p {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+.text-white { color: #ffffff !important; }
+.text-stone-muted { color: #a8a29e !important; }
+
+/* --- Ticket Form Elements Sheets Config --- */
+.grid-support-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.form-dual-fields-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.grid-support-form input[type="text"],
+.grid-support-form select,
+.grid-support-form textarea {
+    width: 100%;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 0.85rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    color: #0c0a09;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+.grid-support-form select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' xmlns='http://w3.org points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 14px;
+}
+
+.grid-support-form textarea {
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.grid-support-form input:focus,
+.grid-support-form select:focus,
+.grid-support-form textarea:focus {
+    border-color: #facc15;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(250, 204, 21, 0.05);
+}
+
+.support-validation-prompt {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    min-height: 18px;
+    color: #ef4444;
+}
+
+.btn-support-submit-trigger {
+    width: fit-content;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.85rem 1.75rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-support-submit-trigger:hover {
+    background-color: #facc15;
+    color: #000000;
+    box-shadow: 0 8px 20px rgba(250, 204, 21, 0.15);
+    transform: translateY(-1px);
+}
+
+/* Right Column Contact Details Hub Stack Layout */
+.support-hotline-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+    height: 100%;
+}
+
+.hotline-slot-card {
+    background-color: #1c1917;
+    border: 1px solid #2e2a24;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hotline-icon {
+    font-size: 1.15rem;
+    color: #facc15;
+}
+
+.hotline-meta-block h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #a8a29e;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.hotline-meta-block p,
+.hotline-telephony-link,
+.hotline-mail-link {
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin: 0;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hotline-telephony-link:hover,
+.hotline-mail-link:hover {
+    color: #facc15;
+    text-decoration: underline;
+}
+
+.btn-support-link-ghost {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #ffffff;
+    margin-top: auto; /* Push down cleanly to card footer thresholds tracking lines */
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-support-link-ghost:hover {
+    background-color: rgba(255,255,255,0.04);
+    border-color: #ffffff;
+}
+
+/* --- Fully Fluid Responsive Breakpoints System Layout Overrides --- */
+@media (max-width: 1200px) {
+    .support-metrics-ribbon {
+        grid-template-columns: 1fr; /* Stack ribbons metrics grids vertically */
+        gap: 1.25rem;
+    }
+    .support-split-matrix-row {
+        grid-template-columns: 1fr; /* Stack layout columns into standard row items flow */
+        gap: 1.25rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .support-control-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+    .btn-support-kb-link,
+    .btn-support-submit-trigger {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .form-dual-fields-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+
+<script>
+    // Initialize mouse coordinate tracking matrices loops for client support cards
+const supportMetricsCardsList = document.querySelectorAll('.support-telemetry-glow-card');
+
+supportMetricsCardsList.forEach(card => {
+    card.addEventListener('mousemove', (event) => {
+        const boundingBoxRect = card.getBoundingClientRect();
+        const coordinateX = event.clientX - boundingBoxRect.left;
+        const coordinateY = event.clientY - boundingBoxRect.top;
+
+        card.style.setProperty('--mx', `${coordinateX}px`);
+        card.style.setProperty('--my', `${coordinateY}px`);
+    });
+});
+
+// Programmatic Verification Form Processing Track Loop
+const clientSupportForm = document.getElementById('clientSupportTicketForm');
+const supportFormAlertLog = document.getElementById('supportFormAlertLog');
+
+if (clientSupportForm && supportFormAlertLog) {
+    clientSupportForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const subjectSelection = document.getElementById('supportTicketSubject').value;
+        const associatedNodeId = document.getElementById('associatedNodeId').value.trim();
+        const ticketMessage = document.getElementById('supportTicketMessage').value.trim();
+
+        if (!subjectSelection || associatedNodeId === '' || ticketMessage === '') {
+            supportFormAlertLog.textContent = '⚠ Operational Error: please fill all fields before executing ticket transmission.';
+            return;
+        }
+
+        // Success Clear and Forward Tracking Route Matrix
+        supportFormAlertLog.textContent = '';
+        clientSupportForm.reset();
+        window.location.href = '404.html';
+    });
+}
+
+</script>
+
+        </main>
+
+    </div>
+
+   
+    <style>
+        /* Unique Typography Imports for Strict Brand Alignment */
+@import url('https://googleapis.com');
+
+/* Master Reset Configuration Framework Sheets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-root-body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fafafa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.body-scroll-lock {
+    overflow: hidden !important;
+}
+
+/* --- Upper Global Header Control Bar Configuration --- */
+.dashboard-global-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #0c0a09; /* Deep charcoal black shell from image design cues */
+    border-bottom: 1px solid #1c1917;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.header-left-brand-block {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.btn-hamburger-menu-trigger {
+    display: none; /* Hidden by default on standard desktop track layout arrays */
+    background: none;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-hamburger-menu-trigger svg {
+    width: 22px;
+    height: 22px;
+}
+
+.header-brand-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-brand-img {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.25s ease;
+}
+
+.header-brand-logo-link:hover .header-brand-img {
+    transform: scale(1.02);
+}
+
+.header-right-telemetry-block {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+.header-telemetry-bell-btn {
+    background: none;
+    border: none;
+    outline: none;
+    color: #a8a29e;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: color 0.25s ease;
+}
+
+.header-telemetry-bell-btn svg {
+    width: 22px;
+    height: 22px;
+}
+
+.header-telemetry-bell-btn:hover {
+    color: #facc15; /* Signature brand yellow theme color variables */
+}
+
+.active-alert-beacon-dot {
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    width: 7px;
+    height: 7px;
+    background-color: #facc15;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #facc15;
+}
+
+/* User identity profiling details section base link elements card */
+.header-user-profile-plate {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-left: 1px solid #1c1917;
+    padding-left: 1.5rem;
+}
+
+.profile-avatar-circle {
+    width: 36px;
+    height: 36px;
+    background-color: #1c1917;
+    border: 1px solid #2e2a24;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.profile-identity-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-greeting-text {
+    font-size: 0.75rem;
+    color: #78716c;
+    font-weight: 500;
+}
+
+.profile-parsed-name-node {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #ffffff;
+    max-width: 140px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Truncate long client names strings keys cleanly */
+}
+
+/* --- Master Lower Workspace Canvas Layout Area Container --- */
+.dashboard-core-canvas-layout {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 70px);
+    margin-top: 70px;
+    display: flex;
+}
+
+/* Left Column Flank Side Drawer Control Configuration */
+.dashboard-sidebar-drawer {
+    width: 260px; /* Rigid desktop sidebar footprint width */
+    background-color: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    padding: 2rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    z-index: 50;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.sidebar-navigation-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 100%;
+}
+
+/* Navigation Interactive Tabs Command Triggers Layout Sheets elements */
+.sidebar-tab-nav-link,
+.sidebar-logout-action-btn {
+    width: 100%;
+    background: none;
+    border: 1px solid transparent;
+    outline: none;
+    padding: 0.85rem 1rem;
+    border-radius: 0.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.sidebar-vector-icon {
+    display: flex;
+    align-items: center;
+    color: #64748b;
+    transition: color 0.25s ease;
+}
+
+.sidebar-vector-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Navigation Interactive Focus Highlight states classes hooks overrides */
+.sidebar-tab-nav-link:hover,
+.sidebar-tab-nav-link.link-state-active {
+    background-color: #fef08a; /* Signature Brand Soft Yellow Highlights base fill code */
+    color: #000000;
+}
+
+.sidebar-tab-nav-link:hover .sidebar-vector-icon,
+.sidebar-tab-nav-link.link-state-active .sidebar-vector-icon {
+    color: #000000;
+}
+
+/* Logout Navigation Anchor button pinned safely to bottom of lists matrix arrays */
+.sidebar-logout-action-btn {
+    margin-top: auto; /* Secure placement cleanly pinned to card boundaries drawer floors */
+    border-color: #fee2e2;
+    background-color: #fef2f2;
+    color: #ef4444; /* Clean contrast warning logout alert state look */
+}
+
+.sidebar-logout-action-btn .sidebar-vector-icon {
+    color: #fca5a5;
+}
+
+.sidebar-logout-action-btn:hover {
+    background-color: #ef4444;
+    color: #ffffff;
+    border-color: #ef4444;
+}
+
+.sidebar-logout-action-btn:hover .sidebar-vector-icon {
+    color: #ffffff;
+}
+
+/* --- Right Column Flank Workspace Display Frame Windows Modules --- */
+.dashboard-main-content-display {
+    flex: 1;
+    height: 100%;
+    overflow-y: auto;
+    padding: 2.5rem;
+    background-color: #f8fafc;
+}
+
+/* Standalone Discrete Content Section Route Tabs Configurations Base */
+.workspace-tab-panel-route {
+    display: none; /* Hide all sheets by default matching rules targets */
+    width: 100%;
+    height: 100%;
+}
+
+.workspace-tab-panel-route.section-display-active {
+    display: block; /* Reveal active state tab panel segment cleanly */
+}
+
+/* Premium Dashboard Component Wireframe Wire Placeholder Plates Look matching images templates layout */
+.wireframe-placeholder-container {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    background-color: #ffffff;
+    border: 1px dashed #cbd5e1;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    text-align: center;
+}
+
+.wireframe-header-text h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0c0a09;
+    margin-bottom: 0.5rem;
+}
+
+.wireframe-header-text p {
+    font-size: 0.95rem;
+    color: #64748b;
+    max-width: 440px;
+    line-height: 1.5;
+}
+
+/* Backdrop Tint Cover sheets layer tracking drawer components rules masks */
+.sidebar-drawer-tint-backdrop {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 40;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* --- Fully Fluid Responsive Breakpoints System Layout Overrides --- */
+@media (max-width: 1024px) {
+    .btn-hamburger-menu-trigger {
+        display: flex; /* Fire active responsive navigation hamburger triggers */
+    }
+    
+    .dashboard-sidebar-drawer {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        height: calc(100vh - 70px);
+        width: 80%; /* Explicit custom width limit specification constraint passed from prompt guidelines rules */
+        max-width: 320px;
+        transform: translateX(-100%); /* Slide sidebar completely off-screen boundaries initial maps array */
+    }
+    
+    /* Open State overrides hooks for smaller viewport tracking drawers matrix */
+    .dashboard-sidebar-drawer.drawer-view-open {
+        transform: translateX(0);
+        box-shadow: 25px 0 50px rgba(0,0,0,0.1);
+    }
+    
+    .dashboard-sidebar-drawer.drawer-view-open ~ .sidebar-drawer-tint-backdrop {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .dashboard-main-content-display {
+        padding: 1.5rem; /* Compress internal viewport spacing gaps fields maps codes */
+    }
+}
+
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Dynamic Identity Email First-Name Token Parser Engine Hook
+    const profileGreetingNameNode = document.getElementById('headerProfileGreetingName');
+    
+    function parseSavedSubscriberEmailIdentity() {
+        const storedUserEmailString = localStorage.getItem('cachedSubscriberNodeEmail');
+
+        if (storedUserEmailString && profileGreetingNameNode) {
+            // Extraction Formula: split address string array, extract the user matrix portion before the domain anchor
+            const addressPartsArray = storedUserEmailString.split('@');
+            let extractedFirstName = addressPartsArray[0];
+
+            if (extractedFirstName) {
+                // Formatting: Capitalize initial string letter trace for a polished corporate feel
+                extractedFirstName = extractedFirstName.charAt(0).toUpperCase() + extractedFirstName.slice(1);
+                profileGreetingNameNode.textContent = extractedFirstName;
+            }
+        }
+    }
+    
+    parseSavedSubscriberEmailIdentity();
+
+    // 2. Programmatic Header Brand Refresh Reload Interceptor Action
+    const brandRefreshAnchorLink = document.getElementById('dashboardBrandRefresh');
+
+    if (brandRefreshAnchorLink) {
+        brandRefreshAnchorLink.addEventListener('click', (event) => {
+            event.preventDefault(); // Stop raw tracking tag browser coordinates jumping traces paths
+            
+            // Re-trigger total page document structural trace reload pipeline
+            window.location.reload();
+        });
+    }
+
+    // 3. Sectionwise Layout Tab Switching Multi-Panel Router System Tracker
+    const navTabTriggersList = document.querySelectorAll('.sidebar-tab-nav-link');
+    const contentWorkspacePanels = document.querySelectorAll('.workspace-tab-panel-route');
+
+    navTabTriggersList.forEach(triggerBtn => {
+        triggerBtn.addEventListener('click', () => {
+            const chosenSectionTargetId = triggerBtn.getAttribute('data-section-target');
+
+            // Tab Trigger Active State Class Loop Toggler
+            navTabTriggersList.forEach(btn => btn.classList.remove('link-state-active'));
+            triggerBtn.classList.add('link-state-active');
+
+            // Content Panel View visibility class loop updater traces paths strings
+            contentWorkspacePanels.forEach(panel => {
+                if (panel.id === chosenSectionTargetId) {
+                    panel.classList.add('section-display-active');
+                } else {
+                    panel.classList.remove('section-display-active');
+                }
+            });
+
+            // Clean-up loop: Automatically slide sidebar shut when tab click triggers on mobile display screens widths
+            if (window.innerWidth <= 1024) {
+                closeResponsiveNavigationConsoleDrawer();
+            }
+        });
+    });
+
+    // 4. Fully Fluid Responsive Hamburger Menu Navigation Console Drawer Engine Controllers
+    const menuToggleBtn = document.getElementById('sidebarMenuDrawerToggle');
+    const sidebarConsoleDrawer = document.getElementById('dashboardSidebarConsole');
+    const drawerBackdropTint = document.getElementById('drawerTintOverlay');
+    const rootBodyDocumentNode = document.body;
+
+    function openResponsiveNavigationConsoleDrawer() {
+        sidebarConsoleDrawer?.classList.add('drawer-view-open');
+        rootBodyDocumentNode.classList.add('body-scroll-lock'); /* Strict rule passed: Background viewport won't scroll */
+    }
+
+    function closeResponsiveNavigationConsoleDrawer() {
+        sidebarConsoleDrawer?.classList.remove('drawer-view-open');
+        rootBodyDocumentNode.classList.remove('body-scroll-lock'); /* Restores normal independent scroll parameters tracks */
+    }
+
+    if (menuToggleBtn && sidebarConsoleDrawer && drawerBackdropTint) {
+        menuToggleBtn.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const isCurrentlyOpened = sidebarConsoleDrawer.classList.contains('drawer-view-open');
+            
+            if (isCurrentlyOpened) {
+                closeResponsiveNavigationConsoleDrawer();
+            } else {
+                openResponsiveNavigationConsoleDrawer();
+            }
+        });
+
+        // Click mask background shroud layer to lock closure events loops cleanly
+        drawerBackdropTint.addEventListener('click', closeResponsiveNavigationConsoleDrawer);
+    }
+
+    // 5. Programmatic Session Disconnect Logout Return Interceptor Action
+    const logoutTriggerBtn = document.getElementById('portalLogoutTriggerAction');
+
+    if (logoutTriggerBtn) {
+        logoutTriggerBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            
+            // Flush tracking storage parameters to protect user telemetry values profiles locks fields
+            localStorage.removeItem('activeAuthorizationRoleToken');
+            
+            // Break scroll locks on body paths bounds before escaping routing layers structures maps
+            rootBodyDocumentNode.classList.remove('body-scroll-lock');
+            
+            // Route session link back instantly to authentication identity card console page
+            window.location.href = 'login.html';
+        });
+    }
+});
+
+    </script>
+</body>
+</html>

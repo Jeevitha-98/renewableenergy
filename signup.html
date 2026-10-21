@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Infrastructure - Node Registration Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="portal-body-wrapper">
+
+    <!-- Primary Asymmetric Workspace Canvas Box (Replicating Image Split Design) -->
+    <main class="signup-layout-container">
+        
+        <!-- Left Column Flank: Brand Value Showcase Branding Sheet -->
+        <div class="signup-left-brand-panel">
+            <div class="brand-eyebrow-wrapper">
+                <span class="brand-beacon-dot"></span>
+                <span class="brand-eyebrow-text">Stackly Grid Matrix</span>
+            </div>
+            
+            <h1 class="brand-main-heading">
+                Create Your<br>
+                <span class="yellow-text-mode">Energy Journey.</span>
+            </h1>
+            
+            <p class="brand-sub-description">
+                Join our decentralized local utility community and discover high-efficiency photovoltaic micro-grids, intuitive power logs, and modular energy hardware resources.
+            </p>
+
+            <!-- Center Core Infrastructure Placeholder Plate Frame Box -->
+            <div class="brand-image-showcase-box">
+                <div class="vector-card-placeholder">
+                    <span class="placeholder-icon">⚡</span>
+                    <p>Stackly Infrastructure Hub Console</p>
+                    <span class="telemetry-subtext">Secure Synchronization Active</span>
+                </div>
+            </div>
+
+            <!-- Bottom Feature Check Marks Matrix (Matched from Reference Image Base) -->
+            <div class="brand-checklist-matrix">
+                <div class="checklist-item-node"><span>✓</span> Fresh Energy Logs</div>
+                <div class="checklist-item-node"><span>✓</span> Balanced Load Lines</div>
+                <div class="checklist-item-node"><span>✓</span> Core Node Automation</div>
+            </div>
+        </div>
+
+        <!-- Right Column Flank: Interactive Form Control Terminal Dashboard -->
+        <div class="signup-right-terminal-panel">
+            <!-- Programmatic Back-To-Login Action Link -->
+            <a href="login.html" class="link-back-navigation">← Back to Login</a>
+            
+            <div class="terminal-header-block">
+                <h2>Create Account</h2>
+                <p>Register your node account to manage smart renewable energy distributions, utility assets, and custom configurations models.</p>
+            </div>
+
+            <!-- Access Control Core Authorization Form Input Stack -->
+            <form id="portalRegistrationTerminalForm" class="portal-auth-form" novalidate>
+                
+                <!-- Input Node 01: Full Name Vector Field -->
+                <div class="auth-input-element-group">
+                    <label for="subscriberFullName">Your Full Name</label>
+                    <div class="input-vector-field-wrapper">
+                        <span class="input-field-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </span>
+                        <input type="text" id="subscriberFullName" placeholder="Enter your full name..." required autocomplete="off">
+                    </div>
+                </div>
+
+                <!-- Input Node 02: Node Routing Email -->
+                <div class="auth-input-element-group">
+                    <label for="subscriberEmail">Email Address</label>
+                    <div class="input-vector-field-wrapper">
+                        <span class="input-field-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </span>
+                        <input type="email" id="subscriberEmail" placeholder="you@example.com" required autocomplete="off">
+                    </div>
+                </div>
+
+                <!-- Input Node 03: Telephony Handle Field Vector -->
+                <div class="auth-input-element-group">
+                    <label for="subscriberMobileHandle">10-Digit Mobile Number</label>
+                    <div class="input-vector-field-wrapper">
+                        <span class="input-field-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.74 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </span>
+                        <input type="tel" id="subscriberMobileHandle" placeholder="10-digit mobile number..." maxlength="10" required autocomplete="off">
+                    </div>
+                </div>
+
+                <!-- Input Node 04: Passkey Key String Token -->
+                <div class="auth-input-element-group">
+                    <label for="subscriberPassword">Password Key</label>
+                    <div class="input-vector-field-wrapper">
+                        <span class="input-field-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        </span>
+                        <input type="password" id="subscriberPassword" placeholder="Create a password" required>
+                        <button type="button" class="btn-toggle-password-reveal" id="passwordMaskToggler" aria-label="Toggle password visibility">👁</button>
+                    </div>
+                </div>
+
+                <!-- Input Node 05: Passkey Token Confirmation -->
+                <div class="auth-input-element-group">
+                    <label for="confirmSubscriberPassword">Confirm Password Key</label>
+                    <div class="input-vector-field-wrapper">
+                        <span class="input-field-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        </span>
+                        <input type="password" id="confirmSubscriberPassword" placeholder="Confirm your password" required>
+                        <button type="button" class="btn-toggle-password-reveal" id="confirmPasswordMaskToggler" aria-label="Toggle password visibility">👁</button>
+                    </div>
+                </div>
+
+                <!-- Dynamic Micro Notification System Validation Alert Bar -->
+                <div class="auth-validation-prompt-box" id="terminalAlertLogMessage"></div>
+
+                <!-- Authorization Access Submission Trigger Button -->
+                <button type="submit" class="btn-auth-submit-trigger">Sign Up →</button>
+
+                <!-- Base Account Relock Message Anchor Link -->
+                <p class="auth-base-login-prompt">Already have an account? <a href="login.html" class="link-switch-login-matrix">Log In</a></p>
+                <a href="404.html" class="link-return-home-footer">Return to Home</a>
+
+            </form>
+        </div>
+
+    </main>
+
+
+    <style>
+        /* Unique Typography Imports for Strict Brand Alignment */
+@import url('https://googleapis.com');
+
+/* Core Setup Canvas Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.portal-body-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f8fafc; /* Clean crisp concrete backdrop frame look */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Master Asymmetric Two-Column Split Grid Enclosure Plate Box */
+.signup-layout-container {
+    width: 100%;
+    max-width: 1120px;
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.02);
+    display: grid;
+    grid-template-columns: 1fr 1.1fr; /* absolute half-and-half proportions system layout tracking */
+    align-items: stretch;
+}
+
+/* --- Left Column Flank Brand Module Panel Configs --- */
+.signup-left-brand-panel {
+    background-color: #0c0a09; /* Deep charcoal black theme matching infrastructure profile */
+    padding: 4rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-right: 1px solid #1c1917;
+}
+
+.brand-eyebrow-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.brand-beacon-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #facc15;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #facc15;
+}
+
+.brand-eyebrow-text {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #facc15; /* Signature brand core yellow text tracking */
+}
+
+.brand-main-heading {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+}
+
+.yellow-text-mode {
+    color: #facc15; /* Swapping brand core yellow highlights cleanly */
+}
+
+.brand-sub-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #a8a29e; /* Muted stone grey text font color */
+    max-width: 400px;
+}
+
+/* Center Core Infrastructure Placeholder Plate Frame Box */
+.brand-image-showcase-box {
+    margin-top: 1.5rem;
+    width: 100%;
+    height: 200px;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 1px solid #1c1917;
+    background-color: #1c1917;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vector-card-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 0.5rem;
+}
+
+.placeholder-icon {
+    font-size: 2.25rem;
+    filter: drop-shadow(0 0 10px rgba(250, 204, 21, 0.3));
+}
+
+.vector-card-placeholder p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.telemetry-subtext {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #facc15;
+    letter-spacing: 0.05em;
+}
+
+/* Bottom Feature Check Marks Matrix Base Layout */
+.brand-checklist-matrix {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    border-top: 1px solid #1c1917;
+    padding-top: 1.5rem;
+}
+
+.checklist-item-node {
+    font-size: 0.9rem;
+    color: #d6d3d1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checklist-item-node span {
+    color: #facc15;
+    font-weight: 700;
+}
+
+/* --- Right Column Flank Interactive Portal Forms Configs --- */
+.signup-right-terminal-panel {
+    padding: 4rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.link-back-navigation {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0c0a09;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    width: fit-content;
+    transition: all 0.25s ease;
+}
+
+.link-back-navigation:hover {
+    color: #eab308;
+    transform: translateX(-3px);
+}
+
+.terminal-header-block {
+    margin-bottom: 2rem;
+}
+
+.terminal-header-block h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #0c0a09;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.5rem;
+}
+
+.terminal-header-block p {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* Input Fields Modules Configurations Framework Base */
+.portal-auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+    width: 100%;
+}
+
+.auth-input-element-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.auth-input-element-group label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #0c0a09;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.input-vector-field-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-field-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-field-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Input Field Elements Architecture Sheets */
+.portal-auth-form input[type="text"],
+.portal-auth-form input[type="email"],
+.portal-auth-form input[type="tel"],
+.portal-auth-form input[type="password"] {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 0.8rem 1rem 0.8rem 2.5rem; /* Left alignment boundary path to fit vector icons cleanly */
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    color: #0c0a09;
+    outline: none;
+    transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.portal-auth-form input:focus {
+    border-color: #facc15; /* Focus highlight transitions to brand yellow core strings */
+    box-shadow: 0 0 15px rgba(250, 204, 21, 0.05);
+}
+
+/* Password visibility button toggler link node */
+.btn-toggle-password-reveal {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #64748b;
+    z-index: 3;
+}
+
+/* Custom Interactive Notification Validation Bar Log */
+.auth-validation-prompt-box {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    min-height: 18px;
+    transition: all 0.2s ease;
+}
+
+.auth-validation-prompt-box.error-alert {
+    color: #ef4444; /* Image structural warning alert profile texts look */
+}
+
+.auth-validation-prompt-box.success-alert {
+    color: #10b981; /* Success feedback green accent mapping look */
+}
+
+/* Master Primary Core Submission Sign In Button Module Configs */
+.btn-auth-submit-trigger {
+    width: 100%;
+    background-color: #000000; /* Minimalist strict dark silhouette look */
+    color: #ffffff;
+    border: none;
+    outline: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.95rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-auth-submit-trigger:hover {
+    background-color: #facc15; /* Shift to brand core signature yellow fill profile on hover */
+    color: #000000;
+    box-shadow: 0 12px 24px rgba(250, 204, 21, 0.25);
+    transform: translateY(-1px);
+}
+
+/* Bottom footer link references alignment layout structures */
+.auth-base-login-prompt {
+    text-align: center;
+    font-size: 0.88rem;
+    color: #64748b;
+    margin-top: 0.5rem;
+}
+
+.link-switch-login-matrix {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.link-switch-login-matrix:hover {
+    color: #eab308;
+}
+
+.link-return-home-footer {
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.link-return-home-footer:hover {
+    color: #000000;
+}
+
+/* --- Fully Fluid Responsive Breakpoints System Layout Overrides --- */
+@media (max-width: 968px) {
+    .portal-body-wrapper {
+        padding: 1rem;
+    }
+    .signup-layout-container {
+        grid-template-columns: 1fr; /* Collapse asymmetric columns block cleanly directly down to stacked layout */
+    }
+    .signup-left-brand-panel {
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+        padding: 3rem 2rem;
+        align-items: center;
+        text-align: center;
+    }
+    .brand-sub-description {
+        margin: 0 auto;
+    }
+    .brand-image-showcase-box, .brand-checklist-matrix {
+        max-width: 450px;
+        margin: 1.5rem auto 0 auto;
+        width: 100%;
+    }
+    .signup-right-terminal-panel {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-left-brand-panel h1 {
+        font-size: 2.25rem;
+    }
+    .signup-right-terminal-panel h2 {
+        font-size: 1.75rem;
+    }
+}
+
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Password Visibility Reveal Mask Masking Toggler Interface Action Link
+    const bindPasswordToggle = (inputFieldId, buttonTogglerId) => {
+        const inputField = document.getElementById(inputFieldId);
+        const buttonToggler = document.getElementById(buttonTogglerId);
+
+        if (inputField && buttonToggler) {
+            buttonToggler.addEventListener('click', () => {
+                const isCurrentlyMaskedType = inputField.getAttribute('type') === 'password';
+                if (isCurrentlyMaskedType) {
+                    inputField.setAttribute('type', 'text');
+                    buttonToggler.textContent = '🙈';
+                } else {
+                    inputField.setAttribute('type', 'password');
+                    buttonToggler.textContent = '👁';
+                }
+            });
+        }
+    };
+
+    bindPasswordToggle('subscriberPassword', 'passwordMaskToggler');
+    bindPasswordToggle('confirmSubscriberPassword', 'confirmPasswordMaskToggler');
+
+    // 2. Rigid Key Character Input Filtration Mechanics (Barring invalid digits in real-time)
+    const nameInputNode = document.getElementById('subscriberFullName');
+    const phoneInputNode = document.getElementById('subscriberMobileHandle');
+
+    if (nameInputNode) {
+        // Enforce constraint: Name field strictly bars numbers inside string fields paths
+        nameInputNode.addEventListener('input', () => {
+            nameInputNode.value = nameInputNode.value.replace(/[0-9]/g, '');
+        });
+    }
+
+    if (phoneInputNode) {
+        // Enforce constraint: Phone field strictly blocks alphabet symbols inside numerical chains
+        phoneInputNode.addEventListener('input', () => {
+            phoneInputNode.value = phoneInputNode.value.replace(/[^0-9]/g, '');
+        });
+    }
+
+    // 3. Strict Real-Time Missing Field Validation & Redirection Router Matrix Loops
+    const registrationForm = document.getElementById('portalRegistrationTerminalForm');
+    const systemAlertLogBox = document.getElementById('terminalAlertLogMessage');
+
+    const emailInputNode = document.getElementById('subscriberEmail');
+    const passInputNode = document.getElementById('subscriberPassword');
+    const passConfirmInputNode = document.getElementById('confirmSubscriberPassword');
+
+    if (registrationForm && systemAlertLogBox) {
+        registrationForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Halt default browser routing paths updates
+
+            const nameValue = nameInputNode.value.trim();
+            const emailValue = emailInputNode.value.trim();
+            const phoneValue = phoneInputNode.value.trim();
+            const passwordValue = passInputNode.value;
+            const confirmPasswordValue = passConfirmInputNode.value;
+
+            // Step 1 Check: Verify absolute clear null empty index selector state parameters
+            if (nameValue === '' || emailValue === '' || phoneValue === '' || passwordValue === '' || confirmPasswordValue === '') {
+                systemAlertLogBox.textContent = '⚠ Operational Error: please fill all the fields before executing registration.';
+                systemAlertLogBox.className = 'auth-validation-prompt-box error-alert';
+                
+                // Focus focus parameters based on earliest empty row found
+                if (nameValue === '') nameInputNode.focus();
+                else if (emailValue === '') emailInputNode.focus();
+                else if (phoneValue === '') phoneInputNode.focus();
+                else if (passwordValue === '') passInputNode.focus();
+                else passConfirmInputNode.focus();
+                return;
+            }
+
+            // Step 2 Check: Confirm confirmation passkey match matrix paths tokens
+            if (passwordValue !== confirmPasswordValue) {
+                systemAlertLogBox.textContent = '⚠ Passkey Mismatch: Token fields do not match alignment codes verify inputs.';
+                systemAlertLogBox.className = 'auth-validation-prompt-box error-alert';
+                passConfirmInputNode.focus();
+                return;
+            }
+
+            // Success Path Pass: Store credentials inside client cache storage array strings maps
+            localStorage.setItem('cachedSubscriberNodeEmail', emailValue);
+            localStorage.setItem('cachedRegistrationName', nameValue);
+
+            systemAlertLogBox.textContent = '✔ Success: successfully signed up. Relocking control gateway paths navigation...';
+            systemAlertLogBox.className = 'auth-validation-prompt-box success-alert';
+            registrationForm.reset();
+
+            // Programmatic Redirect Matrix: Route user precisely to their login control panel after 1.5 seconds delay gap
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 1500);
+        });
+
+        // Add input trackers to flush old system caution strings instantly right as users start typing
+        const formInputNodesArray = [nameInputNode, emailInputNode, phoneInputNode, passInputNode, passConfirmInputNode];
+        formInputNodesArray.forEach(input => {
+            if (!input) return;
+            input.addEventListener('input', () => {
+                if (systemAlertLogBox.textContent !== '') {
+                    systemAlertLogBox.textContent = '';
+                    systemAlertLogBox.className = 'auth-validation-prompt-box';
+                }
+            });
+        });
+    }
+});
+
+    </script>
+</body>
+</html>
