@@ -47,7 +47,7 @@
     <div class="header-content">
         
         <a href="#" id="brandLogo" class="logo-link" aria-label="Stackly Home">
-            <img src="logo.svg" alt="Stackly Logo" class="brand-logo">
+            <img src="./assests/stackly renewable energy logo.webp" alt="Stackly Logo" class="brand-logo">
         </a>
 
         <!-- Main Navigation Links Container -->
@@ -178,7 +178,7 @@
             <div class="infra-media-engine">
                 <div class="infra-image-glow-wrapper">
                     <!-- Replace src with your custom hardware architecture array asset path -->
-                    <img src="infrastructure-hardware-core.jpg" alt="Stackly Renewable Grid Generation Cell Array" class="infra-main-image">
+                    <img src="./assests/solar success.webp" alt="Stackly Renewable Grid Generation Cell Array" class="infra-main-image">
                     <div class="infra-ambient-yellow-glow"></div>
                 </div>
             </div>
@@ -1106,7 +1106,7 @@
             <div class="deck-interactive-card scroll-deck-stagger">
                 <!-- Hidden Background Image Asset Layer -->
                 <div class="card-image-back-layer">
-                    <img src="solar-matrix-core.jpg" alt="Stackly Solar Array Field" class="deck-bg-asset-img">
+                    <img src="./assests/ev charging hub.webp" alt="Stackly Solar Array Field" class="deck-bg-asset-img">
                 </div>
                 <!-- Overlaid Content Layer -->
                 <div class="card-content-front-layer">
@@ -1118,7 +1118,7 @@
             <!-- Card 02 -->
             <div class="deck-interactive-card scroll-deck-stagger">
                 <div class="card-image-back-layer">
-                    <img src="wind-turbine-mesh.jpg" alt="Stackly Wind Harvesting Array" class="deck-bg-asset-img">
+                    <img src="./assests/solar fan.webp" alt="Stackly Wind Harvesting Array" class="deck-bg-asset-img">
                 </div>
                 <div class="card-content-front-layer">
                     <h3>Where Innovation Meets Nature</h3>
@@ -1129,7 +1129,7 @@
             <!-- Card 03 -->
             <div class="deck-interactive-card scroll-deck-stagger">
                 <div class="card-image-back-layer">
-                    <img src="battery-storage-cells.jpg" alt="Stackly Solid-State Energy Cells" class="deck-bg-asset-img">
+                    <img src="./assests/solar success.webp" alt="Stackly Solid-State Energy Cells" class="deck-bg-asset-img">
                 </div>
                 <div class="card-content-front-layer">
                     <h3>Because the Earth Deserves Better</h3>
@@ -1140,7 +1140,7 @@
             <!-- Card 04 -->
             <div class="deck-interactive-card scroll-deck-stagger">
                 <div class="card-image-back-layer">
-                    <img src="smart-grid-telemetry.jpg" alt="Stackly Digital Grid Distribution Terminal" class="deck-bg-asset-img">
+                    <img src="./assests/harvest success.webp" alt="Stackly Digital Grid Distribution Terminal" class="deck-bg-asset-img">
                 </div>
                 <div class="card-content-front-layer">
                     <h3>Sustainability Made Simple</h3>
@@ -1423,7 +1423,7 @@
     <!-- Full-Width Background Media Layer -->
     <div class="dual-banner-bg-container">
         <!-- Replace src with your customized clean infrastructure matrix path -->
-        <img src="infra-dual-mesh-bg.jpg" alt="Stackly Distributed Cell Infrastructure Grid Network" class="dual-banner-bg-asset">
+        <img src="./assests/harvest success.webp" alt="Stackly Distributed Cell Infrastructure Grid Network" class="dual-banner-bg-asset">
         <div class="dual-banner-tint-overlay"></div>
     </div>
 
@@ -2138,7 +2138,7 @@
             <!-- Matrix Card 01 -->
             <div class="spec-glow-card floor-slide-up">
                 <div class="spec-card-media">
-                    <img src="inverter-topology.jpg" alt="Stackly Phase Synchronizer Module" class="spec-asset-img">
+                    <img src="./assests/team of renewable energy.webp" alt="Stackly Phase Synchronizer Module" class="spec-asset-img">
                     <div class="spec-media-tint"></div>
                 </div>
                 <div class="spec-card-body">
@@ -2151,7 +2151,7 @@
             <!-- Matrix Card 02 -->
             <div class="spec-glow-card floor-slide-up">
                 <div class="spec-card-media">
-                    <img src="thermal-management.jpg" alt="Solid-State Core Thermal Enclosure" class="spec-asset-img">
+                    <img src="./assests/solar success.webp" alt="Solid-State Core Thermal Enclosure" class="spec-asset-img">
                     <div class="spec-media-tint"></div>
                 </div>
                 <div class="spec-card-body">
@@ -2164,7 +2164,7 @@
             <!-- Matrix Card 03 -->
             <div class="spec-glow-card floor-slide-up">
                 <div class="spec-card-media">
-                    <img src="telemetry-uplink.jpg" alt="Decentralized Network Gateway Antenna" class="spec-asset-img">
+                    <img src="./assests/harvest success.webp" alt="Decentralized Network Gateway Antenna" class="spec-asset-img">
                     <div class="spec-media-tint"></div>
                 </div>
                 <div class="spec-card-body">
@@ -2535,7 +2535,7 @@
     <!-- Spatial Background Backdrop Imagery Layers Matrix -->
     <div class="subscribe-backdrop-layer">
         <!-- Replace src with your customized solar grid asset path -->
-        <img src="subscribe-matrix-mesh.jpg" alt="Stackly Distributed Cell Infrastructure network grid" class="subscribe-bg-asset">
+        <img src="./assests/renewable energy.webp" alt="Stackly Distributed Cell Infrastructure network grid" class="subscribe-bg-asset">
         <div class="subscribe-tint-overlay"></div>
     </div>
 
@@ -2915,53 +2915,102 @@
 
 </style>
 
+
+
 <script>
-  
-// 3. Subscription Section Scroll Animation Fix
-const subscribeViewport = document.querySelector(
-    '#subscribe-terminal.fullwidth-subscribe-viewport'
-);
+document.addEventListener('DOMContentLoaded', function () {
 
-if (subscribeViewport) {
-    const leftTextFlank = subscribeViewport.querySelector(
-        '.subscribe-text-flank'
+    // 1. Subscription section scroll animation
+    const subscribeViewport = document.querySelector(
+        '#subscribe-terminal.fullwidth-subscribe-viewport'
     );
 
-    const rightFormFlank = subscribeViewport.querySelector(
-        '.subscribe-form-flank'
-    );
-
-    const revealSubscribeContent = () => {
-        leftTextFlank?.classList.add('reveal-active');
-        rightFormFlank?.classList.add('reveal-active');
-    };
-
-    if ('IntersectionObserver' in window) {
-        const subscribeIntersectionObserver = new IntersectionObserver(
-            (entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        revealSubscribeContent();
-                        observer.unobserve(entry.target);
-                    }
-                });
-            },
-            {
-                threshold: 0,
-                rootMargin: '0px 0px 150px 0px'
-            }
+    if (subscribeViewport) {
+        const leftTextFlank = subscribeViewport.querySelector(
+            '.subscribe-text-flank'
         );
 
-        subscribeIntersectionObserver.observe(subscribeViewport);
-    } else {
-        revealSubscribeContent();
+        const rightFormFlank = subscribeViewport.querySelector(
+            '.subscribe-form-flank'
+        );
+
+        const revealSubscribeContent = () => {
+            leftTextFlank?.classList.add('reveal-active');
+            rightFormFlank?.classList.add('reveal-active');
+        };
+
+        if ('IntersectionObserver' in window) {
+            const subscribeIntersectionObserver = new IntersectionObserver(
+                (entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            revealSubscribeContent();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                {
+                    threshold: 0,
+                    rootMargin: '0px 0px 150px 0px'
+                }
+            );
+
+            subscribeIntersectionObserver.observe(subscribeViewport);
+        } else {
+            revealSubscribeContent();
+        }
+
+        setTimeout(revealSubscribeContent, 1200);
     }
 
-    // Fallback: reveal the content if the observer does not trigger
-    setTimeout(revealSubscribeContent, 1200);
-}
+    // 2. Subscription form validation and 404 navigation
+    const subscribeForm = document.getElementById('gridSubscribeForm');
+    const emailInput = document.getElementById('subscriberEmail');
+    const validationMessage = document.getElementById(
+        'validationPromptMessage'
+    );
 
+    if (subscribeForm && emailInput && validationMessage) {
+
+        subscribeForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const email = emailInput.value.trim();
+
+            // Show message when the field is empty
+            if (email === '') {
+                validationMessage.textContent = 'Please fill the fields.';
+                validationMessage.classList.add('error-alert');
+                emailInput.focus();
+                return;
+            }
+
+            // Check email format
+            if (!emailInput.checkValidity()) {
+                validationMessage.textContent =
+                    'Please enter a valid email address.';
+                validationMessage.classList.add('error-alert');
+                emailInput.focus();
+                return;
+            }
+
+            // Valid email: navigate to the 404 page
+            validationMessage.textContent = '';
+            validationMessage.classList.remove('error-alert');
+
+            window.location.href = '404.html';
+        });
+
+        // Clear validation message when the user starts typing
+        emailInput.addEventListener('input', function () {
+            validationMessage.textContent = '';
+            validationMessage.classList.remove('error-alert');
+        });
+    }
+
+});
 </script>
+
 
 <footer class="global-footer-viewport">
     <div class="footer-layout-container">
@@ -2972,7 +3021,7 @@ if (subscribeViewport) {
             <!-- Column 1: Brand & Inline SVG Social Vectors -->
             <div class="footer-brand-column">
                 <a href="#" id="footerBackToTop" class="footer-logo-link" aria-label="Scroll back to top">
-                    <img src="logo-yellow.svg" alt="Stackly Renewable Energy Logo" class="footer-brand-logo">
+                    <img src="./assests/renewable energy logo footer.webp" alt="Stackly Renewable Energy Logo" class="footer-brand-logo">
                 </a>
                 <p class="footer-brand-description">
                     Delivering premier renewable energy solutions and high fidelity grid architectures engineered to fuel sustainable electrification straight to your infrastructure.
@@ -3303,6 +3352,74 @@ if (subscribeViewport) {
 
 </style>
 
+<script>
+    
+(function () {
+    const RETURN_URL_KEY = 'stackly_return_url';
+    const POSITIONS_KEY = 'stackly_scroll_positions';
+
+    const is404Page = /\/404(?:\.html)?\/?$/i.test(
+        window.location.pathname
+    );
+
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+
+    function getPositions() {
+        try {
+            return JSON.parse(sessionStorage.getItem(POSITIONS_KEY) || '{}');
+        } catch {
+            return {};
+        }
+    }
+
+    // Save the page URL and its exact scroll position before leaving.
+    if (!is404Page) {
+        window.addEventListener('pagehide', function () {
+            const currentUrl = window.location.href;
+            const positions = getPositions();
+
+            positions[currentUrl] = {
+                x: window.scrollX,
+                y: window.scrollY
+            };
+
+            sessionStorage.setItem(POSITIONS_KEY, JSON.stringify(positions));
+            sessionStorage.setItem(RETURN_URL_KEY, currentUrl);
+        });
+
+        // Restore the saved position when returning to this page.
+        function restoreScrollPosition() {
+            const positions = getPositions();
+            const saved = positions[window.location.href];
+
+            if (!saved) return;
+
+            let attempts = 0;
+
+            function restore() {
+                window.scrollTo(saved.x || 0, saved.y || 0);
+                attempts++;
+
+                // Retry while the page content is still rendering.
+                if (
+                    attempts < 10 &&
+                    document.documentElement.scrollHeight <
+                        (saved.y || 0) + window.innerHeight
+                ) {
+                    requestAnimationFrame(restore);
+                }
+            }
+
+            requestAnimationFrame(restore);
+        }
+
+        window.addEventListener('pageshow', restoreScrollPosition);
+    }
+})();
+
+</script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
 

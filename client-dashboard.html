@@ -18,22 +18,28 @@
             
             <!-- Clicking the Brand Link triggers a programmatic dashboard state refresh execution loop -->
             <a href="#" id="dashboardBrandRefresh" class="header-brand-logo-link" aria-label="Refresh Dashboard Matrix State">
-                <img src="logo-yellow.svg" alt="Stackly Renewable Energy Industrial Control Grid Logo" class="header-brand-img">
+                <img src="./assests/renewable energy logo footer.webp" alt="Stackly Renewable Energy Industrial Control Grid Logo" class="header-brand-img">
             </a>
         </div>
 
         <div class="header-right-telemetry-block">
             <!-- Telemetry Notification Alert Bell Vector Icon Group -->
-            <button class="header-telemetry-bell-btn" aria-label="Open Telemetry Notifications Feed">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
-                <span class="active-alert-beacon-dot"></span>
-            </button>
+          <button class="header-telemetry-bell-btn"
+        aria-label="Open Telemetry Notifications Feed"
+        onclick="window.location.href='404.html'">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+    </svg>
+    <span class="active-alert-beacon-dot"></span>
+</button>
 
             
             <div class="header-user-profile-plate">
                 <div class="profile-avatar-circle">👤</div>
                 
-                    <span class="profile-greeting-text">Welcome,</span>
+                
                     <!-- Fallback default string initialized before app.js script binder loads -->
                     <span class="profile-parsed-name-node" id="headerProfileGreetingName">Consumer Client</span>
                 </div>
@@ -2118,6 +2124,44 @@ if (clientSupportForm && supportFormAlertLog) {
 
    
     <style>
+
+        /* FIX: Completely lock background scrolling when drawer is open */
+html:has(body.body-scroll-lock),
+body.body-scroll-lock {
+    overflow: hidden !important;
+    height: 100% !important;
+    overscroll-behavior: none !important;
+}
+
+body.body-scroll-lock {
+    position: fixed !important;
+    width: 100% !important;
+    left: 0;
+    right: 0;
+}
+
+/* Prevent the dashboard content behind the drawer from scrolling */
+body.body-scroll-lock .dashboard-main-content-display,
+body.body-scroll-lock .dashboard-core-canvas-layout {
+    overflow: hidden !important;
+    overscroll-behavior: none !important;
+}
+
+/* Keep the sidebar usable while the background is locked */
+.dashboard-sidebar-drawer.drawer-view-open {
+    overflow-y: auto !important;
+    overscroll-behavior: contain !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Backdrop blur */
+.sidebar-drawer-tint-backdrop.backdrop-visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
         /* Unique Typography Imports for Strict Brand Alignment */
 @import url('https://googleapis.com');
 
@@ -2473,6 +2517,36 @@ if (clientSupportForm && supportFormAlertLog) {
 
     </style>
 
+<script>
+    let savedBackgroundScrollY = 0;
+
+function openResponsiveNavigationConsoleDrawer() {
+    if (!sidebarConsoleDrawer) return;
+
+    savedBackgroundScrollY = window.scrollY;
+
+    sidebarConsoleDrawer.classList.add('drawer-view-open');
+    drawerBackdropTint?.classList.add('backdrop-visible');
+
+    rootBodyDocumentNode.classList.add('body-scroll-lock');
+
+    // Freeze the page at its current scroll position
+    rootBodyDocumentNode.style.top = `-${savedBackgroundScrollY}px`;
+}
+
+function closeResponsiveNavigationConsoleDrawer() {
+    if (!sidebarConsoleDrawer) return;
+
+    sidebarConsoleDrawer.classList.remove('drawer-view-open');
+    drawerBackdropTint?.classList.remove('backdrop-visible');
+
+    rootBodyDocumentNode.classList.remove('body-scroll-lock');
+    rootBodyDocumentNode.style.top = '';
+
+    // Restore the exact previous scroll position
+    window.scrollTo(0, savedBackgroundScrollY);
+}
+</script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 

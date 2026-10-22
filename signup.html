@@ -521,6 +521,243 @@
     }
 }
 
+
+/* ==========================================
+   STACKLY SIGNUP PAGE - RESPONSIVE ADD-ON
+   ========================================== */
+
+/* Prevent horizontal overflow */
+.portal-body-wrapper {
+    width: 100%;
+    min-width: 320px;
+    min-height: 100vh;
+    padding: 24px;
+}
+
+.signup-layout-container {
+    width: 100%;
+    max-width: 1120px;
+    min-width: 0;
+    margin: auto;
+}
+
+.signup-left-brand-panel,
+.signup-right-terminal-panel {
+    min-width: 0;
+}
+
+/* Tablet and smaller laptop screens */
+@media (max-width: 968px) {
+    .portal-body-wrapper {
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .signup-layout-container {
+        grid-template-columns: 1fr;
+        max-width: 720px;
+    }
+
+    .signup-left-brand-panel {
+        padding: 36px 32px;
+        border-right: none;
+        border-bottom: 1px solid #292524;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .brand-eyebrow-wrapper {
+        justify-content: center;
+    }
+
+    .brand-main-heading {
+        font-size: clamp(2.2rem, 5vw, 2.8rem);
+        line-height: 1.15;
+    }
+
+    .brand-sub-description {
+        width: 100%;
+        max-width: 520px;
+        margin: 0 auto;
+    }
+
+    .brand-image-showcase-box {
+        width: 100%;
+        max-width: 480px;
+        height: 180px;
+        margin: 8px auto 0;
+    }
+
+    .brand-checklist-matrix {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .signup-right-terminal-panel {
+        padding: 36px 32px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+    .portal-body-wrapper {
+        padding: 12px;
+    }
+
+    .signup-layout-container {
+        border-radius: 16px;
+    }
+
+    .signup-left-brand-panel {
+        padding: 28px 20px;
+        gap: 16px;
+    }
+
+    .brand-main-heading {
+        font-size: clamp(1.9rem, 8vw, 2.4rem);
+        letter-spacing: -0.03em;
+    }
+
+    .brand-sub-description {
+        font-size: 0.88rem;
+        line-height: 1.65;
+    }
+
+    .brand-image-showcase-box {
+        height: 150px;
+    }
+
+    .vector-card-placeholder {
+        padding: 16px;
+    }
+
+    .vector-card-placeholder p {
+        font-size: 0.85rem;
+    }
+
+    .telemetry-subtext {
+        font-size: 0.68rem;
+        text-align: center;
+    }
+
+    .brand-checklist-matrix {
+        padding-top: 18px;
+        gap: 12px;
+    }
+
+    .checklist-item-node {
+        font-size: 0.82rem;
+    }
+
+    .signup-right-terminal-panel {
+        padding: 28px 20px;
+    }
+
+    .link-back-navigation {
+        margin-bottom: 24px;
+    }
+
+    .terminal-header-block {
+        margin-bottom: 24px;
+    }
+
+    .terminal-header-block h2 {
+        font-size: 1.8rem;
+    }
+
+    .terminal-header-block p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+
+    .portal-auth-form {
+        gap: 18px;
+    }
+
+    .auth-input-element-group label {
+        font-size: 0.75rem;
+    }
+
+    .portal-auth-form input[type="text"],
+    .portal-auth-form input[type="email"],
+    .portal-auth-form input[type="tel"],
+    .portal-auth-form input[type="password"] {
+        min-height: 46px;
+        font-size: 16px;
+        padding-right: 2.8rem;
+    }
+
+    .btn-toggle-password-reveal {
+        right: 12px;
+        padding: 6px;
+    }
+
+    .btn-auth-submit-trigger {
+        min-height: 48px;
+    }
+
+    .auth-base-login-prompt {
+        font-size: 0.82rem;
+        line-height: 1.6;
+    }
+
+    .link-return-home-footer {
+        padding: 6px;
+    }
+}
+
+/* Extra-small mobile screens */
+@media (max-width: 360px) {
+    .portal-body-wrapper {
+        padding: 8px;
+    }
+
+    .signup-left-brand-panel,
+    .signup-right-terminal-panel {
+        padding: 24px 14px;
+    }
+
+    .brand-main-heading {
+        font-size: 1.8rem;
+    }
+
+    .terminal-header-block h2 {
+        font-size: 1.6rem;
+    }
+
+    .brand-image-showcase-box {
+        height: 135px;
+    }
+
+    .checklist-item-node {
+        font-size: 0.76rem;
+    }
+
+    .portal-auth-form input[type="text"],
+    .portal-auth-form input[type="email"],
+    .portal-auth-form input[type="tel"],
+    .portal-auth-form input[type="password"] {
+        padding-left: 2.2rem;
+    }
+
+    .input-field-icon {
+        left: 12px;
+    }
+}
+
+/* Accessibility: reduce motion when requested */
+@media (prefers-reduced-motion: reduce) {
+    .signup-layout-container *,
+    .signup-layout-container *::before,
+    .signup-layout-container *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
     </style>
 
     <script>
