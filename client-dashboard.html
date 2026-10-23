@@ -2518,6 +2518,54 @@ body.body-scroll-lock .dashboard-core-canvas-layout {
     </style>
 
 <script>
+    
+    // 6. Save the exact dashboard URL before navigating to 404.html
+    document.querySelectorAll('a[href*="404.html"]').forEach(link => {
+        link.addEventListener('click', function () {
+            sessionStorage.setItem(
+                'stackly_return_url',
+                window.location.href
+            );
+
+            // Preserve the current dashboard section
+            const activeSection = document.querySelector(
+                '.workspace-tab-panel-route.section-display-active'
+            );
+
+            if (activeSection) {
+                sessionStorage.setItem(
+                    'stackly_return_section',
+                    activeSection.id
+                );
+            }
+        });
+    });
+
+    // Support buttons that navigate to 404 through JavaScript
+    document.querySelectorAll('button[data-404-target]').forEach(button => {
+        button.addEventListener('click', function () {
+            sessionStorage.setItem(
+                'stackly_return_url',
+                window.location.href
+            );
+
+            const activeSection = document.querySelector(
+                '.workspace-tab-panel-route.section-display-active'
+            );
+
+            if (activeSection) {
+                sessionStorage.setItem(
+                    'stackly_return_section',
+                    activeSection.id
+                );
+            }
+
+            window.location.href = '404.html';
+        });
+    });
+
+</script>
+<script>
     let savedBackgroundScrollY = 0;
 
 function openResponsiveNavigationConsoleDrawer() {
@@ -2572,44 +2620,80 @@ function closeResponsiveNavigationConsoleDrawer() {
     parseSavedSubscriberEmailIdentity();
 
     // 2. Programmatic Header Brand Refresh Reload Interceptor Action
+  
+    // 2. Refresh dashboard and preserve the active sidebar section
     const brandRefreshAnchorLink = document.getElementById('dashboardBrandRefresh');
 
     if (brandRefreshAnchorLink) {
-        brandRefreshAnchorLink.addEventListener('click', (event) => {
-            event.preventDefault(); // Stop raw tracking tag browser coordinates jumping traces paths
-            
-            // Re-trigger total page document structural trace reload pipeline
+        brandRefreshAnchorLink.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const activeSection = document.querySelector(
+                '.workspace-tab-panel-route.section-display-active'
+            );
+
+            if (activeSection) {
+                sessionStorage.setItem(
+                    'stackly_active_dashboard_section',
+                    activeSection.id
+                );
+            }
+
             window.location.reload();
         });
     }
 
     // 3. Sectionwise Layout Tab Switching Multi-Panel Router System Tracker
+   
+    // 3. Sidebar navigation with refresh persistence
     const navTabTriggersList = document.querySelectorAll('.sidebar-tab-nav-link');
     const contentWorkspacePanels = document.querySelectorAll('.workspace-tab-panel-route');
 
-    navTabTriggersList.forEach(triggerBtn => {
-        triggerBtn.addEventListener('click', () => {
-            const chosenSectionTargetId = triggerBtn.getAttribute('data-section-target');
+    function activateDashboardSection(sectionId) {
+        const targetPanel = document.getElementById(sectionId);
+        const targetButton = document.querySelector(
+            '.sidebar-tab-nav-link[data-section-target="' + sectionId + '"]'
+        );
 
-            // Tab Trigger Active State Class Loop Toggler
-            navTabTriggersList.forEach(btn => btn.classList.remove('link-state-active'));
-            triggerBtn.classList.add('link-state-active');
+        if (!targetPanel || !targetButton) return;
 
-            // Content Panel View visibility class loop updater traces paths strings
-            contentWorkspacePanels.forEach(panel => {
-                if (panel.id === chosenSectionTargetId) {
-                    panel.classList.add('section-display-active');
-                } else {
-                    panel.classList.remove('section-display-active');
-                }
-            });
+        navTabTriggersList.forEach(button => {
+            button.classList.toggle('link-state-active', button === targetButton);
+        });
 
-            // Clean-up loop: Automatically slide sidebar shut when tab click triggers on mobile display screens widths
-            if (window.innerWidth <= 1024) {
-                closeResponsiveNavigationConsoleDrawer();
-            }
+        contentWorkspacePanels.forEach(panel => {
+            panel.classList.toggle(
+                'section-display-active',
+                panel.id === sectionId
+            );
+        });
+
+        sessionStorage.setItem(
+            'stackly_active_dashboard_section',
+            sectionId
+        );
+
+        if (window.innerWidth <= 1024) {
+            closeResponsiveNavigationConsoleDrawer();
+        }
+    }
+
+    navTabTriggersList.forEach(button => {
+        button.addEventListener('click', function () {
+            activateDashboardSection(
+                this.getAttribute('data-section-target')
+            );
         });
     });
+
+    // Restore the last selected section after page refresh
+    const savedSection = sessionStorage.getItem(
+        'stackly_active_dashboard_section'
+    );
+
+    if (savedSection) {
+        activateDashboardSection(savedSection);
+    }
 
     // 4. Fully Fluid Responsive Hamburger Menu Navigation Console Drawer Engine Controllers
     const menuToggleBtn = document.getElementById('sidebarMenuDrawerToggle');
@@ -2663,5 +2747,7 @@ function closeResponsiveNavigationConsoleDrawer() {
 });
 
     </script>
+
+    
 </body>
 </html>

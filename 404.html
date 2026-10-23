@@ -272,39 +272,48 @@
   </style>
 
   
-<script>
 
+<script>
 document.addEventListener('DOMContentLoaded', function () {
 
-    // 1. Return to the saved dashboard page
-    const backButton = document.getElementById('btnErrorBackTrack');
+    // 1. Return to the exact page that opened 404.html
+    
+const backButton = document.getElementById('btnErrorBackTrack');
 
-    if (backButton) {
-        backButton.addEventListener('click', function () {
+if (backButton) {
+    backButton.addEventListener('click', function () {
+        const savedUrl = sessionStorage.getItem('stackly_return_url');
+        const savedSection = sessionStorage.getItem('stackly_return_section');
 
-            const savedUrl = sessionStorage.getItem('stackly_return_url');
+        if (savedUrl) {
+            try {
+                const previousUrl = new URL(savedUrl);
 
-            if (savedUrl) {
-                try {
-                    const previousUrl = new URL(savedUrl);
+                if (
+                    previousUrl.origin === window.location.origin &&
+                    !previousUrl.pathname.toLowerCase().endsWith('/404.html')
+                ) {
+                    // Return to the original dashboard URL
+                    window.location.href = previousUrl.href;
 
-                    // Only allow navigation within the same website
-                    if (
-                        previousUrl.origin === window.location.origin &&
-                        !previousUrl.pathname.endsWith('/404.html')
-                    ) {
-                        window.location.href = previousUrl.href;
-                        return;
+                    // Restore the selected dashboard tab after navigation
+                    if (savedSection) {
+                        sessionStorage.setItem(
+                            'stackly_restore_section',
+                            savedSection
+                        );
                     }
-                } catch (error) {
-                    console.error('Invalid saved dashboard URL:', error);
-                }
-            }
 
-            // Do not redirect to Contact automatically
-            window.history.back();
-        });
-    }
+                    return;
+                }
+            } catch (error) {
+                console.error('Invalid dashboard return URL:', error);
+            }
+        }
+
+        window.location.href = 'login.html';
+    });
+}
 
     // 2. Radar glow effect
     const glowElement = document.getElementById('errorTerminalGlow');
@@ -314,8 +323,15 @@ document.addEventListener('DOMContentLoaded', function () {
         errorCard.addEventListener('mousemove', function (event) {
             const rect = errorCard.getBoundingClientRect();
 
-            errorCard.style.setProperty('--ex', (event.clientX - rect.left) + 'px');
-            errorCard.style.setProperty('--ey', (event.clientY - rect.top) + 'px');
+            errorCard.style.setProperty(
+                '--ex',
+                (event.clientX - rect.left) + 'px'
+            );
+
+            errorCard.style.setProperty(
+                '--ey',
+                (event.clientY - rect.top) + 'px'
+            );
         });
 
         errorCard.addEventListener('mouseleave', function () {
@@ -325,8 +341,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
-
 </script>
+
 
 </body>
 </html>

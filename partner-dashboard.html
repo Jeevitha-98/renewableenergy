@@ -2237,6 +2237,44 @@ body.dashboard-root-body.body-scroll-lock {
     }
 }
 
+
+/* Lock background scrolling when hamburger drawer is open */
+body.dashboard-root-body.body-scroll-lock {
+    overflow: hidden !important;
+    height: 100vh;
+    overscroll-behavior: none;
+}
+
+/* Blur and dim the dashboard content behind the sidebar */
+@media (max-width: 1024px) {
+    body.dashboard-root-body.body-scroll-lock
+    .dashboard-main-content-display {
+        filter: blur(4px);
+        pointer-events: none;
+        user-select: none;
+        transition: filter 0.3s ease;
+    }
+
+    /* Dim and blur the background overlay */
+    .sidebar-drawer-tint-backdrop {
+        background-color: rgba(12, 10, 9, 0.45);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        touch-action: none;
+    }
+
+    /* Keep the sidebar sharp and independently scrollable */
+    .dashboard-sidebar-drawer {
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .dashboard-sidebar-drawer.drawer-view-open {
+        filter: none;
+    }
+}
+
     </style>
 
     <script>
@@ -2265,44 +2303,79 @@ body.dashboard-root-body.body-scroll-lock {
     parseSavedSubscriberEmailIdentity();
 
     // 2. Programmatic Header Brand Refresh Reload Interceptor Action
+
+    // 2. Refresh dashboard while preserving the selected sidebar menu
     const brandRefreshAnchorLink = document.getElementById('dashboardBrandRefresh');
 
     if (brandRefreshAnchorLink) {
-        brandRefreshAnchorLink.addEventListener('click', (event) => {
-            event.preventDefault(); // Stop raw tracking tag browser coordinates jumping traces paths
-            
-            // Re-trigger total page document structural trace reload pipeline
+        brandRefreshAnchorLink.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const activeSection = document.querySelector(
+                '.workspace-tab-panel-route.section-display-active'
+            );
+
+            if (activeSection) {
+                sessionStorage.setItem(
+                    'stackly_active_dashboard_section',
+                    activeSection.id
+                );
+            }
+
             window.location.reload();
         });
     }
 
+
     // 3. Sectionwise Layout Tab Switching Multi-Panel Router System Tracker
+  
+    // 3. Sidebar navigation with active section persistence
     const navTabTriggersList = document.querySelectorAll('.sidebar-tab-nav-link');
     const contentWorkspacePanels = document.querySelectorAll('.workspace-tab-panel-route');
 
+    function activateDashboardSection(sectionId) {
+        const targetPanel = document.getElementById(sectionId);
+        const targetButton = document.querySelector(
+            '.sidebar-tab-nav-link[data-section-target="' + sectionId + '"]'
+        );
+
+        if (!targetPanel || !targetButton) return;
+
+        navTabTriggersList.forEach(btn => {
+            btn.classList.toggle('link-state-active', btn === targetButton);
+        });
+
+        contentWorkspacePanels.forEach(panel => {
+            panel.classList.toggle(
+                'section-display-active',
+                panel.id === sectionId
+            );
+        });
+
+        // Remember the selected sidebar menu
+        sessionStorage.setItem('stackly_active_dashboard_section', sectionId);
+
+        if (window.innerWidth <= 1024) {
+            closeResponsiveNavigationConsoleDrawer();
+        }
+    }
+
     navTabTriggersList.forEach(triggerBtn => {
         triggerBtn.addEventListener('click', () => {
-            const chosenSectionTargetId = triggerBtn.getAttribute('data-section-target');
-
-            // Tab Trigger Active State Class Loop Toggler
-            navTabTriggersList.forEach(btn => btn.classList.remove('link-state-active'));
-            triggerBtn.classList.add('link-state-active');
-
-            // Content Panel View visibility class loop updater traces paths strings
-            contentWorkspacePanels.forEach(panel => {
-                if (panel.id === chosenSectionTargetId) {
-                    panel.classList.add('section-display-active');
-                } else {
-                    panel.classList.remove('section-display-active');
-                }
-            });
-
-            // Clean-up loop: Automatically slide sidebar shut when tab click triggers on mobile display screens widths
-            if (window.innerWidth <= 1024) {
-                closeResponsiveNavigationConsoleDrawer();
-            }
+            const sectionId = triggerBtn.getAttribute('data-section-target');
+            activateDashboardSection(sectionId);
         });
     });
+
+    // Restore the last selected section when the dashboard loads or refreshes
+    const savedDashboardSection = sessionStorage.getItem(
+        'stackly_active_dashboard_section'
+    );
+
+    if (savedDashboardSection) {
+        activateDashboardSection(savedDashboardSection);
+    }
+
 
     // 4. Fully Fluid Responsive Hamburger Menu Navigation Console Drawer Engine Controllers
     const menuToggleBtn = document.getElementById('sidebarMenuDrawerToggle');
@@ -2367,6 +2440,22 @@ document.addEventListener("DOMContentLoaded", function () {
             );
         });
     });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    document.querySelectorAll('a[href*="404.html"]').forEach(function (link) {
+
+        link.addEventListener('click', function () {
+            sessionStorage.setItem(
+                'stackly_return_url',
+                window.location.href
+            );
+        });
+
+    });
+
 });
 </script>
 </body>
